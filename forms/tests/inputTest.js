@@ -1,8 +1,8 @@
-jest.unmock("../Input");
+jest.unmock("../forms/Input");
 
 import React from "react";
 import TestUtils from "react-addons-test-utils";
-import Input from "../Input";
+import Input from "../forms/Input";
 
 describe( "Input", () => {
 	var renderer = TestUtils.createRenderer();

@@ -1,8 +1,8 @@
-jest.unmock("../Label");
+jest.unmock("../forms/Label");
 
 import React from "react";
 import TestUtils from "react-addons-test-utils";
-import Label from "../Label";
+import Label from "../forms/Label";
 
 describe( "A Label component", () => {
 	var renderer = TestUtils.createRenderer();

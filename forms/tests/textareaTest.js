@@ -1,8 +1,8 @@
-jest.unmock("../Textarea");
+jest.unmock("../forms/Textarea");
 
 import React from "react";
 import TestUtils from "react-addons-test-utils";
-import Textarea from "../Textarea";
+import Textarea from "../forms/Textarea";
 
 describe( "A Textarea component", () => {
 	var renderer = TestUtils.createRenderer();
