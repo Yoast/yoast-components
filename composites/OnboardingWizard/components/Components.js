@@ -1,5 +1,6 @@
 import Choice from "../../Choice/Choice";
 import Input from "../../../forms/Input";
+import TextField from "../../../forms/composites/Textfield"
 import HTML from "./Html";
 import MailchimpSignup from "./custom_components/MailchimpSignup";
 import PublishingEntity from "./custom_components/PublishingEntity";
@@ -8,7 +9,7 @@ import ConnectGoogleSearchConsole from "./custom_components/ConnectGoogleSearchC
 
 let Components = {
 	Choice,
-	Input,
+	"Input": TextField,
 	HTML,
 	MailchimpSignup,
 	PostTypeVisibility,
