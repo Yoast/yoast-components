@@ -1,4 +1,6 @@
 import React from "react";
+import Input from '../../forms/Input';
+import Label from '../../forms/Label';
 
 /**
  * Represents a choice interface, like a group of radio buttons or a select button. Initially it should render a
@@ -19,17 +21,17 @@ const Choice = ( props ) => {
 
 			{fieldKeys.map( function( choiceName, index ) {
 				let choice = choices[ choiceName ];
-				let choiceId = choiceName + "-" + index;
-				let isChecked = ( props.data === choiceName ) ? "checked" : "";
+				let id = choiceName + "-" + index;
+				let checked = ( props.data === choiceName ) ? "checked" : "";
 
 				return (
 					<div key={index}>
-						<input onChange={props.onChange} id={choiceId} type="radio" name={fieldName}
-						       value={choiceName}
-						       checked={isChecked}/>
-						<label htmlFor={choiceId}>
-							{choice.label}
-						</label>
+						<Input name={fieldName} type="radio" label={choice.label} onChange={props.onChange}
+						       value={choiceName} optionalAttributes={{
+							id,
+							checked
+						}}/>
+						<Label for={id}>{choice.label}</Label>
 					</div>
 				);
 			} )}
