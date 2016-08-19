@@ -1,4 +1,4 @@
-jest.unmock( '../progressIndicator' );
+jest.unmock( "../ProgressIndicator" );
 
 import React from 'react';
 import TestUtils from "react-addons-test-utils";

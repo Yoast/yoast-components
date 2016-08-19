@@ -1,4 +1,4 @@
-jest.unmock( "../step" );
+jest.unmock( "../Step" );
 
 import React from "react";
 import TestUtils from "react-addons-test-utils";
