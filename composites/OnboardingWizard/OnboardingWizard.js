@@ -1,10 +1,10 @@
 import React from "react";
-import Step from "./step";
-import ProgressIndicator from "./progressIndicator";
+import Step from "./Step";
+import ProgressIndicator from "./ProgressIndicator";
 import postJSON from "./helpers/postJSON";
 
 /**
- * The onboarding Wizard class.
+ * The onboarding OnboardingWizard class.
  */
 class Wizard extends React.Component {
 

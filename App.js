@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import SearchResultEditor from "./composites/SearchResultEditor/SearchResultEditor";
+import Wizard from "./composites/OnboardingWizard/OnboardingWizard";
+import Config from "./composites/OnboardingWizard/config/config";
 
 class App extends React.Component {
 	constructor() {
@@ -11,7 +12,7 @@ class App extends React.Component {
 	}
 
 	render() {
-		return ( <SearchResultEditor />	);
+		return ( <Wizard {...Config} />	);
 	}
 }
 

@@ -1,6 +1,6 @@
-jest.unmock( "../wizard" );
+jest.unmock( "../OnboardingWizard" );
 jest.unmock( "lodash/cloneDeep" );
-jest.unmock( "../progressIndicator" );
+jest.unmock( "../ProgressIndicator" );
 jest.unmock( "../config/config" );
 jest.mock( '../helpers/postJSON', () => {
 
@@ -14,7 +14,7 @@ jest.mock( '../helpers/postJSON', () => {
 } );
 
 import React from "react";
-import Wizard from "../wizard";
+import OnboardingWizard from "../OnboardingWizard";
 import Config from "../config/config";
 import {shallow, render, mount} from "enzyme";
 import cloneDeep from "lodash/cloneDeep";
@@ -28,12 +28,12 @@ import cloneDeep from "lodash/cloneDeep";
  *
  */
 describe( "a wizard component", () => {
-	let renderedWizard = undefined;
-	let config = undefined;
+	let renderedWizard = "undefined";
+	let config = "undefined";
 
 	beforeEach( () => {
 		config = cloneDeep( Config );
-		renderedWizard = mount( <Wizard {...config} /> );
+		renderedWizard = mount( <OnboardingWizard {...config} /> );
 	} );
 
 	it( "renders a wizard component based on the config", () => {
@@ -68,28 +68,5 @@ describe( "a wizard component", () => {
 
 		// Test step count.
 		expect( renderedWizard.node.stepCount ).toEqual( Object.keys( steps ).length );
-	} );
-
-	it( "goes to the next step", () => {
-	} );
-
-	it( "goes to the previous step", () => {
-
-	} );
-
-	it( "renders the step correctly", () => {
-
-	} );
-
-	it( "saves the current step, when moving to another step", () => {
-
-	} );
-
-	it( "does not go to another step, when saving the current progress fails", () => {
-
-	} );
-
-	it( "does not go to the next step, when saving the progress fails", () => {
-
 	} );
 } );
