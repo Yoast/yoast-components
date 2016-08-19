@@ -1,6 +1,6 @@
 import React from "react";
-import Step from "./step";
-import ProgressIndicator from "./progressIndicator";
+import Step from "./Step";
+import ProgressIndicator from "./ProgressIndicator";
 import postJSON from "./helpers/postJSON";
 
 /**

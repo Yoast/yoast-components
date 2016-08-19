@@ -1,5 +1,5 @@
 import React from "react";
-import Components from "./components";
+import Components from "./Components";
 
 /**
  * Renders a step in the wizard process

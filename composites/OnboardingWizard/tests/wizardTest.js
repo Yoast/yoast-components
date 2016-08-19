@@ -14,7 +14,7 @@ jest.mock( '../helpers/postJSON', () => {
 } );
 
 import React from "react";
-import Wizard from "../wizard";
+import Wizard from "../OnboardingWizard";
 import Config from "../config/config";
 import {shallow, render, mount} from "enzyme";
 import cloneDeep from "lodash/cloneDeep";

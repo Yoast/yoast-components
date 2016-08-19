@@ -2,7 +2,7 @@ jest.unmock( '../progressIndicator' );
 
 import React from 'react';
 import TestUtils from "react-addons-test-utils";
-import ProgressIndicator from '../progressIndicator';
+import ProgressIndicator from '../ProgressIndicator';
 
 describe( 'a processIndicator component', () => {
 	let renderer = TestUtils.createRenderer();

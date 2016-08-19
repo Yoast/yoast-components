@@ -2,7 +2,7 @@ jest.unmock( "../step" );
 
 import React from "react";
 import TestUtils from "react-addons-test-utils";
-import Step from "../step";
+import Step from "../Step";
 
 describe( "a step component", () => {
 
