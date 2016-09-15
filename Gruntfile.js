@@ -15,10 +15,10 @@ module.exports = function( grunt ) {
 		files: {
 			components: [
 				"forms/*.js",
-				"a11y/*.js", 
-				"onboarding-wizard/**/*.js",
-				"!onboarding-wizard/tests/**/*.js",
-				"!onboarding-wizard/config/**/*.js"
+				"a11y/*.js",
+				"composites/**/*.js",
+				"!composites/**/*Test.js",
+				"!composites/OnboardingWizard/config/*.js",
 			],
 			get config() {
 				return project.paths.config + "*.js";
