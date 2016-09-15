@@ -1,6 +1,6 @@
-import React from 'react';
-import IconButton from 'material-ui/IconButton';
-import SvgIcon from 'material-ui/SvgIcon';
+import React from "react";
+import IconButton from "material-ui/IconButton";
+import SvgIcon from "material-ui/SvgIcon";
 
 /**
  * Creates a step button for the wizard. The step buttons are meant to be rendered in a stepper component(StepIndicator)
@@ -9,7 +9,7 @@ import SvgIcon from 'material-ui/SvgIcon';
  *
  * The step button is an extension for a IconButton from the Material-UI react framework.
  *
- * @param props The properties for the step button.
+ * @param {Object} props The properties for the step button.
  *
  * @constructor Passes the properties to the component.
  */
@@ -24,5 +24,14 @@ const StepButton = ( props ) => (
 		</SvgIcon>
 	</IconButton>
 );
+
+
+StepButton.propTypes = {
+	className: React.PropTypes.string,
+	onClick: React.PropTypes.func,
+	tooltip: React.PropTypes.string,
+	index: React.PropTypes.string,
+};
+
 
 export default StepButton;

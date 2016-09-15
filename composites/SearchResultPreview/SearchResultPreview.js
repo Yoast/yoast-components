@@ -1,5 +1,5 @@
 import React from "react";
-import {localize} from "i18n-calypso";
+import { localize } from "i18n-calypso";
 
 import Section from "../../forms/Section";
 import Button from "../../forms/Button";
@@ -20,13 +20,13 @@ class SearchResultPreview extends React.Component {
 
 	getTranslations() {
 		return {
-			previewTitle:       this.props.translate( "Search Result Preview" ),
+			previewTitle: this.props.translate( "Search Result Preview" ),
 			previewDescription: this.props.translate( "You can click on each element in the preview to jump to the Snippet Editor." ),
-			titleLabel:         this.props.translate( "SEO title preview: " ),
-			title:              this.props.title || this.props.translate( "This is an example title - edit by clicking here" ),
-			urlLabel:           this.props.translate( "URL preview: " ),
-			descriptionLabel:   this.props.translate( "Meta description preview: " ),
-			description:        this.props.description || this.props.translate( "Please provide a meta description by editing the snippet below." ),
+			titleLabel: this.props.translate( "SEO title preview: " ),
+			title: this.props.title || this.props.translate( "This is an example title - edit by clicking here" ),
+			urlLabel: this.props.translate( "URL preview: " ),
+			descriptionLabel: this.props.translate( "Meta description preview: " ),
+			description: this.props.description || this.props.translate( "Please provide a meta description by editing the snippet below." ),
 		};
 	}
 
@@ -60,14 +60,14 @@ class SearchResultPreview extends React.Component {
 	}
 
 	componentDidMount() {
-		this.props.measureTitle( this.getFieldWidthByReference("previewTitle") );
+		this.props.measureTitle( this.getFieldWidthByReference( "previewTitle" ) );
 		this.props.measureDescription( this.props.description.length );
 	}
 
-	componentDidUpdate(prevProps, prevState) {
+	componentDidUpdate( prevProps ) {
 		if ( this.props.title !== prevProps.title ) {
 			// Recalculate width
-			this.props.measureTitle( this.getFieldWidthByReference("previewTitle") );
+			this.props.measureTitle( this.getFieldWidthByReference( "previewTitle" ) );
 		}
 
 		if ( this.props.description !== prevProps.description ) {
@@ -76,8 +76,8 @@ class SearchResultPreview extends React.Component {
 		}
 	}
 
-	getFieldWidthByReference(reference) {
-		return this.refs[reference].getBoundingClientRect().width || 0;
+	getFieldWidthByReference( reference ) {
+		return this.refs[ reference ].getBoundingClientRect().width || 0;
 	}
 
 	/**
@@ -89,7 +89,9 @@ class SearchResultPreview extends React.Component {
 		let translations = this.getTranslations();
 
 		return (
-			<Section level={3} headingText={translations.previewTitle} headingClassName="yoast-search-result-preview__heading yoast-icon__eye" className="yoast-search-result-preview">
+			<Section level={3} headingText={translations.previewTitle}
+					 headingClassName="yoast-search-result-preview__heading yoast-icon__eye"
+					 className="yoast-search-result-preview">
 				<p className="screen-reader-text">{translations.previewDescription}</p>
 
 				<div className="yoast-search-result-preview__field">
@@ -105,7 +107,9 @@ class SearchResultPreview extends React.Component {
 				<div className="yoast-search-result-preview__field">
 					<span className="screen-reader-text">{translations.descriptionLabel}</span>
 					{ this.renderDate() }
-					<span ref="previewDescription" className="yoast-search-result-preview__description">{translations.description.substr( 0, 156 )}</span>
+					<span ref="previewDescription" className="yoast-search-result-preview__description">
+						{translations.description.substr( 0, 156 )}
+					</span>
 				</div>
 
 				{ this.renderEditButton() }
@@ -125,6 +129,9 @@ SearchResultPreview.propTypes = {
 	title: React.PropTypes.string,
 	url: React.PropTypes.string,
 	onEditButtonClick: React.PropTypes.func,
+	measureTitle: React.PropTypes.string,
+	measureDescription: React.PropTypes.string,
+	translate: React.PropTypes.object,
 };
 
 /**

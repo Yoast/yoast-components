@@ -3,10 +3,10 @@ import Step from "./Step";
 import StepIndicator from "./StepIndicator";
 import LoadingIndicator from "./LoadingIndicator";
 import sendStep from "./helpers/ajaxHelper";
-import RaisedButton from 'material-ui/RaisedButton';
-import YoastLogo from '../basic/YoastLogo';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import muiTheme from './config/yoast-theme';
+import RaisedButton from "material-ui/RaisedButton";
+import YoastLogo from "../basic/YoastLogo";
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import muiTheme from "./config/yoast-theme";
 
 /**
  * The OnboardingWizard class.
@@ -119,7 +119,7 @@ class OnboardingWizard extends React.Component {
 	 * @returns {Object}  The first step object
 	 */
 	getFirstStep( steps ) {
-		return Object.getOwnPropertyNames( steps )[0];
+		return Object.getOwnPropertyNames( steps )[ 0 ];
 	}
 
 	/**
@@ -199,29 +199,31 @@ class OnboardingWizard extends React.Component {
 	/**
 	 * Creates a next or previous button to navigate through the steps.
 	 *
-	 * @param type A next or previous button.
-	 * @param attributes The attributes for the button component.
-	 * @param currentStep The current step object in the wizard.
+	 * @param {string} type        A next or previous button.
+	 * @param {object} attributes  The attributes for the button component.
+	 * @param {string} currentStep The current step object in the wizard.
+	 * @param {string} className   The class name to give.
 	 *
 	 * @returns {RaisedButton || ""} Returns a RaisedButton component depending on an existing previous/next step.
 	 */
-	getNavigationbutton(type, attributes, currentStep, className){
+	getNavigationbutton( type, attributes, currentStep, className ) {
 		let hideButton = false;
 
 		if ( type === "next" && ! currentStep.next ) {
 			attributes.label = "Close";
 			attributes.onClick = () => {
-				history.go(-1);
-			}
+				history.go( -1 );
+			};
 		}
 		if ( type === "previous" && ! currentStep.previous ) {
 			hideButton = true;
 		}
 
-		return ( ! hideButton )
-			? <RaisedButton className={className}
-			                {...attributes} />
-			: "";
+		if ( ! hideButton ) {
+			return <RaisedButton className={className} {...attributes} />;
+		}
+
+		return "";
 	}
 
 	/**
@@ -232,20 +234,20 @@ class OnboardingWizard extends React.Component {
 	render() {
 		let step = this.getCurrentStep();
 
-		let previousButton = this.getNavigationbutton("previous", {
+		let previousButton = this.getNavigationbutton( "previous", {
 			label: "Previous",
 			onClick: this.setPreviousStep.bind( this ),
 			disableFocusRipple: true,
 			disableTouchRipple: true,
-		}, step, "yoast-wizard--button yoast-wizard--button__previous");
+		}, step, "yoast-wizard--button yoast-wizard--button__previous" );
 
-		let nextButton = this.getNavigationbutton("next", {
+		let nextButton = this.getNavigationbutton( "next", {
 			label: "Continue",
 			primary: true,
 			onClick: this.setNextStep.bind( this ),
 			disableFocusRipple: true,
 			disableTouchRipple: true,
-		}, step, "yoast-wizard--button yoast-wizard--button__next");
+		}, step, "yoast-wizard--button yoast-wizard--button__next" );
 
 		return (
 			<MuiThemeProvider muiTheme={muiTheme}>
@@ -262,7 +264,7 @@ class OnboardingWizard extends React.Component {
 								{nextButton}
 							</div>
 						</div>
-						{(this.state.isLoading) ? <div className="yoast-wizard-overlay"><LoadingIndicator/></div> : ""}
+						{ ( this.state.isLoading ) ? <div className="yoast-wizard-overlay"><LoadingIndicator/></div> : "" }
 					</div>
 				</div>
 			</MuiThemeProvider>

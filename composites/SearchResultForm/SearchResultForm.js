@@ -1,5 +1,5 @@
 import React from "react";
-import {localize} from "i18n-calypso";
+import { localize } from "i18n-calypso";
 
 import Section from "../../forms/Section";
 import Button from "../../forms/Button";
@@ -23,18 +23,18 @@ class SearchResultForm extends React.Component {
 
 	/**
 	 * Retrieves translatable strings to be used throughout the component.
-	 * 
+	 *
 	 * @returns {{formTitle: string, formDescription: string, titleLabel: string, title: string, urlLabel: string, descriptionLabel: string, description: string}}
 	 */
 	getTranslations() {
 		return {
-			formTitle:          this.props.translate( "Search Result Form" ),
-			formDescription:    this.props.translate( "You can click on each element in the preview to jump to the Snippet Editor." ),
-			titleLabel:         this.props.translate( "SEO title preview: " ),
-			title:              this.props.title || this.props.translate( "This is an example title - edit by clicking here" ),
-			urlLabel:           this.props.translate( "Slug preview: " ),
-			descriptionLabel:   this.props.translate( "Meta description preview: " ),
-			description:        this.props.description || this.props.translate( "Please provide a meta description by editing it here." ),
+			formTitle: this.props.translate( "Search Result Form" ),
+			formDescription: this.props.translate( "You can click on each element in the preview to jump to the Snippet Editor." ),
+			titleLabel: this.props.translate( "SEO title preview: " ),
+			title: this.props.title || this.props.translate( "This is an example title - edit by clicking here" ),
+			urlLabel: this.props.translate( "Slug preview: " ),
+			descriptionLabel: this.props.translate( "Meta description preview: " ),
+			description: this.props.description || this.props.translate( "Please provide a meta description by editing it here." ),
 		};
 	}
 
@@ -46,7 +46,7 @@ class SearchResultForm extends React.Component {
 	prepareSlug() {
 		let baseUrl = "example.com/";
 
-		return this.props.slug.replace(baseUrl, "");
+		return this.props.slug.replace( baseUrl, "" );
 	}
 
 	/**
@@ -88,7 +88,8 @@ class SearchResultForm extends React.Component {
 					min={0}
 					max={600}
 					optionalAttributes={ {
-						className: "yoast-search-result-form__progress yoast-search-result-form__progress--" + this.props.titleRating
+						className: "yoast-search-result-form__progress yoast-search-result-form__progress--" +
+						this.props.titleRating,
 					} } />
 
 				<Textfield
@@ -114,7 +115,8 @@ class SearchResultForm extends React.Component {
 					min={0}
 					max={156}
 					optionalAttributes={ {
-						className: "yoast-search-result-form__progress yoast-search-result-form__progress--" + this.props.descriptionRating
+						className: "yoast-search-result-form__progress yoast-search-result-form__progress--" +
+						this.props.descriptionRating,
 					} } />
 
 				{ this.renderCloseButton() }
@@ -138,6 +140,7 @@ SearchResultForm.propTypes = {
 	onTitleChange: React.PropTypes.func,
 	onUrlChange: React.PropTypes.func,
 	onDescriptionChange: React.PropTypes.func,
+	translate: React.PropTypes.object
 };
 
 /**

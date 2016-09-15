@@ -1,7 +1,6 @@
-import React from 'react';
+import React from "react";
 
 const YoastLogo = (props) => {
-
 	return (
 		<svg version="1.1" id="YoastLogo" x="0px" y="0px" viewBox="0 0 520 240" xmlSpace="preserve"
 		     style={{ width: props.width, height: props.height }}>

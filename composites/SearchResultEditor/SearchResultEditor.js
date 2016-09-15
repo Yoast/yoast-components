@@ -1,7 +1,7 @@
 import React from "react";
 
-import SearchResultPreview from '../SearchResultPreview/SearchResultPreview';
-import SearchResultForm from '../SearchResultForm/SearchResultForm';
+import SearchResultPreview from "../SearchResultPreview/SearchResultPreview";
+import SearchResultForm from "../SearchResultForm/SearchResultForm";
 
 /**
  * Represents a SearchResultEditor, allowing for a search result (as shown by Google), to be previewed and altered, if necessary.
@@ -15,8 +15,8 @@ class SearchResultEditor extends React.Component {
 	 * @param {Object} props The properties to use within the editor.
 	 * @constructor
 	 */
-	constructor(props) {
-		super(props);
+	constructor( props ) {
+		super( props );
 
 		this.state = {
 			displayForm: true,
@@ -29,7 +29,7 @@ class SearchResultEditor extends React.Component {
 			descriptionLength: 0,
 		};
 
-		this.onEditButtonClick = this.onEditButtonClick.bind(this);
+		this.onEditButtonClick = this.onEditButtonClick.bind( this );
 	}
 
 	/**
@@ -71,7 +71,7 @@ class SearchResultEditor extends React.Component {
 	 */
 	onEditButtonClick() {
 		this.setState( {
-			displayForm: !this.state.displayForm
+			displayForm: ! this.state.displayForm,
 		} );
 	}
 
@@ -83,11 +83,11 @@ class SearchResultEditor extends React.Component {
 	 *
 	 * @returns {void}
 	 */
-	onInputChangeHandler(stateProperty, event) {
+	onInputChangeHandler( stateProperty, event ) {
 		let newValue = event.target.value;
 		let state = {};
 
-		state[stateProperty] = newValue;
+		state[ stateProperty ] = newValue;
 
 		this.setState( state );
 	}
@@ -115,9 +115,9 @@ class SearchResultEditor extends React.Component {
 			    descriptionLength={this.state.descriptionLength}
 
 				onCloseButtonClick={ this.onEditButtonClick }
-			    onTitleChange={ this.onInputChangeHandler.bind(this, 'formTitle') }
-			    onUrlChange={ this.onInputChangeHandler.bind(this, 'formSlug' ) }
-			    onDescriptionChange={ this.onInputChangeHandler.bind(this, 'formDescription' ) }
+			    onTitleChange={ this.onInputChangeHandler.bind( this, "formTitle" ) }
+			    onUrlChange={ this.onInputChangeHandler.bind( this, "formSlug" ) }
+			    onDescriptionChange={ this.onInputChangeHandler.bind( this, "formDescription" ) }
 			/>
 		);
 	}
@@ -136,6 +136,8 @@ class SearchResultEditor extends React.Component {
 	 * Rates the title length based on its length in pixels on screen.
 	 *
 	 * @param {number} length The width of the title, in pixels.
+	 *
+	 * @returns {void}
 	 */
 	rateTitleLength( length ) {
 		let rating = "bad";
@@ -148,13 +150,15 @@ class SearchResultEditor extends React.Component {
 			rating = "good";
 		}
 
-		this.setState( { titleLengthRating: rating, titleLengthInPixels: length } )
+		this.setState( { titleLengthRating: rating, titleLengthInPixels: length } );
 	}
 
 	/**
 	 * Rates the description length based the amount of characters.
 	 *
 	 * @param {number} length The length of the description, in characters.
+	 *
+	 * @returns {void}
 	 */
 	rateDescriptionLength( length ) {
 		let rating = "bad";
@@ -167,7 +171,7 @@ class SearchResultEditor extends React.Component {
 			rating = "good";
 		}
 
-		this.setState( { descriptionLengthRating: rating, descriptionLength: length } )
+		this.setState( { descriptionLengthRating: rating, descriptionLength: length } );
 	}
 
 	/**
@@ -183,8 +187,8 @@ class SearchResultEditor extends React.Component {
 				    url={this.formatSlug()}
 				    description={ this.stripHTML( this.state.formDescription ) }
 
-					measureTitle={this.rateTitleLength.bind(this)}
-					measureDescription={this.rateDescriptionLength.bind(this)}
+					measureTitle={this.rateTitleLength.bind( this )}
+					measureDescription={this.rateDescriptionLength.bind( this )}
 					onEditButtonClick={this.onEditButtonClick}
 				/>
 
@@ -210,7 +214,7 @@ SearchResultEditor.propTypes = {
  * @type {{baseUrl: string}}
  */
 SearchResultEditor.defaultProps = {
-	baseUrl: "example.com/"
+	baseUrl: "example.com/",
 };
 
 export default SearchResultEditor;

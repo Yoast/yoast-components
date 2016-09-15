@@ -1,6 +1,6 @@
 import React from "react";
 import CustomStepButton from "./StepButton";
-import {Stepper, Step, StepButton} from 'material-ui/Stepper';
+import { Stepper, Step, StepButton } from "material-ui/Stepper";
 
 /**
  * The step indicator displays a horizontal progress indicator.
@@ -24,6 +24,8 @@ class StepIndicator extends React.Component {
 	 * Updates the state and re-renders the indicator when new properties are set.
 	 *
 	 * @param {object} props The properties for the StepIndicator.
+	 *
+	 * @returns {void}
 	 */
 	componentWillReceiveProps( props ) {
 		this.setState( props );
@@ -47,9 +49,9 @@ class StepIndicator extends React.Component {
 					key: "step-indicator-" + key,
 					className: "yoast-wizard--step yoast-wizard--step__active",
 				}, currentField.title );
-			}
+
 			// Return a custom step button, without a label for non-active steps.
-			else {
+			} else {
 				let className = this.getStepButtonClass( key, amountOfSteps );
 
 				button = new CustomStepButton( {
@@ -57,7 +59,7 @@ class StepIndicator extends React.Component {
 					tooltip: currentField.title,
 					className,
 					onClick: () => {
-						this.props.onClick( name )
+						this.props.onClick( name );
 					},
 				} );
 			}
@@ -102,6 +104,7 @@ class StepIndicator extends React.Component {
 StepIndicator.propTypes = {
 	steps: React.PropTypes.object.isRequired,
 	stepIndex: React.PropTypes.number.isRequired,
+	onClick: React.PropTypes.func,
 };
 
 StepIndicator.defaultProps = {
