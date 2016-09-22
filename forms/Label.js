@@ -9,24 +9,22 @@ import htmlDecoder from "../composites/OnboardingWizard/helpers/htmlDecoder";
  * @constructor
  */
 const Label = ( props ) => {
-
 	/**
 	 * Check if the label should contain a string or JSX.Elements
 	 * and converts the HTML entities if it is a string.
 	 *
-	 * @param children The children(inner elements) for the label.
+	 * @param {string|JSX.Element} children The children(inner elements) for the label.
 	 *
-	 * @returns {string|JSX.Elements} String with converted HTML entities
+	 * @returns {string|JSX.Element} String with converted HTML entities
 	 *                                or the unconverted JSX.Element(s).
 	 */
-	let decodeText = function ( children ) {
+	let decodeText = function( children ) {
 		if ( typeof children === "string" ) {
 			return htmlDecoder( children );
 		}
 		return children;
 	};
-
-	let innerElements = decodeText(props.children);
+	let innerElements = decodeText( props.children );
 
 	return (
 		<label htmlFor={props.for} {...props.optionalAttributes}>{innerElements}</label>
