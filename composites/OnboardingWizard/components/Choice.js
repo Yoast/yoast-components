@@ -39,7 +39,7 @@ const Choice = ( props ) => {
 
 	return (
 		<div className={props.className}>
-			<p className="yoast-wizard-field-description">{props.properties.label}</p>
+			<p className="yoast-wizard-field-description">{htmlDecoder(props.properties.label)}</p>
 			{fieldSet()}
 			<Explanation text={props.properties.explanation}/>
 		</div>
