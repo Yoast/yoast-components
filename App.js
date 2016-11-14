@@ -6,6 +6,8 @@ import Config from "./composites/OnboardingWizard/config/production-config";
 import SearchResultsEditor from "./composites/SearchResultEditor/SearchResultEditor";
 import apiConfig from "./composites/OnboardingWizard/config/api-config";
 
+import Suggestions from "./composites/Suggestions/Suggestions";
+
 // Required to make Material UI work with touch screens.
 import injectTapEventPlugin from "react-tap-event-plugin";
 
@@ -21,7 +23,7 @@ class App extends React.Component {
 		injectTapEventPlugin();
 
 		this.state = {
-			activeComponent: "wizard"
+			activeComponent: "suggestions"
 		};
 	}
 
@@ -31,6 +33,16 @@ class App extends React.Component {
 		switch ( this.state.activeComponent ) {
 			case "search-results-editor":
 				content = <SearchResultsEditor />;
+				break;
+
+			case "suggestions":
+				let suggestions = [
+					{
+						value: 'This is a suggestion',
+						url: 'https://yoast.com'
+					}
+				];
+				content = <Suggestions suggestions={suggestions} />;
 				break;
 
 			case "wizard":

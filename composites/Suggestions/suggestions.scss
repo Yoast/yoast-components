@@ -1,0 +1,38 @@
+@import "../../css/colors";
+@import "../../css/icons";
+
+.suggestion {
+
+	&__copy {
+
+		height: 30px;
+		width: 30px;
+		background-color: transparent;
+		background-image: url( svg-icon-clipboard( $color_caret ) );
+		background-repeat: no-repeat;
+		background-position: left 0.6em top 0.6em;
+		background-size: 16px;
+		border: none;
+		border-radius: 15px;
+		cursor: pointer;
+		outline:none;
+		float: left;
+		margin-right: 5px;
+
+		&:focus {
+			border-radius: 100%;
+			box-shadow: 0 0 0 1px #5b9dd9, 0 0 2px 1px rgba(30, 140, 190, 0.8);
+		}
+
+		&:hover, &:focus, &:active {
+			background-image: url( svg-icon-clipboard( $color_caret_focus ) );
+		}
+
+	}
+
+	&__value {
+		padding: 2px 0;
+		float: left;
+	}
+
+}
