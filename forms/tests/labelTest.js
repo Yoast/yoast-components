@@ -1,4 +1,5 @@
 jest.unmock("../Label");
+jest.unmock("../../composites/OnboardingWizard/helpers/htmlDecoder");
 
 import React from "react";
 import TestUtils from "react-addons-test-utils";
