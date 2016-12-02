@@ -35,9 +35,6 @@ describe( "ScreenReaderShortcut", () => {
 		renderer.render( <ScreenReaderShortcut anchor="example"><div></div></ScreenReaderShortcut> );
 
 		expect( console.error ).toBeCalled();
-		expect( console.error.mock.calls[ 0 ][ 0 ] )
-			.toContain( "Warning: Failed prop type: Invalid prop `children` of type `object` supplied to " +
-			            "`ScreenReaderShortcut`, expected `string`." );
 	} );
 
 	it( "generates a warning when props.anchor is not a string.", () => {
@@ -45,8 +42,6 @@ describe( "ScreenReaderShortcut", () => {
 		renderer.render( <ScreenReaderShortcut anchor={1}>example text</ScreenReaderShortcut> );
 
 		expect( console.error ).toBeCalled();
-		expect( console.error.mock.calls[ 0 ][ 0 ] )
-			.toContain( "Warning: Failed prop type: Invalid prop `anchor` of type `number` supplied to `ScreenReaderShortcut`, expected `string`." );
 	} );
 
 	it( "generates a warning when no children are passed in.", () => {
@@ -54,8 +49,6 @@ describe( "ScreenReaderShortcut", () => {
 		renderer.render( <ScreenReaderShortcut anchor="example" /> );
 
 		expect( console.error ).toBeCalled();
-		expect( console.error.mock.calls[ 0 ][ 0 ] )
-			.toContain( "Warning: Failed prop type: Required prop `children` was not specified in `ScreenReaderShortcut`." );
 	} );
 
 	it( "generates a warning when no anchor prop is passed in.", () => {
@@ -63,7 +56,5 @@ describe( "ScreenReaderShortcut", () => {
 		renderer.render( <ScreenReaderShortcut>example text</ScreenReaderShortcut> );
 
 		expect( console.error ).toBeCalled();
-		expect( console.error.mock.calls[ 0 ][ 0 ] )
-			.toContain( "Warning: Failed prop type: Required prop `anchor` was not specified in `ScreenReaderShortcut`." );
 	} );
 } );

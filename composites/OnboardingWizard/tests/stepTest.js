@@ -37,8 +37,6 @@ describe( "a step component", () => {
 		renderer.getRenderOutput();
 
 		expect( console.error ).toBeCalled();
-		expect( console.error.mock.calls[ 0 ][ 0 ] )
-			.toContain( "Warning: Failed prop type: Required prop `title` was not specified in `Step`" );
 	} );
 
 	it( "throws an error when property fields is not an object ", () => {
@@ -53,9 +51,6 @@ describe( "a step component", () => {
 		renderer.getRenderOutput();
 
 		expect( console.error ).toBeCalled();
-		expect( console.error.mock.calls[ 0 ][ 0 ] )
-			.toContain( "Warning: Failed prop type: Invalid prop `fields` of type `string` supplied to `Step`," +
-			            " expected `object`." );
 	} );
 
 	it( "throws an error when property title is not a string", () => {
@@ -69,8 +64,6 @@ describe( "a step component", () => {
 		renderer.getRenderOutput();
 
 		expect( console.error ).toBeCalled();
-		expect( console.error.mock.calls[ 0 ][ 0 ] )
-			.toContain( "Warning: Failed prop type: Invalid prop `title` of type `number` supplied to `Step`, expected `string`." );
 	} );
 
 	it( "throws an error when property currentStep is not a string", () => {
@@ -85,7 +78,5 @@ describe( "a step component", () => {
 		renderer.getRenderOutput();
 
 		expect( console.error ).toBeCalled();
-		expect( console.error.mock.calls[ 0 ][ 0 ] )
-			.toContain( "Warning: Failed prop type: Invalid prop `currentStep` of type `boolean` supplied to `Step`, expected `string`." );
 	} );
 } );

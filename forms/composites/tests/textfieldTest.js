@@ -26,8 +26,6 @@ describe( "A Textfield component", () => {
 		renderer.render( <Textfield /> );
 
 		expect( console.error ).toBeCalled();
-		expect( console.error.mock.calls[ 0 ][ 0 ] )
-			.toContain( "Warning: Failed prop type: Required prop `label` was not specified in `Textfield`." );
 	} );
 
 	it( "generates a warning when a faulty value is passed", () => {
@@ -36,8 +34,6 @@ describe( "A Textfield component", () => {
 		renderer.render( <Textfield label="customLabel" value={0} /> );
 
 		expect( console.error ).toBeCalled();
-		expect( console.error.mock.calls[ 0 ][ 0 ] )
-			.toContain( "Warning: Failed prop type: Invalid prop `value` of type `number` supplied to `Textfield`, expected `string`." );
 	} );
 
 	it( "generates a multiline textarea based on the props", () => {

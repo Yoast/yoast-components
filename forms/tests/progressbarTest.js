@@ -22,8 +22,6 @@ describe( "A Progressbar component", () => {
 		renderer.render( <Progressbar /> );
 
 		expect( console.error ).toBeCalled();
-		expect( console.error.mock.calls[ 0 ][ 0 ] )
-			.toContain( "Warning: Failed prop type: Required prop `value` was not specified" );
 	} );
 
 	it( "generates a warning when a faulty value is passed", () => {
@@ -32,8 +30,6 @@ describe( "A Progressbar component", () => {
 		renderer.render( <Progressbar value="0" /> );
 
 		expect( console.error ).toBeCalled();
-		expect( console.error.mock.calls[ 0 ][ 0 ] )
-			.toContain( "Warning: Failed prop type: Invalid prop `value` of type `string` supplied to `Progressbar`, expected `number`." );
 	} );
 
 	it( "generates a warning when a faulty onChange callback is passed", () => {
@@ -42,8 +38,6 @@ describe( "A Progressbar component", () => {
 		renderer.render( <Progressbar name="customProgressbar" onChange={0} /> );
 
 		expect( console.error ).toBeCalled();
-		expect( console.error.mock.calls[ 0 ][ 0 ] )
-			.toContain( "Warning: Failed prop type: Invalid prop `onChange` of type `number` supplied to `Progressbar`, expected `function`." );
 	} );
 
 	it( "generates a progressbar based on the defaults and additional, optional attributes", () => {
