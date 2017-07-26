@@ -8,11 +8,11 @@ import React from "react";
  * @constructor
  */
 const Loading = ( props ) => {
-	return ( <div className="wpseo-kb-loader">{ props.loadingPlaceholder }</div> );
+	return ( <div className="wpseo-kb-loader">{ props.placeholder }</div> );
 };
 
 Loading.propTypes = {
-	loadingPlaceholder: React.PropTypes.string.isRequired,
+	placeholder: React.PropTypes.string.isRequired,
 };
 
 export default Loading;

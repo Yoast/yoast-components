@@ -1,7 +1,7 @@
 module.exports = {
 	entry: './main.js',
 	output: {
-		path: './',
+		path: __dirname,
 		filename: 'index.js'
 	},
 	devServer: {
@@ -13,18 +13,17 @@ module.exports = {
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				loader: 'babel',
+				loader: 'babel-loader',
 				query: {
 					presets: [ 'es2015', 'react' ]
 				}
 			},
 			{
-				test: /\.json$/,
-				loader: 'json-loader'
+				test: /\.json$/
 			}
 		]
 	},
 	resolve: {
-		extensions: ['', '.json', '.jsx', '.js']
+		extensions: ['.json', '.jsx', '.js']
 	}
 };

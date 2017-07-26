@@ -8,6 +8,7 @@ import Textarea from "./forms/Textarea";
 import OnboardingWizard from "./composites/OnboardingWizard/OnboardingWizard";
 import AlgoliaSearcher from "./composites/AlgoliaSearch/AlgoliaSearcher";
 import MessageBox from "./composites/OnboardingWizard/MessageBox";
+import HelpCenter from "./composites/HelpCenter/HelpCenter";
 
 export {
 	Textfield,
@@ -19,5 +20,6 @@ export {
 	Textarea,
 	OnboardingWizard,
 	AlgoliaSearcher,
-	MessageBox
+	MessageBox,
+	HelpCenter,
 };

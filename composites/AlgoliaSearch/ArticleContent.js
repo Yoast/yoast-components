@@ -1,4 +1,6 @@
 import React from "react";
+import IFrame from "../../basic/IFrame";
+import PropTypes from "prop-types";
 
 /**
  * Creates the JSX to render the content of the selected article.
@@ -7,19 +9,28 @@ import React from "react";
  * @returns {ReactElement} An iframe with the content of the selected article.
  * @constructor
  */
-const ArticleContent = ( props ) => {
-	let url = props.post.permalink + "amp?source=wpseo-kb-search";
 
-	return ( <iframe src={ url } className="kb-search-content-frame" title={ props.iframeTitle } /> );
-};
+class ArticleContent extends React.Component {
+	constructor( props ) {
+		super( props );
+	}
+
+	toAmp( originalUrl ) {
+		return `${ originalUrl }amp?source=wpseo-kb-search`;
+	}
+
+	render() {
+		return ( <IFrame src={ this.toAmp( this.props.permalink ) } className="kb-search-content-frame" title={ this.props.title } /> );
+	}
+}
 
 ArticleContent.propTypes = {
-	post: React.PropTypes.object,
-	iframeTitle: React.PropTypes.string,
+	permalink: PropTypes.string.isRequired,
+	title: PropTypes.string,
 };
 
 ArticleContent.defaultProps = {
-	iframeTitle: "Knowledge base article",
+	title: "Knowledge base article",
 };
 
 export default ArticleContent;

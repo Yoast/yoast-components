@@ -1,16 +1,25 @@
 import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
-/**
- * Overrides the default submit action with a custom one.
- *
- * @param {Event} submitEvent The submit event.
- * @param {object} props The React props.
- * @returns {void}
- */
-const onSubmit = ( submitEvent, props ) => {
-	submitEvent.preventDefault();
-	props.submitAction( submitEvent );
-};
+const SearchBarWrapper = styled.div`
+	width: 100%;
+`;
+
+const SearchBarInput = styled.input`
+	box-sizing: border-box;
+	height: 1em;
+	width: 100%;
+	box-shadow: inset 0 2px 8px 0px rgba(0,0,0,0.3);
+	background: #ddd;
+	padding: 20px;
+	border: 0;
+	font-size: 1em;
+`;
+
+const SearchHeading = styled.h2`
+	font-size: 1em;
+`;
 
 /**
  * Create the JSX to render the search bar.
@@ -19,23 +28,32 @@ const onSubmit = ( submitEvent, props ) => {
  * @returns {ReactElement} A div with the searchbar.
  * @constructor
  */
-const SearchBar = ( props ) => {
-	return (
-		<div className="wpseo-kb-search-search-bar">
-			<h2 id="wpseo-kb-search-heading">{ props.headingText }</h2>
-			<form onSubmit={ ( submitEvent ) => onSubmit( submitEvent, props ) }>
-				<input type="text" aria-labelledby="wpseo-kb-search-heading" defaultValue={ props.searchString }/>
-				<button type="submit" className="button wpseo-kb-search-search-button">{ props.searchButtonText }</button>
-			</form>
-		</div>
-	);
-};
+class SearchBar extends React.Component {
+	handleSubmission( submitEvent ) {
+		submitEvent.preventDefault();
+
+		this.props.submitAction( submitEvent );
+	}
+
+	render() {
+		return (
+			<SearchBarWrapper role="search">
+				<SearchHeading>{ this.props.headingText }</SearchHeading>
+				<form onSubmit={ ( submitEvent ) => this.handleSubmission( submitEvent ) }>
+					<label htmlFor="search-input" className="screen-reader-text">{ this.props.headingText }</label>
+					<SearchBarInput type="text" name="search-input" id="search-input" defaultValue={ this.props.searchString }/>
+					{/*<button type="submit">{ this.props.searchButtonText }</button>*/}
+				</form>
+			</SearchBarWrapper>
+		);
+	}
+}
 
 SearchBar.propTypes = {
-	headingText: React.PropTypes.string,
-	searchButtonText: React.PropTypes.string,
-	searchString: React.PropTypes.string,
-	submitAction: React.PropTypes.func,
+	headingText: PropTypes.string,
+	searchButtonText: PropTypes.string,
+	searchString: PropTypes.string,
+	submitAction: PropTypes.func,
 };
 
 SearchBar.defaultProps = {

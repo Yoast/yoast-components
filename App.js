@@ -9,6 +9,7 @@ import Loader from "./composites/basic/Loader";
 
 // Required to make Material UI work with touch screens.
 import injectTapEventPlugin from "react-tap-event-plugin";
+import HelpCenter from "./composites/HelpCenter/HelpCenter";
 
 function cloneDeep( object ) {
 	return JSON.parse( JSON.stringify( object ) );
@@ -22,7 +23,7 @@ class App extends React.Component {
 		injectTapEventPlugin();
 
 		this.state = {
-			activeComponent: "wizard",
+			activeComponent: "helpcenter",
 		};
 	}
 
@@ -36,6 +37,10 @@ class App extends React.Component {
 
 			case "loader":
 				content = <Loader />;
+				break;
+
+			case "helpcenter":
+				content = <HelpCenter/>;
 				break;
 
 			case "wizard":
@@ -65,6 +70,7 @@ class App extends React.Component {
 				<button type="button" onClick={this.navigate.bind( this, "wizard" )}>Wizard</button>
 				<button type="button" onClick={this.navigate.bind( this, "search-results-editor" )}>Search results editor</button>
 				<button type="button" onClick={this.navigate.bind( this, "loader" )}>Loader</button>
+				<button type="button" onClick={this.navigate.bind( this, "helpcenter" )}>Help Center</button>
 			</nav>
 		);
 	}
