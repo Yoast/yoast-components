@@ -10,12 +10,9 @@ cache:
     - node_modules
 
 install:
+- yarn global upgrade jest-cli
 - yarn global add grunt-cli
 - yarn --ignore-optional
-- echo "Jest cli version:"
-- jest --version
-- echo "Local jest version:"
-- cat package.json | grep "jest"
 
 script:
 - grunt check
