@@ -10,6 +10,7 @@ cache:
     - node_modules
 
 install:
+- yarn global upgrade jest-cli
 - yarn global add grunt-cli
 - yarn --ignore-optional
 
