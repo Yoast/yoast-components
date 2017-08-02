@@ -1,6 +1,12 @@
 import React from "react";
 import IFrame from "../../basic/IFrame";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+
+const ArticleContentFullWidth = styled(IFrame)`
+	width: 100%;
+	height: 600px;
+`;
 
 /**
  * Creates the JSX to render the content of the selected article.
@@ -20,7 +26,7 @@ class ArticleContent extends React.Component {
 	}
 
 	render() {
-		return ( <IFrame src={ this.toAmp( this.props.permalink ) } className="kb-search-content-frame" title={ this.props.title } /> );
+		return ( <ArticleContentFullWidth src={ this.toAmp( this.props.permalink ) } className="kb-search-content-frame" title={ this.props.title } /> );
 	}
 }
 

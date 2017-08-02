@@ -66,7 +66,7 @@ class App extends React.Component {
 
 	getMenu() {
 		return (
-			<nav style={ {margin: "0 0 2rem 0", textAlign: "center" } }>
+			<nav style={ {padding: "0 0 1rem 0", textAlign: "center", borderBottom: "1px solid #ddd" } }>
 				<button type="button" onClick={this.navigate.bind( this, "wizard" )}>Wizard</button>
 				<button type="button" onClick={this.navigate.bind( this, "search-results-editor" )}>Search results editor</button>
 				<button type="button" onClick={this.navigate.bind( this, "loader" )}>Loader</button>
@@ -77,7 +77,7 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div style={ { boxSizing: "border-box" } }>
 				{this.getMenu()}
 				{this.getContent()}
 			</div>

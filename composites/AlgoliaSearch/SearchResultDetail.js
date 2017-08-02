@@ -15,8 +15,8 @@ const BackButton = styled.button`
 	display: inline-block;
     text-decoration: none;
     font-size: 13px;
-    line-height: 26px;
-    height: 28px;
+    line-height: 24px;
+    height: 24px;
     margin: 0;
     padding: 0 10px 1px;
     cursor: pointer;

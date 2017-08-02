@@ -59,7 +59,7 @@ class AlgoliaSearcher extends React.Component {
 	 * @returns {void}
 	 */
 	searchButtonClicked( clickEvent ) {
-		let searchString = clickEvent.target.getElementsByTagName( "input" )[ 0 ].value;
+		let searchString = clickEvent.target.value;
 
 		if ( searchString === "" ) {
 			return;

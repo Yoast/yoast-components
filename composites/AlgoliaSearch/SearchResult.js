@@ -1,16 +1,22 @@
 import React from "react";
+import { Row } from "../../basic/Table/Row";
+import styled from "styled-components";
+import colors from "../../style-guide/colors.json";
 
-/**
- * Overrides the default onClick behavior with a custom one.
- *
- * @param {Event} clickEvent The click event.
- * @param {object} props The React props.
- * @returns {void}
- */
-const onClick = ( clickEvent, props ) => {
-	clickEvent.preventDefault();
-	props.showDetail();
-};
+const SearchResultTitle = styled.h3`
+	padding: 10px;
+	margin: 0;
+	font-size: 1em;
+	font-weight: normal;
+`;
+
+const SearchResultLink = styled.a`
+	color: ${ colors.$color_black };
+	
+	&:hover, &:focus {
+		color: ${ colors.$color_purple };
+	}
+`;
 
 /**
  * Create the JSX to render a single searchresult.
@@ -19,21 +25,29 @@ const onClick = ( clickEvent, props ) => {
  * @returns {ReactElement} A list item with a single search result.
  * @constructor
  */
-const SearchResult = ( props ) => {
-	let post = props.post;
-	let description = post.excerpt || post.metadesc;
-	return (
-		<li>
-			<a href={ post.permalink }
-			   onClick={ ( clickEvent ) => onClick( clickEvent, props ) }
-			   className="wpseo-kb-search-result-link">
-				<div className="wpseo-kb-search-result">
-					<h3 className="wpseo-kb-search-result-title">{ post.post_title }</h3>
-					{ description && <p>{ description }</p> }
-				</div>
-			</a>
-		</li>
-	);
+class SearchResult extends React.Component {
+
+	/**
+	 * Renders a single list item.
+	 *
+	 * @returns {ReactElement} The list item component.
+	 */
+	render() {
+		let post = this.props.post;
+		let description = post.excerpt || post.metadesc;
+
+		return (
+			<Row {...this.props}>
+				<SearchResultLink href={ post.permalink } onClick={ this.props.handler }>
+					<div>
+						<SearchResultTitle>{ post.post_title }</SearchResultTitle>
+						{ description && <p>{ description }</p> }
+					</div>
+				</SearchResultLink>
+			</Row>
+		);
+	}
+
 };
 
 SearchResult.propTypes = {

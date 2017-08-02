@@ -23,7 +23,7 @@ const SearchResultLink = styled.a`
 	color: ${ colors.$color_black };
 	
 	&:hover, &:focus {
-		color: ${ colors.$color_purple };
+		color: ${ colors.$color_pink_dark };
 	}
 `;
 
@@ -55,6 +55,7 @@ const SearchResultsWrapper = styled.div`
 	margin-top: 20px;
 	width: 100%;
 	display: block;
+	clear: both;
 `;
 
 /**
@@ -100,7 +101,7 @@ class SearchResults extends React.Component {
 	/**
 	 * Maps the results to SearchResult components.
 	 *
-	 * @param {object} results The results returned by Algolia.
+	 * @param {Object} results The results returned by Algolia.
 	 *
 	 * @returns {Array} Array containing the mapped search results.
 	 */
@@ -124,6 +125,8 @@ class SearchResults extends React.Component {
 	 */
 	render() {
 		let resultsCount = this.props.results.length;
+
+		console.log( this.props.results.length );
 
 		// We'll check to see whether no results are returned.
 		if ( resultsCount <= 0 ) {

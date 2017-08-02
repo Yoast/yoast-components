@@ -20,6 +20,10 @@ module.exports = {
 			},
 			{
 				test: /\.json$/
+			},
+			{
+				test: /\.svg$/,
+				loader: 'svg-url-loader'
 			}
 		]
 	},
