@@ -59,11 +59,12 @@ const SearchResultsWrapper = styled.div`
 `;
 
 /**
- * Create the JSX to render a list of search results.
+ * Create the ReactElement to render a list of search results.
  *
  * @param {object} props The React props.
  *
  * @returns {ReactElement} A list of search results.
+ *
  * @constructor
  */
 class SearchResults extends React.Component {
@@ -125,8 +126,6 @@ class SearchResults extends React.Component {
 	 */
 	render() {
 		let resultsCount = this.props.results.length;
-
-		console.log( this.props.results.length );
 
 		// We'll check to see whether no results are returned.
 		if ( resultsCount <= 0 ) {

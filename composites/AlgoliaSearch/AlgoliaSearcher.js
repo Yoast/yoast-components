@@ -125,8 +125,6 @@ class AlgoliaSearcher extends React.Component {
 	 * @returns {void}
 	 */
 	updateSearchResults() {
-		this.setState( { searching: true } );
-
 		this.performSearch( this.state.searchString )
 		    .then( this.processResults.bind( this ) )
 		    .catch( this.processSearchError.bind( this ) );
@@ -257,11 +255,15 @@ class AlgoliaSearcher extends React.Component {
 	 * @returns {ReactElement|string} Returns a specific search result object based on state. Defaults to empty string.
 	 */
 	determineSearchResultsView() {
+		if ( this.state.searchString === "" && this.state.currentDetailViewIndex === -1 ) {
+			return "";
+		}
+
 		// Show the list of search results if the postId for the detail view isn't set.
 		if ( this.state.currentDetailViewIndex === -1 ) {
 			return <SearchResults
 				{ ...this.props }
-				searchString={this.state.searchString}
+				searchString={ this.state.searchString }
 				results={ this.state.results }
 				handler={ this.setCurrentDetailedViewIndex.bind( this ) }
 			/>

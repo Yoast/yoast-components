@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import colors from "../../style-guide/colors.json";
 import searchIcon from "../../icons/search.svg";
-import { defineMessages, injectIntl, intlShape } from "react-intl";
+import { defineMessages } from "react-intl";
 import _debounce from "lodash/debounce";
 
 const messages = defineMessages( {
@@ -43,6 +43,7 @@ SearchLabel.defaultProps = {
 
 
 const SearchBarWrapper = styled.div`
+	overflow: hidden;
 	width: 100%;
 `;
 
@@ -72,59 +73,54 @@ const SearchHeading = styled.h2`
  */
 class SearchBar extends React.Component {
 
+	/**
+	 * Constructs the component and sets its initial state.
+	 *
+	 * @param {Object} props The props to use for this component.
+	 *
+	 * @constructor
+	 */
 	constructor( props ) {
 		super( props );
 
 		this.state = {
 			doRequest: false,
 		};
-
-		this.doSubmit = _debounce( () => {
-			this.setState( { doRequest: true } );
-		}, 1000 );
 	}
 
+	/**
+	 * Defines the debounced doFormSubmission function to be triggered after the user quits typing for 1 second.
+	 *
+	 * @returns {void}
+	 */
 	componentWillMount() {
 		this.doFormSubmission = _debounce( ( event ) => {
 			this.props.submitAction( event );
 		}, 1000 );
 	}
 
-	componentWillUnmount() {
-		this.doSubmit.cancel();
-	}
-
-
-
+	/**
+	 * Handles the change even on the SearchBar.
+	 *
+	 * @param {DOMEvent} event The event being triggered on the SearchBar.
+	 *
+	 * @returns {void}
+	 */
 	onSearchChange( event ) {
 		event.persist();
 		this.doFormSubmission( event );
-
-
-//		const value = event.target.value;
-//
-//		if ( value !== "" ) {
-//			this.setState( { doRequest: true } )
-//		}
-//
-//		if ( this.state.doRequest ) {
-//			this.props.submitAction( event );
-//		}
-//
-//		this.cancelRequest();
 	}
 
-	cancelRequest() {
-		this.setState( { doRequest: false }, () => {
-			this.doSubmit.cancel();
-		} );
-	}
-
+	/**
+	 * Renders the SearchBar component.
+	 *
+	 * @returns {ReactElement} The SearchBar component.
+	 */
 	render() {
 		return (
 			<SearchBarWrapper role="search">
 				<SearchHeading>{ this.props.headingText }</SearchHeading>
-				<form style={{display: "block"}}>
+				<form>
 					<SearchLabel htmlFor="search-input">
 						<SearchLabelText className="screen-reader-text">
 							{ this.props.headingText ? this.props.headingText : props.intl.formatMessage( messages.searchLabel ) }
@@ -133,6 +129,7 @@ class SearchBar extends React.Component {
 
 					<SearchBarInput
 						onChange={ this.onSearchChange.bind( this ) }
+						onSubmit={ ( event ) => { event.preventDefault(); } }
 						type="text"
 						name="search-input"
 						id="search-input"
@@ -142,7 +139,6 @@ class SearchBar extends React.Component {
 						autoCapitalize="off"
 						spellCheck="false"
 					/>
-					{/*<button type="submit">{ this.props.searchButtonText }</button>*/}
 				</form>
 			</SearchBarWrapper>
 		);

@@ -3,26 +3,28 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import IFrame from "../../basic/IFrame";
 
-const StyledIFrame = styled(IFrame)`
-`;
+const StyledIFrame = styled( IFrame )``;
 
-class YouTubeVideo extends React.Component {
-	constructor( props ) {
-		super( props );
-	}
-
-	render() {
-		return (
-			<StyledIFrame
-				width={ this.props.width }
-				height={ this.props.height }
-				src={ this.props.src }
-				title={ this.props.title }
-			    frameBorder={ this.props.frameBorder }
-			    allowFullScreen={ this.props.allowFullScreen }
-			/>
-		);
-	}
+/**
+ * Creates a YouTubeVideo component.
+ *
+ * @param {Object} props The props to use for the component.
+ *
+ * @returns {ReactElement} The YouTubeVideo component.
+ *
+ * @constructor
+ */
+export default function YouTubeVideo( props ) {
+	return (
+		<StyledIFrame
+			width={ props.width }
+			height={ props.height }
+			src={ props.src }
+			title={ props.title }
+		    frameBorder={ props.frameBorder }
+		    allowFullScreen={ props.allowFullScreen }
+		/>
+	);
 }
 
 YouTubeVideo.propTypes = {
@@ -40,5 +42,3 @@ YouTubeVideo.defaultProps = {
 	frameBorder: 0,
 	allowFullScreen: true,
 };
-
-export default YouTubeVideo;

@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import colors from "../../style-guide/colors.json";
 
+/**
+ * Defines the styling of the SubNavigationElement.
+ */
 const SubNavigationElement = styled.nav`
 	border-bottom: 1px solid ${ colors.$color_grey_light };
 	font-size: 1em;
@@ -35,6 +38,9 @@ const SubNavigationElement = styled.nav`
 	}
 `;
 
+/**
+ * Defines the style of the Link component.
+ */
 const Link = styled.a`
 	color: ${colors.$color_pink_dark};
 	text-decoration: none;
@@ -42,17 +48,29 @@ const Link = styled.a`
 	padding: 18px 0;
 `;
 
+/**
+ * Creates a SubNavigation component to be used for the navigation between tabs.
+ */
 export default class SubNavigation extends React.Component {
+
+	/**
+	 * Construct the component.
+	 *
+	 * @param {Object} props The props to use within this component.
+	 *
+	 * @constructor
+	 */
 	constructor( props ) {
 		super( props );
 
 		this.items = props.items;
 	}
 
-	renderNavigation() {
-		return( <ul>{ this.renderNavigationItems() }</ul> )
-	}
-
+	/**
+	 * Creates an LI element for every menu item passed to the component.
+	 *
+	 * @returns {Array} Array containing the rendered LI's.
+	 */
 	renderNavigationItems() {
 		return this.items.map( ( item ) => {
 			return (
@@ -63,7 +81,16 @@ export default class SubNavigation extends React.Component {
 		} );
 	}
 
+	/**
+	 * Renders the SubNavigation component.
+	 *
+	 * @returns {ReactElement} The rendered component.
+	 */
 	render() {
-		return ( <SubNavigationElement>{ this.renderNavigation() }</SubNavigationElement> )
+		return ( <SubNavigationElement>
+			<ul>
+				{ this.renderNavigationItems() }
+			</ul>
+		</SubNavigationElement> );
 	}
 }

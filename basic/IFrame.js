@@ -1,13 +1,14 @@
 import * as React from "react";
 
-class IFrame extends React.Component {
-	constructor( props ) {
-		super( props );
-	}
-
-	render() {
-		return ( <iframe {...this.props} />	);
-	}
+/**
+ * Creates an IFrame component.
+ *
+ * @param {Object} props The props to use with the component.
+ *
+ * @returns {ReactElement} The rendered IFrame component.
+ *
+ * @constructor
+ */
+export default function IFrame( props ) {
+	return ( <iframe {...props} />	);
 }
-
-export default IFrame;

@@ -9,41 +9,44 @@ import VideoTutorial from "./views/VideoTutorial";
 import AlgoliaSearcher from "./../AlgoliaSearch/AlgoliaSearcher";
 import Button from "../../forms/Button";
 
+/**
+ * The parent component that wraps everything HelpCenter-related.
+ */
 const HelpCenterContainer = styled.div`
 	width: 100%;
-	max-width: 1280px;
-	margin: 0 auto;
 	
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-state;
-	
-    min-height: ${props => props.isOpen ? "30em" : 0};
 `;
 
+/**
+ * A collapsable container to be used to show/hide the HelpCenter.
+ */
 const CollapsableContainer = styled.div`
+	width: 100%;
+	max-width: 1280px;
     overflow: hidden;
     
-    height: auto;
-    
-//    min-height: ${props => props.isOpen ? "30em" : 0};
-	transition: flex 0.5s ease-in-out;
-	flex: ${props => props.isOpen ? 1 : 0};
+    max-height: ${props => props.isOpen ? "100em" : 0};
+	transition: max-height 0.5s ease-in-out;
 	
 	background: ${ colors.$color_white };
-	border: 1px solid $\{ colors.$color_grey_light };
+	border: 1px solid ${ colors.$color_grey_light };
 	position: relative;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
 	box-sizing: border-box;
 	
-	margin: 0 1em 1em 1em;
+	margin: 0 auto;
 	
     font-family: "Open Sans", sans-serif;
-
 `;
 
-const HelpCenterToggleButton = styled(Button)`
-	margin: -1em auto 0 auto;
+/**
+ * The toggle button to show / hide the HelpCenter.
+ */
+const HelpCenterToggleButton = styled( Button )`
+	margin: 0 auto;
 	display: block;
 	height: 3em;
 	padding: 0 16px;
@@ -60,7 +63,16 @@ const HelpCenterToggleButton = styled(Button)`
 	cursor: pointer;
 `;
 
+/**
+ * Creates the HelpCenter that can be used to assist the user by providing useful information.
+ */
 class HelpCenter extends React.Component {
+
+	/**
+	 * Constructs the HelpCenter component and sets its initial state.
+	 *
+	 * @param {Object} props The props to use for this component.
+	 */
 	constructor( props ) {
 		super( props );
 
@@ -71,6 +83,11 @@ class HelpCenter extends React.Component {
 
 		this.handler = this.stateHandler.bind( this );
 
+		/**
+		 * Defines the various items that should be displayed in the SubNavigation. Also defines the tabs.
+		 *
+		 * @type {Array} Array containing the objects that define the menu items and tabs.
+		 */
 		this.items = [
 			{
 				id: "video",
@@ -88,29 +105,46 @@ class HelpCenter extends React.Component {
 				id: "email",
 				label: "Email Support",
 				url: "#email",
-				view: "You have new mail",
+				view: "Email Support",
 			},
 			{
 				id: "feedback",
 				label: "Feedback",
 				url: "#feedback",
-				view: "How am I coding? Please call 555-FOOBAR",
+				view: "Please leave feedback",
 			},
 		];
 	}
 
+	/**
+	 * Handles the state change that alters the current active tab.
+	 *
+	 * @param {string} url The URL to set as active.
+	 *
+	 * @returns {void}
+	 */
 	stateHandler( url ) {
 		this.setState( {
 			activeTab: url
 		} );
 	}
 
+	/**
+	 * Toggles the open/close state of the HelpCenter.
+	 *
+	 * @returns {void}
+	 */
 	toggleOpenState() {
 		this.setState( {
 			isOpen: ! this.state.isOpen,
 		} );
 	}
 
+	/**
+	 * Determines the button text based on the current open/close state.
+	 *
+	 * @returns {string} The button text.
+	 */
 	getButtonText() {
 		if ( this.state.isOpen === false ) {
 			return "Need help?";
@@ -119,22 +153,25 @@ class HelpCenter extends React.Component {
 		return "Close help center";
 	}
 
+	/**
+	 * Renders the HelpCenter.
+	 *
+	 * @returns {ReactElement} The HelpCenter component.
+	 */
 	render() {
 		let buttonText = this.getButtonText();
 
 		return (
 			<div>
-				<HelpCenterContainer>
-					<CollapsableContainer isOpen={ this.state.isOpen }>
+				<CollapsableContainer isOpen={ this.state.isOpen }>
+					<HelpCenterContainer>
 						<SubNavigation items={ this.items } activeTab={ this.state.activeTab } handler={ this.handler } />
-
 						<div>
 							<HelpCenterTabs items={ this.items } activeTab={ this.state.activeTab } />
 						</div>
-
-					</CollapsableContainer>
-					<HelpCenterToggleButton text={ buttonText }  onClick={ () => this.toggleOpenState() } />
-				</HelpCenterContainer>
+					</HelpCenterContainer>
+				</CollapsableContainer>
+				<HelpCenterToggleButton text={ buttonText } onClick={ () => this.toggleOpenState() } />
 			</div> );
 	}
 }

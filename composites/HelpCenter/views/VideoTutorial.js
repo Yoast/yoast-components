@@ -10,7 +10,6 @@ const Section = styled.section`
 
 const VideoTutorialPlaceholder = styled( Section )`
 	flex-wrap: wrap;
-	background: red;
 `;
 
 const VideoTextPanel = styled( Section )`
@@ -23,26 +22,26 @@ const StyledYouTubeVideo = styled( YouTubeVideo )`
 	flex: 50% 0;
 `;
 
-class VideoTutorial extends React.Component {
-	constructor( props ) {
-		super( props );
-	}
-
-	render() {
-		return (
-			<VideoTutorialPlaceholder>
-				<StyledYouTubeVideo	src={ this.props.src } title={ this.props.title } />
-				<VideoTextPanel>
-					Some text
-				</VideoTextPanel>
-			</VideoTutorialPlaceholder>
-		);
-	}
+/**
+ * Creates a VideoTutorial component that displays a YouTube video.
+ *
+ * @param {Object} props The props to use for the component.
+ * @returns {ReactElement} The rendered VideoTutorial component.
+ *
+ * @constructor
+ */
+export default function VideoTutorial( props ) {
+	return (
+		<VideoTutorialPlaceholder>
+			<StyledYouTubeVideo	src={ props.src } title={ props.title } />
+			<VideoTextPanel>
+				Some text
+			</VideoTextPanel>
+		</VideoTutorialPlaceholder>
+	);
 }
 
 VideoTutorial.propTypes = {
 	src: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
 };
-
-export default VideoTutorial;

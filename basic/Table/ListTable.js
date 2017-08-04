@@ -38,13 +38,27 @@ export function makeFullWidth( component ) {
 	`;
 }
 
+/**
+ * Creates a list table component.
+ */
 class ListTable extends React.Component {
+
+	/**
+	 * Constructor for the component.
+	 *
+	 * @param {Object} props The props to assign to the current component.
+	 *
+	 * @constructor
+	 */
 	constructor( props ) {
 		super( props );
-
-		this.children = this.getChildren();
 	}
 
+	/**
+	 * Retrieves the child nodes of the ListTable and ensures that single results are wrapped in an array.
+	 *
+	 * @returns {Array} The children to use within the ListTable.
+	 */
 	getChildren() {
 		if ( this.props.children === 1 ) {
 			return [ this.props.children ];
@@ -53,19 +67,39 @@ class ListTable extends React.Component {
 		return this.props.children;
 	}
 
+	/**
+	 * Renders the ListTable.
+	 *
+	 * @returns {ReactElement} The ListTable component.
+	 */
 	render() {
-		return ( <List role="list" children={ this.children } /> );
+		let children = this.getChildren();
+
+		return ( <List role="list" children={ children } /> );
 	}
 }
 
+/**
+ * A zebrafied variant of the ListTable component.
+ */
 class ZebrafiedTable extends ListTable {
+
+	/**
+	 * Constructor for the component. Also makes a shadow copy of the props that we can manipulate.
+	 * @param {Object} props The props to assign to the current component.
+	 *
+	 * @constructor
+	 */
 	constructor( props ) {
 		super( props );
-
 		this.zebraProps = Object.assign( {}, props );
-		this.zebrafyChildren();
 	}
 
+	/**
+	 * Zebrafies the child items of the ListTable.
+	 *
+	 * @returns {Array} Array containing the zebrafied rows.
+	 */
 	zebrafyChildren() {
 		this.zebraProps.children = this.props.children.map( ( child, index ) => {
 			return React.cloneElement( child, {
@@ -74,7 +108,14 @@ class ZebrafiedTable extends ListTable {
 		} );
 	}
 
+	/**
+	 * Renders the zebrafied ListTable.
+	 *
+	 * @returns {ReactElement} The zebrafied ListTable.
+	 */
 	render() {
+		this.zebrafyChildren();
+
 		return ( <List role="list" { ...this.zebraProps } /> );
 	}
 }
