@@ -1,5 +1,30 @@
+import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
+
 import colors from "../../../style-guide/colors.json";
+import { Icon } from "./Icon";
+
+/**
+ * Returns a component with applied focus styles.
+ *
+ * @param {ReactElement} component The original component.
+ *
+ * @returns {ReactElement} Component with applied focus styles.
+ */
+export function focus( component ) {
+	return styled( component )`
+		&::-moz-focus-inner {
+			border-width: 0;
+		}
+
+		&:focus {
+			border-color: ${ colors.$color_blue };
+			background-color: ${ colors.$color_white };
+			box-shadow: 0 0 3px ${ colors.$palette_blue_dark };
+		}
+	`;
+}
 
 /**
  * Returns a basic styled button.
@@ -8,22 +33,26 @@ import colors from "../../../style-guide/colors.json";
  *
  * @returns {ReactElement} Styled button.
  */
-export const Button = styled.button`
-	display: inline-block;
-	padding: 8px 10px;
-	border: 1px solid ${ colors.$color_button_border };
-	border-radius: 4px;
-	background: ${ colors.$color_button };
-	color: ${ colors.$color_button_text };
-	cursor: pointer;
-	box-sizing: border-box;
-	font-size: inherit;
-	font-family: inherit;
-	font-weight: inherit;
-	outline: none;
-`;
+export const BaseButton = focus(
+	styled.button`
+		float: left;
+		display: inline-block;
+		padding: 8px 10px;
+		border: 1px solid ${ colors.$color_button_border };
+		border-radius: 4px;
+		background: ${ colors.$color_button };
+		color: ${ colors.$color_button_text };
+		cursor: pointer;
+		box-sizing: border-box;
+		font-size: inherit;
+		font-family: inherit;
+		font-weight: inherit;
+		outline: none;
+		min-height: 33px;
+	`
+);
 
-Button.defaultProps = {
+BaseButton.defaultProps = {
 	type: "button",
 };
 
@@ -34,29 +63,40 @@ Button.defaultProps = {
  *
  * @returns {ReactElement} Styled button.
  */
-export const SnippetPreviewButton = styled( Button )`
+export const SnippetPreviewButton = styled( BaseButton )`
 	line-height: 15px;
 	font-size: 0.8rem;
+	
+	> span {
+		margin-left: 8px;
+	}
 `;
 
 /**
- * Returns a component with applied focus styles
+ * Returns an icon button that can optionally contain text.
  *
- * @param {ReactElement} component The original component
+ * @param {object} props Component props.
  *
- * @returns {ReactElement} Component with applied focus styles
+ * @returns {ReactElement} Styled icon button.
  */
-export function focus( component ) {
-	return styled( component )`
-		&::-moz-focus-inner {
-			border-width: 0;
-			padding: 0;
-		}
+export const IconButton = ( props ) => {
+	const { children, icon, iconColor } = props;
+	return (
+		<SnippetPreviewButton { ...props } >
+			<Icon icon={ icon } color={ iconColor } />
+			{ children ? <span>{ children }</span> : null }
+		</SnippetPreviewButton>
+	);
+};
 
-		&:focus {
-			border-color: ${ colors.$color_blue };
-			background-color: ${ colors.$color_white };
-			box-shadow: 0 0 3px ${ colors.$palette_blue_dark };
-		}
-	`;
-}
+IconButton.propTypes = {
+	icon: PropTypes.string,
+	iconColor: PropTypes.string,
+	children: PropTypes.string,
+};
+
+IconButton.defaultProps = {
+	icon: "edit",
+};
+
+
