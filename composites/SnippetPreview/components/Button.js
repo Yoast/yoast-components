@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 import colors from "../../../style-guide/colors.json";
 import { Icon } from "./Icon";
+import { rgba } from "../../../style-guide/helpers";
 
 /**
  * Returns a component with applied focus styles.
@@ -12,16 +13,17 @@ import { Icon } from "./Icon";
  *
  * @returns {ReactElement} Component with applied focus styles.
  */
-export function focus( component ) {
+export function addFocusStyle( component ) {
 	return styled( component )`
 		&::-moz-focus-inner {
 			border-width: 0;
 		}
 
 		&:focus {
+			outline: none;
 			border-color: ${ colors.$color_blue };
 			background-color: ${ colors.$color_white };
-			box-shadow: 0 0 3px ${ colors.$palette_blue_dark };
+			box-shadow: 0 0 3px ${ rgba( `${ colors.$color_blue_dark }`, .8 ) };
 		}
 	`;
 }
@@ -33,7 +35,7 @@ export function focus( component ) {
  *
  * @returns {ReactElement} Styled button.
  */
-export const BaseButton = focus(
+export const BaseButton = addFocusStyle(
 	styled.button`
 		float: left;
 		display: inline-block;
@@ -47,7 +49,6 @@ export const BaseButton = focus(
 		font-size: inherit;
 		font-family: inherit;
 		font-weight: inherit;
-		outline: none;
 		min-height: 33px;
 	`
 );
@@ -98,5 +99,4 @@ IconButton.propTypes = {
 IconButton.defaultProps = {
 	icon: "edit",
 };
-
 
