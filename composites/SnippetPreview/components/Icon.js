@@ -2,33 +2,29 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import * as Icons from "../../../style-guide/svg";
-
 /**
- * Returns an icon.
+ * Returns the Icon component.
  *
  * @param {object} props Component props.
  *
- * @returns {ReactElement} Icon.
+ * @returns {ReactElement} Icon component.
  */
 export const Icon = ( props ) => {
-	const IconComponent = styled( Icons[ props.icon ] )`
-		float: left;
-		width: ${ props => props.size }px;
-		height: ${ props => props.size }px;
-		fill: ${ props => props.color };
+	const IconComponent = styled( props.icon )`
+		width: ${ props.iconSize };
+		height: ${ props.iconSize };
+		fill: ${ props.iconColor };
 	`;
-	return <IconComponent { ...props } />;
+
+	return <IconComponent aria-hidden="true" />;
 };
 
 Icon.propTypes = {
-	icon: PropTypes.string,
-	color: PropTypes.string,
-	size: PropTypes.number,
+	icon: PropTypes.func.isRequired,
+	iconColor: PropTypes.string.isRequired,
+	iconSize: PropTypes.string,
 };
 
 Icon.defaultProps = {
-	size: 16,
-	color: "#555",
-	icon: "edit",
+	iconSize: "16px",
 };

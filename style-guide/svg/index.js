@@ -1,3 +1,1 @@
-import edit from "./edit.svg";
-
-export { edit };
+export { default as edit } from "./edit.svg";
