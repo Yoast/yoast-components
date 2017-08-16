@@ -2,7 +2,7 @@ import React from "react";
 import renderer from "react-test-renderer";
 
 import { BaseButton, SnippetPreviewButton, IconButton } from "../components/Button";
-import { edit } from "../../../style-guide/svg";
+import { edit } from "../../../../style-guide/svg";
 
 test( "the BaseButton matches the snapshot", () => {
 	const component = renderer.create(
