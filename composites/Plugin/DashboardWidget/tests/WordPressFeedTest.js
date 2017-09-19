@@ -1,20 +1,20 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import WordpressFeed from "../components/WordpressFeed";
+import WordPressFeed from "../components/WordPressFeed";
 
-test( "the WordpressFeed matches the snapshot", () => {
+test( "the WordPressFeed matches the snapshot", () => {
 	const feed = {
 		link: "https://www.yoast.com",
 		title: "Feed title",
 		items: [
 			{
-				title: "Wordpress SEO",
+				title: "WordPress SEO",
 				link: "https://www.yoast.com/1",
 				description: "Some arbitrary description any blog post could have",
 			},
 			{
-				title: "Wordpress SEO",
+				title: "WordPress SEO",
 				link: "https://www.yoast.com/2",
 				description: "Some arbitrary description any blog post could have",
 			},
@@ -22,7 +22,7 @@ test( "the WordpressFeed matches the snapshot", () => {
 	};
 
 	const component = renderer.create(
-		<WordpressFeed
+		<WordPressFeed
 			feed={ feed }
 			/>
 	);
