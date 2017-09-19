@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`the WordpressFeed matches the snapshot 1`] = `
+exports[`the WordPressFeed matches the snapshot 1`] = `
 <div
   className="wordpress-feed sc-bdVaJa ggoxkE"
 >
@@ -22,7 +22,7 @@ exports[`the WordpressFeed matches the snapshot 1`] = `
         rel="noopener noreferrer"
         target="_blank"
       >
-        Wordpress SEO
+        WordPress SEO
         <span
           className="sc-ifAKCX GTYdS"
         >
@@ -44,7 +44,7 @@ exports[`the WordpressFeed matches the snapshot 1`] = `
         rel="noopener noreferrer"
         target="_blank"
       >
-        Wordpress SEO
+        WordPress SEO
         <span
           className="sc-ifAKCX GTYdS"
         >

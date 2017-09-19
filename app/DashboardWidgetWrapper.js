@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import SeoAssessment from "../composites/Plugin/DashboardWidget/components/SeoAssessment";
-import WordpressFeed from "../composites/Plugin/DashboardWidget/components/WordpressFeed";
+import WordPressFeed from "../composites/Plugin/DashboardWidget/components/WordPressFeed";
 
 export const DashboardWidgetContainer = styled.div`
    min-height: 700px;
@@ -44,12 +44,12 @@ export default function DashboardWidget() {
 		title: "Feed title",
 		items: [
 			{
-				title: "Wordpress SEO",
+				title: "WordPress SEO",
 				link: "https://www.yoast.com/1",
 				description: "Some arbitrary description any blog post could have",
 			},
 			{
-				title: "Wordpress SEO",
+				title: "WordPress SEO",
 				link: "https://www.yoast.com/2",
 				description: "Some arbitrary description any blog post could have",
 			},
@@ -62,7 +62,7 @@ export default function DashboardWidget() {
 				<SeoAssessment
 					seoAssessmentText="Your SEO score is decent overall, but can be improved! Get to work!"
 					seoAssessmentItems={ seoAssessmentItems }/>
-				<WordpressFeed
+				<WordPressFeed
 					feed={ feed }
 					footerHtml="View our blog on yoast.com!"/>
 			</DashboardContainer>

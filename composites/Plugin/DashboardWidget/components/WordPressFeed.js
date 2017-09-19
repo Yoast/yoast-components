@@ -20,7 +20,7 @@ import styled from "styled-components";
  * @property {string} date        The publication date of the item.
  */
 
-const WordpressFeedContainer = styled.div`
+const WordPressFeedContainer = styled.div`
 	box-sizing: border-box;
 
 	p, a {
@@ -29,18 +29,18 @@ const WordpressFeedContainer = styled.div`
 	}
 `;
 
-const WordpressFeedHeader = styled.h3`
+const WordPressFeedHeader = styled.h3`
 	margin: 8px 0;
 	font-size: 1em;
 `;
 
-const WordpressFeedList = styled.ul`
+const WordPressFeedList = styled.ul`
 	margin: 0;
 	list-style: none;
 	padding: 0;
 `;
 
-const WordpressFeedLink = styled.a`
+const WordPressFeedLink = styled.a`
 	display: inline-block;
 	padding-bottom: 4px;
 `;
@@ -58,22 +58,22 @@ const A11yNotice = styled.span`
 	word-wrap: normal !important;
 `;
 
-const WordpressFeedListItemContainer = styled.li`
+const WordPressFeedListItemContainer = styled.li`
 	margin: 8px 0;
 	overflow: hidden;
 `;
 
-const WordpressFeedFooter = styled.div`
+const WordPressFeedFooter = styled.div`
 	a {
 		margin: 8px 0 0;
 	}
 `;
 
-const WordpressFeedListItem = ( props ) => {
+const WordPressFeedListItem = ( props ) => {
 	return (
-		<WordpressFeedListItemContainer
+		<WordPressFeedListItemContainer
 			className={ props.className }>
-			<WordpressFeedLink
+			<WordPressFeedLink
 				className={ `${ props.className }-link` }
 				href={ props.link }
 				target="_blank"
@@ -82,15 +82,15 @@ const WordpressFeedListItem = ( props ) => {
 				<A11yNotice>
 					( Opens in a new browser tab )
 				</A11yNotice>
-			</WordpressFeedLink>
+			</WordPressFeedLink>
 			<p className={ `${ props.className }-description` }>
 				{ props.description }
 			</p>
-		</WordpressFeedListItemContainer>
+		</WordPressFeedListItemContainer>
 	);
 };
 
-WordpressFeedListItem.propTypes = {
+WordPressFeedListItem.propTypes = {
 	className: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
 	link: PropTypes.string.isRequired,
@@ -98,7 +98,7 @@ WordpressFeedListItem.propTypes = {
 };
 
 /**
- * Displays a parsed wordpress feed.
+ * Displays a parsed WordPress feed.
  *
  * @param {Object} props            The component props.
  * @param {Feed} props.feed         The feed object.
@@ -106,45 +106,45 @@ WordpressFeedListItem.propTypes = {
  * @param {string} props.footerHtml The footer HTML contents.
  * @param {string} props.feedLink   The footer link. Defaults to feed link.
  *
- * @returns {ReactElement} The WordpressFeed component.
+ * @returns {ReactElement} The WordPressFeed component.
  */
-const WordpressFeed = ( props ) => {
+const WordPressFeed = ( props ) => {
 	return (
-		<WordpressFeedContainer
+		<WordPressFeedContainer
 			className={ props.className }>
-			<WordpressFeedHeader
+			<WordPressFeedHeader
 				className={ `${ props.className }__header` }>
 				{ props.title ? props.title : props.feed.title }
-			</WordpressFeedHeader>
-			<WordpressFeedList
+			</WordPressFeedHeader>
+			<WordPressFeedList
 				className={ `${ props.className }__posts` }
 				role="list">
 				{ props.feed.items.map( item => (
-					<WordpressFeedListItem
+					<WordPressFeedListItem
 						className={ `${ props.className }__post` }
 						key={ item.link }
 						title={ item.title }
 						link={ item.link }
 						description={ item.description } />
 				) ) }
-			</WordpressFeedList>
+			</WordPressFeedList>
 			{ props.footerHtml &&
-				<WordpressFeedFooter
+				<WordPressFeedFooter
 					className={ `${ props.className }__footer` }>
-					<WordpressFeedLink
+					<WordPressFeedLink
 						className={ `${ props.className }__footer-link` }
 						href={ props.feedLink ? props.feedLink : props.feed.link }
 						target="_blank"
 						rel="noopener noreferrer"
 						dangerouslySetInnerHTML={ { __html: props.footerHtml } } >
-					</WordpressFeedLink>
-				</WordpressFeedFooter>
+					</WordPressFeedLink>
+				</WordPressFeedFooter>
 			}
-		</WordpressFeedContainer>
+		</WordPressFeedContainer>
 	);
 };
 
-WordpressFeed.propTypes = {
+WordPressFeed.propTypes = {
 	className: PropTypes.string,
 	feed: PropTypes.object.isRequired,
 	title: PropTypes.string,
@@ -152,8 +152,8 @@ WordpressFeed.propTypes = {
 	feedLink: PropTypes.string,
 };
 
-WordpressFeed.defaultProps = {
+WordPressFeed.defaultProps = {
 	className: "wordpress-feed",
 };
 
-export default WordpressFeed;
+export default WordPressFeed;
