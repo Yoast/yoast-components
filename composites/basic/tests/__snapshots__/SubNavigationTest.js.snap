@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the SubNavigation matches the snapshot 1`] = `
+<nav
+  className="sc-bdVaJa isMQIV"
+>
+  <ul>
+    <li
+      className="tab-active"
+    >
+      <a
+        className="sc-bwzfXH hqQtJX"
+        href="http://localhost:3333/tab1"
+        onClick={[Function]}
+      >
+         
+        tab1
+      </a>
+    </li>
+    <li
+      className=""
+    >
+      <a
+        className="sc-bwzfXH hqQtJX"
+        href="http://localhost:3333/tab2"
+        onClick={[Function]}
+      >
+         
+        tab2
+      </a>
+    </li>
+    <li
+      className=""
+    >
+      <a
+        className="sc-bwzfXH hqQtJX"
+        href="http://localhost:3333/tab3"
+        onClick={[Function]}
+      >
+         
+        tab3
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
