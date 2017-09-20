@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import colors from "../../style-guide/colors.json";
+import PropTypes from "prop-types";
 
 /**
  * Defines the styling of the SubNavigationElement.
@@ -75,7 +76,7 @@ export default class SubNavigation extends React.Component {
 		return this.items.map( ( item ) => {
 			return (
 				<li key={ item.id } className={ item.url === this.props.activeTab ? "tab-active" : "" }>
-					<Link href={ item.url } onClick={ () => this.props.handler( item.url ) } > { item.label }</Link>
+					<Link href={ item.url } onClick={ () => this.props.onClick( item.url ) } > { item.label }</Link>
 				</li>
 			);
 		} );
@@ -94,3 +95,13 @@ export default class SubNavigation extends React.Component {
 		</SubNavigationElement> );
 	}
 }
+
+SubNavigation.propTypes = {
+	items: PropTypes.Array,
+	activeTab: PropTypes.String.isRequired,
+	onClick: PropTypes.Func.isRequired,
+};
+
+SubNavigation.defaultProps = {
+	items: [],
+};

@@ -61,7 +61,9 @@ class Tabs extends React.Component {
 	 * @returns {ReactElement} The rendered Tab component.
 	 */
 	addTab( id, url, content ) {
-		return <Tab key={ id } className={ url === this.state.activeTab ? "tab-active" : "" }>{ content }</Tab>
+		return <Tab key={ id } className={ url === this.state.activeTab ? "tab-active" : "" }>
+			{ content }
+		</Tab>;
 	}
 
 	/**
@@ -70,15 +72,20 @@ class Tabs extends React.Component {
 	 * @returns {ReactElement} The tabs.
 	 */
 	render() {
-		return <div>{ this.getTabs() }</div>
+		return <div>
+			{ this.getTabs() }
+		</div>;
 	}
 }
 
 Tabs.propTypes = {
+	items: PropTypes.Array,
 	isActive: PropTypes.bool,
+	activeTab: PropTypes.String.isRequired,
 };
 
 Tabs.defaultProps = {
+	items: [],
 	isActive: false,
 };
 
