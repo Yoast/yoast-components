@@ -11,7 +11,7 @@ let items = [
 
 test( "the SubNavigation matches the snapshot", () => {
 	const component = renderer.create(
-		<SubNavigation items={ items } activeTab="http://localhost:3333/tab1"/>
+		<SubNavigation items={ items } activeTab="http://localhost:3333/tab1" onClick={ () => {} }/>
 	);
 
 	let tree = component.toJSON();

@@ -98,8 +98,8 @@ export default class SubNavigation extends React.Component {
 
 SubNavigation.propTypes = {
 	items: PropTypes.Array,
-	activeTab: PropTypes.String.isRequired,
-	onClick: PropTypes.Func.isRequired,
+	activeTab: PropTypes.string.isRequired,
+	onClick: PropTypes.func.isRequired,
 };
 
 SubNavigation.defaultProps = {

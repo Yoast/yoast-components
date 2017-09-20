@@ -81,7 +81,7 @@ class Tabs extends React.Component {
 Tabs.propTypes = {
 	items: PropTypes.Array,
 	isActive: PropTypes.bool,
-	activeTab: PropTypes.String.isRequired,
+	activeTab: PropTypes.string.isRequired,
 };
 
 Tabs.defaultProps = {
