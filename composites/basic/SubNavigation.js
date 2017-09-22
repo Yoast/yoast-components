@@ -11,7 +11,7 @@ const SubNavigationElement = styled.nav`
 	font-size: 1em;
 	text-transform: uppercase;
 	display: block;
-	
+
 	ul {
 		display: flex;
 		flex-wrap: wrap;
@@ -21,17 +21,17 @@ const SubNavigationElement = styled.nav`
 	    padding: 0;
 	    margin: 0;
 	}
-	
+
 	li {
 		display: inline-block;
 	    text-align: center;
 	    margin: 0 30px;
-		
+
 		&.tab-active {
 	        box-shadow: inset 0 -5px 0 0 ${ colors.$color_pink_dark }
 		}
 	}
-	
+
 	a {
 		padding: 10px;
 		display: flex;
@@ -97,7 +97,7 @@ export default class SubNavigation extends React.Component {
 }
 
 SubNavigation.propTypes = {
-	items: PropTypes.Array,
+	items: PropTypes.array,
 	activeTab: PropTypes.string.isRequired,
 	onClick: PropTypes.func.isRequired,
 };

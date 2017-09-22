@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 const Tab = styled.section`
 	padding: 18px 20px;
 	display: none;
-	
+
 	&.tab-active {
 		display: block;
 	}
@@ -79,7 +79,7 @@ class Tabs extends React.Component {
 }
 
 Tabs.propTypes = {
-	items: PropTypes.Array,
+	items: PropTypes.array,
 	isActive: PropTypes.bool,
 	activeTab: PropTypes.string.isRequired,
 };

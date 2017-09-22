@@ -3,21 +3,21 @@
 exports[`the SubNavigation with active first tab matches the snapshot 1`] = `
 <div>
   <section
-    className="tab-active sc-bdVaJa hboHnN"
+    className="tab-active sc-bdVaJa hknTxb"
   >
     <p>
       This is some content
     </p>
   </section>
   <section
-    className="sc-bdVaJa hboHnN"
+    className="sc-bdVaJa hknTxb"
   >
     <p>
       This is some content
     </p>
   </section>
   <section
-    className="sc-bdVaJa hboHnN"
+    className="sc-bdVaJa hknTxb"
   >
     <p>
       This is some content
