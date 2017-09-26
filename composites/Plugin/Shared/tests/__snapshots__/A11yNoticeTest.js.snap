@@ -9,9 +9,9 @@ exports[`the A11yNotice can be changed to a different element 1`] = `
 `;
 
 exports[`the A11yNotice matches the snapshot 1`] = `
-<p
+<span
   className="sc-bdVaJa hAyGSm"
 >
   A11yNoticeValue
-</p>
+</span>
 `;
