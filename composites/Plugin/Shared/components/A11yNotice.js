@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 /**
- * A paragraph tag invisible to the user, but not to screen readers.
+ * A span tag invisible to the user, but not to screen readers.
  *
- * If you need a different element then a paragraph, you can use styled-component's .withComponent function.
+ * If you need a different element then a span, you can use styled-component's .withComponent function.
  */
-export const A11yNotice = styled.p`
+export const A11yNotice = styled.span`
 	border: 0;
 	clip: rect(1px, 1px, 1px, 1px);
 	clip-path: inset(50%);
