@@ -16,7 +16,7 @@ const YoastTabsContainer = styled( Tabs )`
 		padding: 0;
 		margin: 0;
 		text-transform: uppercase;
-		border-bottom: 1px solid ${ colors.$color_grey_light };
+		border-bottom: 4px solid ${ colors.$color_grey_light };
 	}
 
 	.react-tabs__tab {
@@ -26,9 +26,10 @@ const YoastTabsContainer = styled( Tabs )`
 		padding: 10px;
 		color: ${ colors.$color_pink_dark };
 		cursor: pointer;
+		margin-bottom: -4px;
 
 		&.react-tabs__tab--selected {
-			box-shadow: inset 0 -5px 0 0 ${ colors.$color_pink_dark };
+			box-shadow: inset 0 -4px 0 0 ${ colors.$color_pink_dark };
 		}
 	}
 
