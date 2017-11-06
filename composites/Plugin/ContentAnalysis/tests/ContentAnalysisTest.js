@@ -63,6 +63,7 @@ test( "the ContentAnalysis component without language notice matches the snapsho
 			errorsResults={ errorsResults }
 			changeLanguageLink={ "#" }
 			language="English"
+			onMarkButtonClick={ () => {} }
 		/>
 	);
 
