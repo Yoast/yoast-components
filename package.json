@@ -59,7 +59,7 @@
     "babel-preset-react": "^6.24.1",
     "babelify": "^7.3.0",
     "concurrently": "^3.5.0",
-    "enzyme": "^2.9.1",
+    "enzyme": "^3.0.0",
     "eslint": "^4.6.1",
     "eslint-config-yoast": "^2.0.0",
     "eslint-plugin-react": "^6.0.0",
