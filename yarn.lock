@@ -1275,10 +1275,6 @@ cliui@^3.2.0:
     strip-ansi "^3.0.1"
     wrap-ansi "^2.0.0"
 
-cloneextend@>=0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/cloneextend/-/cloneextend-0.0.3.tgz#df0629ca4845316afd884cf1b61a0cdf4b129f79"
-
 co@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/co/-/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
@@ -6006,12 +6002,11 @@ striptags@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/striptags/-/striptags-3.1.0.tgz#763e534338d9cf542f004a4b1eb099e32d295e44"
 
-stubby@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/stubby/-/stubby-0.3.1.tgz#e64b64c9e81cba92916a7d84a7c119e24c5b6701"
+stubby@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/stubby/-/stubby-4.0.0.tgz#455122882133edd4ceb7371a80e0e0fb1ebec929"
   dependencies:
     async ">=0.2.7"
-    cloneextend ">=0.0.3"
     ejs ">=0.8.4"
     isutf8 ">=1.0.11"
     js-yaml ">=1.0.1"
