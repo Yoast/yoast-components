@@ -1,4 +1,5 @@
 import React from "react";
+var ReactDOM = require('react-dom');
 import { IntlProvider } from "react-intl";
 
 import SearchResultsEditor from "./composites/SearchResultEditor/SearchResultEditor";
@@ -9,6 +10,11 @@ import DashboardWidget from "./app/DashboardWidgetWrapper";
 import Loader from "./composites/basic/Loader";
 import HelpCenterWrapper from "./app/HelpCenterWrapper";
 import SidebarCollapsibleWrapper from "./app/SidebarCollapsibleWrapper";
+
+if (process.env.NODE_ENV !== 'production') {
+	var axe = require('react-axe');
+	axe(React, ReactDOM);
+}
 
 // Required to make Material UI work with touch screens.
 import injectTapEventPlugin from "react-tap-event-plugin";
