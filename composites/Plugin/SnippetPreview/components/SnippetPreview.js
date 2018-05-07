@@ -133,7 +133,8 @@ export const DesktopDescription = styled.div.attrs( {
 const MobileDescription = styled( DesktopDescription )`
 	line-height: 1em;
 	max-height: 4em;
-	overflow: hidden;
+	/* Hide overflow as long as description length is being calculated */
+	overflow: ${ props => props.overflowHidden ? null : "hidden" };
 `;
 
 const MobilePartContainer = styled.div`
@@ -243,6 +244,7 @@ export default class SnippetPreview extends PureComponent {
 		this.state = {
 			title: props.title,
 			description: props.description,
+			descriptionFits: false,
 		};
 
 		this.setTitleRef       = this.setTitleRef.bind( this );
@@ -346,6 +348,11 @@ export default class SnippetPreview extends PureComponent {
 
 			this.setState( {
 				description: newDescription,
+				descriptionFits: false,
+			} );
+		} else {
+			this.setState( {
+				descriptionFits: true,
 			} );
 		}
 	}
@@ -506,6 +513,7 @@ export default class SnippetPreview extends PureComponent {
 
 		if ( this.props.description !== nextProps.description ) {
 			nextState.description = nextProps.description;
+			nextState.descriptionFits = false;
 		}
 
 		this.setState( nextState );
@@ -605,7 +613,8 @@ export default class SnippetPreview extends PureComponent {
 						             onClick={ onClick.bind( null, "description" ) }
 						             onMouseOver={ partial( onMouseOver, "description" ) }
 						             onMouseLeave={ partial( onMouseLeave, "description" ) }
-						             innerRef={ this.setDescriptionRef } >
+						             innerRef={ this.setDescriptionRef }
+						             overflowHidden={ this.state.descriptionFits }>
 							{ renderedDate }
 							{ highlightKeyword( locale, keyword, this.getDescription() ) }
 						</Description>

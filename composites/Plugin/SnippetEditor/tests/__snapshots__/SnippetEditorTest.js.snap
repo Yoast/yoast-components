@@ -1056,6 +1056,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
                   onClick={[Function]}
                   onMouseLeave={[Function]}
                   onMouseOver={[Function]}
+                  overflowHidden={false}
                 >
                   <SnippetPreview__DesktopDescription
                     className="c8"
@@ -1064,6 +1065,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
                     onClick={[Function]}
                     onMouseLeave={[Function]}
                     onMouseOver={[Function]}
+                    overflowHidden={false}
                   >
                     <div
                       className="c8 c9"
@@ -2310,6 +2312,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
                   onClick={[Function]}
                   onMouseLeave={[Function]}
                   onMouseOver={[Function]}
+                  overflowHidden={false}
                 >
                   <SnippetPreview__DesktopDescription
                     className="c8"
@@ -2318,6 +2321,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
                     onClick={[Function]}
                     onMouseLeave={[Function]}
                     onMouseOver={[Function]}
+                    overflowHidden={false}
                   >
                     <div
                       className="c8 c9"
@@ -3564,6 +3568,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
                   onClick={[Function]}
                   onMouseLeave={[Function]}
                   onMouseOver={[Function]}
+                  overflowHidden={false}
                 >
                   <SnippetPreview__DesktopDescription
                     className="c8"
@@ -3572,6 +3577,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
                     onClick={[Function]}
                     onMouseLeave={[Function]}
                     onMouseOver={[Function]}
+                    overflowHidden={false}
                   >
                     <div
                       className="c8 c9"
@@ -4818,6 +4824,7 @@ exports[`SnippetEditor closes when calling close() 1`] = `
                   onClick={[Function]}
                   onMouseLeave={[Function]}
                   onMouseOver={[Function]}
+                  overflowHidden={false}
                 >
                   <SnippetPreview__DesktopDescription
                     className="c8"
@@ -4826,6 +4833,7 @@ exports[`SnippetEditor closes when calling close() 1`] = `
                     onClick={[Function]}
                     onMouseLeave={[Function]}
                     onMouseOver={[Function]}
+                    overflowHidden={false}
                   >
                     <div
                       className="c8 c9"
@@ -5997,6 +6005,7 @@ exports[`SnippetEditor closes when calling close() 2`] = `
                   onClick={[Function]}
                   onMouseLeave={[Function]}
                   onMouseOver={[Function]}
+                  overflowHidden={false}
                 >
                   <SnippetPreview__DesktopDescription
                     className="c8"
@@ -6005,6 +6014,7 @@ exports[`SnippetEditor closes when calling close() 2`] = `
                     onClick={[Function]}
                     onMouseLeave={[Function]}
                     onMouseOver={[Function]}
+                    overflowHidden={false}
                   >
                     <div
                       className="c8 c9"
@@ -6987,6 +6997,7 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
                   onClick={[Function]}
                   onMouseLeave={[Function]}
                   onMouseOver={[Function]}
+                  overflowHidden={false}
                 >
                   <SnippetPreview__DesktopDescription
                     className="c8"
@@ -6995,6 +7006,7 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
                     onClick={[Function]}
                     onMouseLeave={[Function]}
                     onMouseOver={[Function]}
+                    overflowHidden={false}
                   >
                     <div
                       className="c8 c9"
@@ -8273,6 +8285,7 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
                   onClick={[Function]}
                   onMouseLeave={[Function]}
                   onMouseOver={[Function]}
+                  overflowHidden={false}
                 >
                   <SnippetPreview__DesktopDescription
                     className="c8"
@@ -8281,6 +8294,7 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
                     onClick={[Function]}
                     onMouseLeave={[Function]}
                     onMouseOver={[Function]}
+                    overflowHidden={false}
                   >
                     <div
                       className="c8 c9"
@@ -10511,6 +10525,7 @@ exports[`SnippetEditor highlights the active field when calling setFieldFocus 1`
                   onClick={[Function]}
                   onMouseLeave={[Function]}
                   onMouseOver={[Function]}
+                  overflowHidden={false}
                 >
                   <SnippetPreview__DesktopDescription
                     className="c9"
@@ -10519,6 +10534,7 @@ exports[`SnippetEditor highlights the active field when calling setFieldFocus 1`
                     onClick={[Function]}
                     onMouseLeave={[Function]}
                     onMouseOver={[Function]}
+                    overflowHidden={false}
                   >
                     <div
                       className="c9 c10"
@@ -11801,6 +11817,7 @@ exports[`SnippetEditor highlights the hovered field when onMouseOver() is called
                   onClick={[Function]}
                   onMouseLeave={[Function]}
                   onMouseOver={[Function]}
+                  overflowHidden={false}
                 >
                   <SnippetPreview__MobileDescription
                     className="c8"
@@ -11809,6 +11826,7 @@ exports[`SnippetEditor highlights the hovered field when onMouseOver() is called
                     onClick={[Function]}
                     onMouseLeave={[Function]}
                     onMouseOver={[Function]}
+                    overflowHidden={false}
                   >
                     <SnippetPreview__DesktopDescription
                       className="c8 c9"
@@ -11817,6 +11835,7 @@ exports[`SnippetEditor highlights the hovered field when onMouseOver() is called
                       onClick={[Function]}
                       onMouseLeave={[Function]}
                       onMouseOver={[Function]}
+                      overflowHidden={false}
                     >
                       <div
                         className="c8 c9 c10"
@@ -13064,6 +13083,7 @@ exports[`SnippetEditor opens when calling open() 1`] = `
                   onClick={[Function]}
                   onMouseLeave={[Function]}
                   onMouseOver={[Function]}
+                  overflowHidden={false}
                 >
                   <SnippetPreview__DesktopDescription
                     className="c8"
@@ -13072,6 +13092,7 @@ exports[`SnippetEditor opens when calling open() 1`] = `
                     onClick={[Function]}
                     onMouseLeave={[Function]}
                     onMouseOver={[Function]}
+                    overflowHidden={false}
                   >
                     <div
                       className="c8 c9"
@@ -14329,6 +14350,7 @@ exports[`SnippetEditor passes replacement variables to the title and description
                   onClick={[Function]}
                   onMouseLeave={[Function]}
                   onMouseOver={[Function]}
+                  overflowHidden={false}
                 >
                   <SnippetPreview__DesktopDescription
                     className="c8"
@@ -14337,6 +14359,7 @@ exports[`SnippetEditor passes replacement variables to the title and description
                     onClick={[Function]}
                     onMouseLeave={[Function]}
                     onMouseOver={[Function]}
+                    overflowHidden={false}
                   >
                     <div
                       className="c8 c9"
