@@ -134,7 +134,7 @@ const MobileDescription = styled( DesktopDescription )`
 	line-height: 1em;
 	max-height: 4em;
 	/* Hide overflow as long as description length is being calculated */
-	overflow: ${ props => props.overflowHidden ? null : "hidden" };
+	overflow: ${ props => props.overflowHidden ? "hidden" : null };
 `;
 
 const MobilePartContainer = styled.div`
@@ -614,7 +614,7 @@ export default class SnippetPreview extends PureComponent {
 						             onMouseOver={ partial( onMouseOver, "description" ) }
 						             onMouseLeave={ partial( onMouseLeave, "description" ) }
 						             innerRef={ this.setDescriptionRef }
-						             overflowHidden={ this.state.descriptionFits }>
+						             overflowHidden={ ! this.state.descriptionFits }>
 							{ renderedDate }
 							{ highlightKeyword( locale, keyword, this.getDescription() ) }
 						</Description>
