@@ -8807,7 +8807,7 @@ yeoman-generator@^2.0.4:
     through2 "^2.0.0"
     yeoman-environment "^2.0.5"
 
-yoastseo@^1.28.0:
+yoastseo@^1.31.0:
   version "1.31.0"
   resolved "https://registry.yarnpkg.com/yoastseo/-/yoastseo-1.31.0.tgz#4ff9f37dcefe629ac66676ae4f2afcb1b4e54b2a"
   dependencies:
