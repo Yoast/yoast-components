@@ -641,6 +641,7 @@ exports[`SnippetEditor activates a field on onClick() and opens the editor 1`] =
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,
@@ -2021,6 +2022,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,
@@ -3621,6 +3623,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,
@@ -5221,6 +5224,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,
@@ -6821,6 +6825,7 @@ exports[`SnippetEditor closes when calling close() 1`] = `
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,
@@ -9667,6 +9672,7 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 361,
@@ -11299,6 +11305,7 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 100,
@@ -12921,6 +12928,7 @@ exports[`SnippetEditor decodes separator replacement variables in the  1`] = `
           },
         ]
       }
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,
@@ -13236,6 +13244,7 @@ exports[`SnippetEditor doesn't remove the highlight if the wrong field is left 1
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,
@@ -15806,6 +15815,7 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,
@@ -17426,6 +17436,7 @@ exports[`SnippetEditor highlights the hovered field when onMouseOver() is called
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,
@@ -19026,6 +19037,7 @@ exports[`SnippetEditor opens when calling open() 1`] = `
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,
@@ -20648,6 +20660,7 @@ exports[`SnippetEditor passes replacement variables to the title and description
           },
         ]
       }
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,
@@ -21558,6 +21571,7 @@ exports[`SnippetEditor removes the highlight from the hovered field on calling o
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,

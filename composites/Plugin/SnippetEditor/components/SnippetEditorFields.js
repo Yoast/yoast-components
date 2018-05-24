@@ -213,6 +213,7 @@ class SnippetEditorFields extends React.Component {
 			activeField,
 			hoveredField,
 			replacementVariables,
+			replacementVariablesExplanation,
 			titleLengthProgress,
 			descriptionLengthProgress,
 			onFocus,
@@ -298,10 +299,7 @@ class SnippetEditorFields extends React.Component {
 						value={ descriptionLengthProgress.actual }
 						progressColor={ this.getProgressColor( descriptionLengthProgress.score ) }
 					/>
-					<ReplacementVariableExplanation>{
-						__( "Type '%' to add snippet variables. " +
-							"See the 'Help' tab on this page to see all available variables.", "yoast-components" )
-					}</ReplacementVariableExplanation>
+					<ReplacementVariableExplanation>{ replacementVariablesExplanation }</ReplacementVariableExplanation>
 				</FormSection>
 			</StyledEditor>
 		);
@@ -340,6 +338,7 @@ SnippetEditorFields.propTypes = {
 	hoveredField: PropTypes.oneOf( [ "title", "slug", "description" ] ),
 	titleLengthProgress: lengthProgressShape,
 	descriptionLengthProgress: lengthProgressShape,
+	replacementVariablesExplanation: PropTypes.string,
 };
 
 SnippetEditorFields.defaultProps = {
@@ -355,6 +354,8 @@ SnippetEditorFields.defaultProps = {
 		actual: 0,
 		score: 0,
 	},
+	replacementVariablesExplanation: __( "Type '%' to add snippet variables. " +
+		"See the 'Help' tab on this page to see all available variables.", "yoast-components" ),
 };
 
 export default SnippetEditorFields;
