@@ -94,17 +94,22 @@ const InputContainerDescription = InputContainer.extend`
 `;
 
 const FormSection = styled.div`
-	margin: 32px 0;
+	margin: 32px 0 0;
 `;
 
 const StyledEditor = styled.section`
-	padding: 10px 20px 20px 20px;
+	padding: 10px 20px 0 20px;
 `;
 
 const SimulatedLabel = styled.div`
 	cursor: pointer;
 	font-size: 16px;
 	font-family: Arial, Roboto-Regular, HelveticaNeue, sans-serif;
+`;
+
+const ReplacementVariableExplanation = styled.p`
+	margin: 16px 0;
+	font-size: 13px;
 `;
 
 class SnippetEditorFields extends React.Component {
@@ -276,6 +281,10 @@ class SnippetEditorFields extends React.Component {
 						value={ descriptionLengthProgress.actual }
 						progressColor={ this.getProgressColor( descriptionLengthProgress.score ) }
 					/>
+					<ReplacementVariableExplanation>{
+						__( "Type '%' to add snippet variables, " +
+							"see the 'Help' tab on this page to see all available variables.", "yoast-components" )
+					}</ReplacementVariableExplanation>
 				</FormSection>
 			</StyledEditor>
 		);
