@@ -282,8 +282,8 @@ class SnippetEditorFields extends React.Component {
 						progressColor={ this.getProgressColor( descriptionLengthProgress.score ) }
 					/>
 					<ReplacementVariableExplanation>{
-						__( "Type '%' to add snippet variables, " +
-							"see the 'Help' tab on this page to see all available variables.", "yoast-components" )
+						__( "Type '%' to add snippet variables. " +
+							"See the 'Help' tab on this page to see all available variables.", "yoast-components" )
 					}</ReplacementVariableExplanation>
 				</FormSection>
 			</StyledEditor>
