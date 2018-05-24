@@ -11,7 +11,10 @@ import { __, _n, sprintf } from "@wordpress/i18n";
 
 // Internal dependencies.
 import { replacementVariablesShape } from "../constants";
-import { serializeEditor, unserializeEditor } from "../serialization";
+import {
+	serializeEditor,
+	unserializeEditor,
+} from "../serialization";
 
 /**
  * Creates a Draft.js editor state from a string.
@@ -69,6 +72,8 @@ class ReplacementVariableEditor extends React.Component {
 		const { content: rawContent, replacementVariables } = this.props;
 		const unserialized = unserializeEditor( rawContent, replacementVariables );
 
+		console.log( unserialized );
+
 		this.state = {
 			editorState: createEditorState( unserialized ),
 			searchValue: "",
@@ -102,18 +107,35 @@ class ReplacementVariableEditor extends React.Component {
 	 * Serializes the current content and calls the onChange handler with this
 	 * content.
 	 *
-	 * @param {EditorState} editorState The current state of the editor.
+	 * @param {string} serializedContent The current content of the editor.
 	 *
 	 * @returns {void}
 	 */
-	serializeContent( editorState ) {
-		const serializedContent = serializeEditorState( editorState.getCurrentContent() );
-
+	serializeContent( serializedContent ) {
 		if ( this._serializedContent !== serializedContent ) {
 			this._serializedContent = serializedContent;
 
 			this.props.onChange( this._serializedContent );
 		}
+	}
+
+	reserialize( editorState ) {
+		let nextEditorState = editorState;
+		const serializedContent = serializeEditorState(
+			editorState.getCurrentContent()
+		);
+		if ( this._serializedContent !== serializedContent ) {
+			const unserialized = unserializeEditor(
+				serializedContent,
+				this.state.replacementVariables
+			);
+			console.log( unserialized );
+			nextEditorState = createEditorState( unserialized );
+		}
+		return {
+			serializedContent,
+			nextEditorState,
+		};
 	}
 
 	/**
@@ -124,10 +146,17 @@ class ReplacementVariableEditor extends React.Component {
 	 * @returns {void}
 	 */
 	onChange( editorState ) {
+		const {
+			nextEditorState,
+			serializedContent,
+		} = this.reserialize( editorState );
 		this.setState( {
-			editorState,
+			editorState: nextEditorState,
 		}, () => {
-			this.serializeContent( editorState );
+			if( this._serializedContent !== serializedContent ) {
+				this._serializedContent = serializedContent;
+				this.props.onChange( serializedContent );
+			}
 		} );
 	}
 

@@ -1,4 +1,4 @@
-import { serializeEditor, unserializeEditor } from "../serialization";
+import { serializeEditor, unserializeEditor, getEntityCountFromRawEditorState } from "../serialization";
 
 const TAGS = [
 	{ name: "title", value: "Title" },
@@ -90,4 +90,33 @@ describe( "editor unserialization", () => {
 
 		expect( actual ).toBe( expected );
 	} );
+} );
+
+describe( "getEntityCountFromRawEditorState", () => {
+	it( "returns the right number of enties in a raw editor state", () => {
+		const rawEditorState = {
+			blocks: [
+				{
+					entityRanges: [
+						{
+							key: 0,
+							offset: 10,
+							length: 3,
+						},
+						{
+							key: 1,
+							offset: 14,
+							length: 3,
+						},
+					],
+				},
+			],
+		};
+
+		expect( getEntityCountFromRawEditorState( rawEditorState ) ).toBe( 2 );
+	} );
+} );
+
+describe( "getEntityCountFromRawContent", () => {
+
 } );

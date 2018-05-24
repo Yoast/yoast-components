@@ -3,6 +3,7 @@ import reduce from "lodash/reduce";
 import sortBy from "lodash/sortBy";
 import sortedIndexBy from "lodash/sortedIndexBy";
 import trim from "lodash/trim";
+import get from "lodash/get";
 
 const CIRCUMFIX = "%%";
 
@@ -188,4 +189,26 @@ export function unserializeEditor( content, tags ) {
 		blocks,
 		entityMap,
 	};
+}
+
+/**
+ * Returns the number of entities in a raw DraftJS EditorState.
+ *
+ * @param {Object} rawEditorState The raw editor state.
+ *
+ * @returns {number} The number of entities.
+ */
+export function getEntityCountFromRawEditorState( rawEditorState ) {
+	return get( rawEditorState, "blocks[0].entityRanges.length", 0 );
+}
+
+/**
+ * Returns the number of entities in a raw content string.
+ *
+ * @param {string} content The raw content.
+ *
+ * @returns {number} The number of entities found.
+ */
+export function getEntityCountFromRawContent( content ) {
+	return 0;
 }
