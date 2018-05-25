@@ -641,6 +641,7 @@ exports[`SnippetEditor activates a field on onClick() and opens the editor 1`] =
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,
@@ -743,7 +744,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
   margin-right: 7px;
 }
 
-.c36 {
+.c37 {
   font-size: 0.8rem;
   height: 33px;
   border: 1px solid #dbdbdb;
@@ -1014,17 +1015,22 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
 }
 
 .c30 {
-  margin: 32px 0;
+  margin: 32px 0 0;
 }
 
 .c29 {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 0 20px;
 }
 
 .c31 {
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
+}
+
+.c36 {
+  margin: 16px 0;
+  font-size: 13px;
 }
 
 .c24 {
@@ -2016,6 +2022,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,
@@ -2176,6 +2183,13 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
                   value={0}
                 />
               </ProgressBar>
+              <SnippetEditorFields__ReplacementVariableExplanation>
+                <p
+                  className="c36"
+                >
+                  Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables.
+                </p>
+              </SnippetEditorFields__ReplacementVariableExplanation>
             </div>
           </SnippetEditorFields__FormSection>
         </section>
@@ -2188,7 +2202,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
         backgroundColor="#f7f7f7"
         borderColor="#ccc"
         boxShadowColor="#ccc"
-        className="c36"
+        className="c37"
         onClick={[Function]}
         textColor="#555"
         type="button"
@@ -2197,7 +2211,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
           backgroundColor="#f7f7f7"
           borderColor="#ccc"
           boxShadowColor="#ccc"
-          className="c36 Button-kDSBcD c3"
+          className="c37 Button-kDSBcD c3"
           onClick={[Function]}
           textColor="#555"
           type="button"
@@ -2206,7 +2220,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
             backgroundColor="#f7f7f7"
             borderColor="#ccc"
             boxShadowColor="#ccc"
-            className="c36 Button-kDSBcD c3 Button-kDSBcD c4"
+            className="c37 Button-kDSBcD c3 Button-kDSBcD c4"
             onClick={[Function]}
             textColor="#555"
             type="button"
@@ -2215,7 +2229,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
               backgroundColor="#f7f7f7"
               borderColor="#ccc"
               boxShadowColor="#ccc"
-              className="c36 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
+              className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
               onClick={[Function]}
               textColor="#555"
               type="button"
@@ -2224,13 +2238,13 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
                 backgroundColor="#f7f7f7"
                 borderColor="#ccc"
                 boxShadowColor="#ccc"
-                className="c36 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
+                className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
                 onClick={[Function]}
                 textColor="#555"
                 type="button"
               >
                 <button
-                  className="c36 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+                  className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
                   onClick={[Function]}
                   type="button"
                 >
@@ -2331,7 +2345,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
   margin-right: 7px;
 }
 
-.c36 {
+.c37 {
   font-size: 0.8rem;
   height: 33px;
   border: 1px solid #dbdbdb;
@@ -2602,17 +2616,22 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
 }
 
 .c30 {
-  margin: 32px 0;
+  margin: 32px 0 0;
 }
 
 .c29 {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 0 20px;
 }
 
 .c31 {
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
+}
+
+.c36 {
+  margin: 16px 0;
+  font-size: 13px;
 }
 
 .c24 {
@@ -3604,6 +3623,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,
@@ -3764,6 +3784,13 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
                   value={0}
                 />
               </ProgressBar>
+              <SnippetEditorFields__ReplacementVariableExplanation>
+                <p
+                  className="c36"
+                >
+                  Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables.
+                </p>
+              </SnippetEditorFields__ReplacementVariableExplanation>
             </div>
           </SnippetEditorFields__FormSection>
         </section>
@@ -3776,7 +3803,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
         backgroundColor="#f7f7f7"
         borderColor="#ccc"
         boxShadowColor="#ccc"
-        className="c36"
+        className="c37"
         onClick={[Function]}
         textColor="#555"
         type="button"
@@ -3785,7 +3812,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
           backgroundColor="#f7f7f7"
           borderColor="#ccc"
           boxShadowColor="#ccc"
-          className="c36 Button-kDSBcD c3"
+          className="c37 Button-kDSBcD c3"
           onClick={[Function]}
           textColor="#555"
           type="button"
@@ -3794,7 +3821,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
             backgroundColor="#f7f7f7"
             borderColor="#ccc"
             boxShadowColor="#ccc"
-            className="c36 Button-kDSBcD c3 Button-kDSBcD c4"
+            className="c37 Button-kDSBcD c3 Button-kDSBcD c4"
             onClick={[Function]}
             textColor="#555"
             type="button"
@@ -3803,7 +3830,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
               backgroundColor="#f7f7f7"
               borderColor="#ccc"
               boxShadowColor="#ccc"
-              className="c36 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
+              className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
               onClick={[Function]}
               textColor="#555"
               type="button"
@@ -3812,13 +3839,13 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
                 backgroundColor="#f7f7f7"
                 borderColor="#ccc"
                 boxShadowColor="#ccc"
-                className="c36 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
+                className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
                 onClick={[Function]}
                 textColor="#555"
                 type="button"
               >
                 <button
-                  className="c36 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+                  className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
                   onClick={[Function]}
                   type="button"
                 >
@@ -3919,7 +3946,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
   margin-right: 7px;
 }
 
-.c36 {
+.c37 {
   font-size: 0.8rem;
   height: 33px;
   border: 1px solid #dbdbdb;
@@ -4190,17 +4217,22 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
 }
 
 .c30 {
-  margin: 32px 0;
+  margin: 32px 0 0;
 }
 
 .c29 {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 0 20px;
 }
 
 .c31 {
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
+}
+
+.c36 {
+  margin: 16px 0;
+  font-size: 13px;
 }
 
 .c24 {
@@ -5192,6 +5224,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,
@@ -5352,6 +5385,13 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
                   value={0}
                 />
               </ProgressBar>
+              <SnippetEditorFields__ReplacementVariableExplanation>
+                <p
+                  className="c36"
+                >
+                  Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables.
+                </p>
+              </SnippetEditorFields__ReplacementVariableExplanation>
             </div>
           </SnippetEditorFields__FormSection>
         </section>
@@ -5364,7 +5404,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
         backgroundColor="#f7f7f7"
         borderColor="#ccc"
         boxShadowColor="#ccc"
-        className="c36"
+        className="c37"
         onClick={[Function]}
         textColor="#555"
         type="button"
@@ -5373,7 +5413,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
           backgroundColor="#f7f7f7"
           borderColor="#ccc"
           boxShadowColor="#ccc"
-          className="c36 Button-kDSBcD c3"
+          className="c37 Button-kDSBcD c3"
           onClick={[Function]}
           textColor="#555"
           type="button"
@@ -5382,7 +5422,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
             backgroundColor="#f7f7f7"
             borderColor="#ccc"
             boxShadowColor="#ccc"
-            className="c36 Button-kDSBcD c3 Button-kDSBcD c4"
+            className="c37 Button-kDSBcD c3 Button-kDSBcD c4"
             onClick={[Function]}
             textColor="#555"
             type="button"
@@ -5391,7 +5431,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
               backgroundColor="#f7f7f7"
               borderColor="#ccc"
               boxShadowColor="#ccc"
-              className="c36 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
+              className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
               onClick={[Function]}
               textColor="#555"
               type="button"
@@ -5400,13 +5440,13 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
                 backgroundColor="#f7f7f7"
                 borderColor="#ccc"
                 boxShadowColor="#ccc"
-                className="c36 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
+                className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
                 onClick={[Function]}
                 textColor="#555"
                 type="button"
               >
                 <button
-                  className="c36 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+                  className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
                   onClick={[Function]}
                   type="button"
                 >
@@ -5507,7 +5547,7 @@ exports[`SnippetEditor closes when calling close() 1`] = `
   margin-right: 7px;
 }
 
-.c36 {
+.c37 {
   font-size: 0.8rem;
   height: 33px;
   border: 1px solid #dbdbdb;
@@ -5778,17 +5818,22 @@ exports[`SnippetEditor closes when calling close() 1`] = `
 }
 
 .c30 {
-  margin: 32px 0;
+  margin: 32px 0 0;
 }
 
 .c29 {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 0 20px;
 }
 
 .c31 {
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
+}
+
+.c36 {
+  margin: 16px 0;
+  font-size: 13px;
 }
 
 .c24 {
@@ -6780,6 +6825,7 @@ exports[`SnippetEditor closes when calling close() 1`] = `
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,
@@ -6940,6 +6986,13 @@ exports[`SnippetEditor closes when calling close() 1`] = `
                   value={0}
                 />
               </ProgressBar>
+              <SnippetEditorFields__ReplacementVariableExplanation>
+                <p
+                  className="c36"
+                >
+                  Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables.
+                </p>
+              </SnippetEditorFields__ReplacementVariableExplanation>
             </div>
           </SnippetEditorFields__FormSection>
         </section>
@@ -6952,7 +7005,7 @@ exports[`SnippetEditor closes when calling close() 1`] = `
         backgroundColor="#f7f7f7"
         borderColor="#ccc"
         boxShadowColor="#ccc"
-        className="c36"
+        className="c37"
         onClick={[Function]}
         textColor="#555"
         type="button"
@@ -6961,7 +7014,7 @@ exports[`SnippetEditor closes when calling close() 1`] = `
           backgroundColor="#f7f7f7"
           borderColor="#ccc"
           boxShadowColor="#ccc"
-          className="c36 Button-kDSBcD c3"
+          className="c37 Button-kDSBcD c3"
           onClick={[Function]}
           textColor="#555"
           type="button"
@@ -6970,7 +7023,7 @@ exports[`SnippetEditor closes when calling close() 1`] = `
             backgroundColor="#f7f7f7"
             borderColor="#ccc"
             boxShadowColor="#ccc"
-            className="c36 Button-kDSBcD c3 Button-kDSBcD c4"
+            className="c37 Button-kDSBcD c3 Button-kDSBcD c4"
             onClick={[Function]}
             textColor="#555"
             type="button"
@@ -6979,7 +7032,7 @@ exports[`SnippetEditor closes when calling close() 1`] = `
               backgroundColor="#f7f7f7"
               borderColor="#ccc"
               boxShadowColor="#ccc"
-              className="c36 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
+              className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
               onClick={[Function]}
               textColor="#555"
               type="button"
@@ -6988,13 +7041,13 @@ exports[`SnippetEditor closes when calling close() 1`] = `
                 backgroundColor="#f7f7f7"
                 borderColor="#ccc"
                 boxShadowColor="#ccc"
-                className="c36 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
+                className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
                 onClick={[Function]}
                 textColor="#555"
                 type="button"
               >
                 <button
-                  className="c36 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+                  className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
                   onClick={[Function]}
                   type="button"
                 >
@@ -8309,7 +8362,7 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
   margin-right: 7px;
 }
 
-.c37 {
+.c38 {
   font-size: 0.8rem;
   height: 33px;
   border: 1px solid #dbdbdb;
@@ -8612,17 +8665,22 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
 }
 
 .c30 {
-  margin: 32px 0;
+  margin: 32px 0 0;
 }
 
 .c29 {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 0 20px;
 }
 
 .c31 {
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
+}
+
+.c37 {
+  margin: 16px 0;
+  font-size: 13px;
 }
 
 .c24 {
@@ -9614,6 +9672,7 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 361,
@@ -9774,6 +9833,13 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
                   value={0}
                 />
               </ProgressBar>
+              <SnippetEditorFields__ReplacementVariableExplanation>
+                <p
+                  className="c37"
+                >
+                  Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables.
+                </p>
+              </SnippetEditorFields__ReplacementVariableExplanation>
             </div>
           </SnippetEditorFields__FormSection>
         </section>
@@ -9786,7 +9852,7 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
         backgroundColor="#f7f7f7"
         borderColor="#ccc"
         boxShadowColor="#ccc"
-        className="c37"
+        className="c38"
         onClick={[Function]}
         textColor="#555"
         type="button"
@@ -9795,7 +9861,7 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
           backgroundColor="#f7f7f7"
           borderColor="#ccc"
           boxShadowColor="#ccc"
-          className="c37 Button-kDSBcD c3"
+          className="c38 Button-kDSBcD c3"
           onClick={[Function]}
           textColor="#555"
           type="button"
@@ -9804,7 +9870,7 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
             backgroundColor="#f7f7f7"
             borderColor="#ccc"
             boxShadowColor="#ccc"
-            className="c37 Button-kDSBcD c3 Button-kDSBcD c4"
+            className="c38 Button-kDSBcD c3 Button-kDSBcD c4"
             onClick={[Function]}
             textColor="#555"
             type="button"
@@ -9813,7 +9879,7 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
               backgroundColor="#f7f7f7"
               borderColor="#ccc"
               boxShadowColor="#ccc"
-              className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
+              className="c38 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
               onClick={[Function]}
               textColor="#555"
               type="button"
@@ -9822,13 +9888,13 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
                 backgroundColor="#f7f7f7"
                 borderColor="#ccc"
                 boxShadowColor="#ccc"
-                className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
+                className="c38 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
                 onClick={[Function]}
                 textColor="#555"
                 type="button"
               >
                 <button
-                  className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+                  className="c38 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
                   onClick={[Function]}
                   type="button"
                 >
@@ -9929,7 +9995,7 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
   margin-right: 7px;
 }
 
-.c37 {
+.c38 {
   font-size: 0.8rem;
   height: 33px;
   border: 1px solid #dbdbdb;
@@ -10232,17 +10298,22 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
 }
 
 .c30 {
-  margin: 32px 0;
+  margin: 32px 0 0;
 }
 
 .c29 {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 0 20px;
 }
 
 .c31 {
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
+}
+
+.c37 {
+  margin: 16px 0;
+  font-size: 13px;
 }
 
 .c24 {
@@ -11234,6 +11305,7 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 100,
@@ -11394,6 +11466,13 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
                   value={330}
                 />
               </ProgressBar>
+              <SnippetEditorFields__ReplacementVariableExplanation>
+                <p
+                  className="c37"
+                >
+                  Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables.
+                </p>
+              </SnippetEditorFields__ReplacementVariableExplanation>
             </div>
           </SnippetEditorFields__FormSection>
         </section>
@@ -11406,7 +11485,7 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
         backgroundColor="#f7f7f7"
         borderColor="#ccc"
         boxShadowColor="#ccc"
-        className="c37"
+        className="c38"
         onClick={[Function]}
         textColor="#555"
         type="button"
@@ -11415,7 +11494,7 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
           backgroundColor="#f7f7f7"
           borderColor="#ccc"
           boxShadowColor="#ccc"
-          className="c37 Button-kDSBcD c3"
+          className="c38 Button-kDSBcD c3"
           onClick={[Function]}
           textColor="#555"
           type="button"
@@ -11424,7 +11503,7 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
             backgroundColor="#f7f7f7"
             borderColor="#ccc"
             boxShadowColor="#ccc"
-            className="c37 Button-kDSBcD c3 Button-kDSBcD c4"
+            className="c38 Button-kDSBcD c3 Button-kDSBcD c4"
             onClick={[Function]}
             textColor="#555"
             type="button"
@@ -11433,7 +11512,7 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
               backgroundColor="#f7f7f7"
               borderColor="#ccc"
               boxShadowColor="#ccc"
-              className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
+              className="c38 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
               onClick={[Function]}
               textColor="#555"
               type="button"
@@ -11442,13 +11521,13 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
                 backgroundColor="#f7f7f7"
                 borderColor="#ccc"
                 boxShadowColor="#ccc"
-                className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
+                className="c38 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
                 onClick={[Function]}
                 textColor="#555"
                 type="button"
               >
                 <button
-                  className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+                  className="c38 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
                   onClick={[Function]}
                   type="button"
                 >
@@ -11549,7 +11628,7 @@ exports[`SnippetEditor decodes separator replacement variables in the  1`] = `
   margin-right: 7px;
 }
 
-.c36 {
+.c37 {
   font-size: 0.8rem;
   height: 33px;
   border: 1px solid #dbdbdb;
@@ -11820,17 +11899,22 @@ exports[`SnippetEditor decodes separator replacement variables in the  1`] = `
 }
 
 .c30 {
-  margin: 32px 0;
+  margin: 32px 0 0;
 }
 
 .c29 {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 0 20px;
 }
 
 .c31 {
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
+}
+
+.c36 {
+  margin: 16px 0;
+  font-size: 13px;
 }
 
 .c24 {
@@ -12844,6 +12928,7 @@ exports[`SnippetEditor decodes separator replacement variables in the  1`] = `
           },
         ]
       }
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,
@@ -13026,6 +13111,13 @@ exports[`SnippetEditor decodes separator replacement variables in the  1`] = `
                   value={0}
                 />
               </ProgressBar>
+              <SnippetEditorFields__ReplacementVariableExplanation>
+                <p
+                  className="c36"
+                >
+                  Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables.
+                </p>
+              </SnippetEditorFields__ReplacementVariableExplanation>
             </div>
           </SnippetEditorFields__FormSection>
         </section>
@@ -13038,7 +13130,7 @@ exports[`SnippetEditor decodes separator replacement variables in the  1`] = `
         backgroundColor="#f7f7f7"
         borderColor="#ccc"
         boxShadowColor="#ccc"
-        className="c36"
+        className="c37"
         onClick={[Function]}
         textColor="#555"
         type="button"
@@ -13047,7 +13139,7 @@ exports[`SnippetEditor decodes separator replacement variables in the  1`] = `
           backgroundColor="#f7f7f7"
           borderColor="#ccc"
           boxShadowColor="#ccc"
-          className="c36 Button-kDSBcD c3"
+          className="c37 Button-kDSBcD c3"
           onClick={[Function]}
           textColor="#555"
           type="button"
@@ -13056,7 +13148,7 @@ exports[`SnippetEditor decodes separator replacement variables in the  1`] = `
             backgroundColor="#f7f7f7"
             borderColor="#ccc"
             boxShadowColor="#ccc"
-            className="c36 Button-kDSBcD c3 Button-kDSBcD c4"
+            className="c37 Button-kDSBcD c3 Button-kDSBcD c4"
             onClick={[Function]}
             textColor="#555"
             type="button"
@@ -13065,7 +13157,7 @@ exports[`SnippetEditor decodes separator replacement variables in the  1`] = `
               backgroundColor="#f7f7f7"
               borderColor="#ccc"
               boxShadowColor="#ccc"
-              className="c36 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
+              className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
               onClick={[Function]}
               textColor="#555"
               type="button"
@@ -13074,13 +13166,13 @@ exports[`SnippetEditor decodes separator replacement variables in the  1`] = `
                 backgroundColor="#f7f7f7"
                 borderColor="#ccc"
                 boxShadowColor="#ccc"
-                className="c36 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
+                className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
                 onClick={[Function]}
                 textColor="#555"
                 type="button"
               >
                 <button
-                  className="c36 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+                  className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
                   onClick={[Function]}
                   type="button"
                 >
@@ -13152,6 +13244,7 @@ exports[`SnippetEditor doesn't remove the highlight if the wrong field is left 1
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,
@@ -14424,7 +14517,7 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
   margin-right: 7px;
 }
 
-.c37 {
+.c38 {
   font-size: 0.8rem;
   height: 33px;
   border: 1px solid #dbdbdb;
@@ -14695,17 +14788,22 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
 }
 
 .c31 {
-  margin: 32px 0;
+  margin: 32px 0 0;
 }
 
 .c30 {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 0 20px;
 }
 
 .c32 {
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
+}
+
+.c37 {
+  margin: 16px 0;
+  font-size: 13px;
 }
 
 .c25 {
@@ -15717,6 +15815,7 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,
@@ -15877,6 +15976,13 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
                   value={0}
                 />
               </ProgressBar>
+              <SnippetEditorFields__ReplacementVariableExplanation>
+                <p
+                  className="c37"
+                >
+                  Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables.
+                </p>
+              </SnippetEditorFields__ReplacementVariableExplanation>
             </div>
           </SnippetEditorFields__FormSection>
         </section>
@@ -15889,7 +15995,7 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
         backgroundColor="#f7f7f7"
         borderColor="#ccc"
         boxShadowColor="#ccc"
-        className="c37"
+        className="c38"
         onClick={[Function]}
         textColor="#555"
         type="button"
@@ -15898,7 +16004,7 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
           backgroundColor="#f7f7f7"
           borderColor="#ccc"
           boxShadowColor="#ccc"
-          className="c37 Button-kDSBcD c3"
+          className="c38 Button-kDSBcD c3"
           onClick={[Function]}
           textColor="#555"
           type="button"
@@ -15907,7 +16013,7 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
             backgroundColor="#f7f7f7"
             borderColor="#ccc"
             boxShadowColor="#ccc"
-            className="c37 Button-kDSBcD c3 Button-kDSBcD c4"
+            className="c38 Button-kDSBcD c3 Button-kDSBcD c4"
             onClick={[Function]}
             textColor="#555"
             type="button"
@@ -15916,7 +16022,7 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
               backgroundColor="#f7f7f7"
               borderColor="#ccc"
               boxShadowColor="#ccc"
-              className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
+              className="c38 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
               onClick={[Function]}
               textColor="#555"
               type="button"
@@ -15925,13 +16031,13 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
                 backgroundColor="#f7f7f7"
                 borderColor="#ccc"
                 boxShadowColor="#ccc"
-                className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
+                className="c38 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
                 onClick={[Function]}
                 textColor="#555"
                 type="button"
               >
                 <button
-                  className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+                  className="c38 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
                   onClick={[Function]}
                   type="button"
                 >
@@ -16032,7 +16138,7 @@ exports[`SnippetEditor highlights the hovered field when onMouseOver() is called
   margin-right: 7px;
 }
 
-.c37 {
+.c38 {
   font-size: 0.8rem;
   height: 33px;
   border: 1px solid #dbdbdb;
@@ -16303,17 +16409,22 @@ exports[`SnippetEditor highlights the hovered field when onMouseOver() is called
 }
 
 .c31 {
-  margin: 32px 0;
+  margin: 32px 0 0;
 }
 
 .c30 {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 0 20px;
 }
 
 .c32 {
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
+}
+
+.c37 {
+  margin: 16px 0;
+  font-size: 13px;
 }
 
 .c25 {
@@ -17325,6 +17436,7 @@ exports[`SnippetEditor highlights the hovered field when onMouseOver() is called
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,
@@ -17485,6 +17597,13 @@ exports[`SnippetEditor highlights the hovered field when onMouseOver() is called
                   value={0}
                 />
               </ProgressBar>
+              <SnippetEditorFields__ReplacementVariableExplanation>
+                <p
+                  className="c37"
+                >
+                  Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables.
+                </p>
+              </SnippetEditorFields__ReplacementVariableExplanation>
             </div>
           </SnippetEditorFields__FormSection>
         </section>
@@ -17497,7 +17616,7 @@ exports[`SnippetEditor highlights the hovered field when onMouseOver() is called
         backgroundColor="#f7f7f7"
         borderColor="#ccc"
         boxShadowColor="#ccc"
-        className="c37"
+        className="c38"
         onClick={[Function]}
         textColor="#555"
         type="button"
@@ -17506,7 +17625,7 @@ exports[`SnippetEditor highlights the hovered field when onMouseOver() is called
           backgroundColor="#f7f7f7"
           borderColor="#ccc"
           boxShadowColor="#ccc"
-          className="c37 Button-kDSBcD c3"
+          className="c38 Button-kDSBcD c3"
           onClick={[Function]}
           textColor="#555"
           type="button"
@@ -17515,7 +17634,7 @@ exports[`SnippetEditor highlights the hovered field when onMouseOver() is called
             backgroundColor="#f7f7f7"
             borderColor="#ccc"
             boxShadowColor="#ccc"
-            className="c37 Button-kDSBcD c3 Button-kDSBcD c4"
+            className="c38 Button-kDSBcD c3 Button-kDSBcD c4"
             onClick={[Function]}
             textColor="#555"
             type="button"
@@ -17524,7 +17643,7 @@ exports[`SnippetEditor highlights the hovered field when onMouseOver() is called
               backgroundColor="#f7f7f7"
               borderColor="#ccc"
               boxShadowColor="#ccc"
-              className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
+              className="c38 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
               onClick={[Function]}
               textColor="#555"
               type="button"
@@ -17533,13 +17652,13 @@ exports[`SnippetEditor highlights the hovered field when onMouseOver() is called
                 backgroundColor="#f7f7f7"
                 borderColor="#ccc"
                 boxShadowColor="#ccc"
-                className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
+                className="c38 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
                 onClick={[Function]}
                 textColor="#555"
                 type="button"
               >
                 <button
-                  className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+                  className="c38 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
                   onClick={[Function]}
                   type="button"
                 >
@@ -17640,7 +17759,7 @@ exports[`SnippetEditor opens when calling open() 1`] = `
   margin-right: 7px;
 }
 
-.c36 {
+.c37 {
   font-size: 0.8rem;
   height: 33px;
   border: 1px solid #dbdbdb;
@@ -17911,17 +18030,22 @@ exports[`SnippetEditor opens when calling open() 1`] = `
 }
 
 .c30 {
-  margin: 32px 0;
+  margin: 32px 0 0;
 }
 
 .c29 {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 0 20px;
 }
 
 .c31 {
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
+}
+
+.c36 {
+  margin: 16px 0;
+  font-size: 13px;
 }
 
 .c24 {
@@ -18913,6 +19037,7 @@ exports[`SnippetEditor opens when calling open() 1`] = `
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,
@@ -19073,6 +19198,13 @@ exports[`SnippetEditor opens when calling open() 1`] = `
                   value={0}
                 />
               </ProgressBar>
+              <SnippetEditorFields__ReplacementVariableExplanation>
+                <p
+                  className="c36"
+                >
+                  Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables.
+                </p>
+              </SnippetEditorFields__ReplacementVariableExplanation>
             </div>
           </SnippetEditorFields__FormSection>
         </section>
@@ -19085,7 +19217,7 @@ exports[`SnippetEditor opens when calling open() 1`] = `
         backgroundColor="#f7f7f7"
         borderColor="#ccc"
         boxShadowColor="#ccc"
-        className="c36"
+        className="c37"
         onClick={[Function]}
         textColor="#555"
         type="button"
@@ -19094,7 +19226,7 @@ exports[`SnippetEditor opens when calling open() 1`] = `
           backgroundColor="#f7f7f7"
           borderColor="#ccc"
           boxShadowColor="#ccc"
-          className="c36 Button-kDSBcD c3"
+          className="c37 Button-kDSBcD c3"
           onClick={[Function]}
           textColor="#555"
           type="button"
@@ -19103,7 +19235,7 @@ exports[`SnippetEditor opens when calling open() 1`] = `
             backgroundColor="#f7f7f7"
             borderColor="#ccc"
             boxShadowColor="#ccc"
-            className="c36 Button-kDSBcD c3 Button-kDSBcD c4"
+            className="c37 Button-kDSBcD c3 Button-kDSBcD c4"
             onClick={[Function]}
             textColor="#555"
             type="button"
@@ -19112,7 +19244,7 @@ exports[`SnippetEditor opens when calling open() 1`] = `
               backgroundColor="#f7f7f7"
               borderColor="#ccc"
               boxShadowColor="#ccc"
-              className="c36 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
+              className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
               onClick={[Function]}
               textColor="#555"
               type="button"
@@ -19121,13 +19253,13 @@ exports[`SnippetEditor opens when calling open() 1`] = `
                 backgroundColor="#f7f7f7"
                 borderColor="#ccc"
                 boxShadowColor="#ccc"
-                className="c36 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
+                className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
                 onClick={[Function]}
                 textColor="#555"
                 type="button"
               >
                 <button
-                  className="c36 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+                  className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
                   onClick={[Function]}
                   type="button"
                 >
@@ -19228,7 +19360,7 @@ exports[`SnippetEditor passes replacement variables to the title and description
   margin-right: 7px;
 }
 
-.c36 {
+.c37 {
   font-size: 0.8rem;
   height: 33px;
   border: 1px solid #dbdbdb;
@@ -19499,17 +19631,22 @@ exports[`SnippetEditor passes replacement variables to the title and description
 }
 
 .c30 {
-  margin: 32px 0;
+  margin: 32px 0 0;
 }
 
 .c29 {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 0 20px;
 }
 
 .c31 {
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
+}
+
+.c36 {
+  margin: 16px 0;
+  font-size: 13px;
 }
 
 .c24 {
@@ -20523,6 +20660,7 @@ exports[`SnippetEditor passes replacement variables to the title and description
           },
         ]
       }
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,
@@ -20705,6 +20843,13 @@ exports[`SnippetEditor passes replacement variables to the title and description
                   value={0}
                 />
               </ProgressBar>
+              <SnippetEditorFields__ReplacementVariableExplanation>
+                <p
+                  className="c36"
+                >
+                  Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables.
+                </p>
+              </SnippetEditorFields__ReplacementVariableExplanation>
             </div>
           </SnippetEditorFields__FormSection>
         </section>
@@ -20717,7 +20862,7 @@ exports[`SnippetEditor passes replacement variables to the title and description
         backgroundColor="#f7f7f7"
         borderColor="#ccc"
         boxShadowColor="#ccc"
-        className="c36"
+        className="c37"
         onClick={[Function]}
         textColor="#555"
         type="button"
@@ -20726,7 +20871,7 @@ exports[`SnippetEditor passes replacement variables to the title and description
           backgroundColor="#f7f7f7"
           borderColor="#ccc"
           boxShadowColor="#ccc"
-          className="c36 Button-kDSBcD c3"
+          className="c37 Button-kDSBcD c3"
           onClick={[Function]}
           textColor="#555"
           type="button"
@@ -20735,7 +20880,7 @@ exports[`SnippetEditor passes replacement variables to the title and description
             backgroundColor="#f7f7f7"
             borderColor="#ccc"
             boxShadowColor="#ccc"
-            className="c36 Button-kDSBcD c3 Button-kDSBcD c4"
+            className="c37 Button-kDSBcD c3 Button-kDSBcD c4"
             onClick={[Function]}
             textColor="#555"
             type="button"
@@ -20744,7 +20889,7 @@ exports[`SnippetEditor passes replacement variables to the title and description
               backgroundColor="#f7f7f7"
               borderColor="#ccc"
               boxShadowColor="#ccc"
-              className="c36 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
+              className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
               onClick={[Function]}
               textColor="#555"
               type="button"
@@ -20753,13 +20898,13 @@ exports[`SnippetEditor passes replacement variables to the title and description
                 backgroundColor="#f7f7f7"
                 borderColor="#ccc"
                 boxShadowColor="#ccc"
-                className="c36 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
+                className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
                 onClick={[Function]}
                 textColor="#555"
                 type="button"
               >
                 <button
-                  className="c36 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+                  className="c37 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
                   onClick={[Function]}
                   type="button"
                 >
@@ -21426,6 +21571,7 @@ exports[`SnippetEditor removes the highlight from the hovered field on calling o
       onChange={[Function]}
       onFocus={[Function]}
       replacementVariables={Array []}
+      replacementVariablesExplanation="Type '%' to add snippet variables. See the 'Help' tab on this page to see all available variables."
       titleLengthProgress={
         Object {
           "actual": 0,

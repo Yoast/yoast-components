@@ -113,6 +113,7 @@ class SnippetEditor extends React.Component {
 			data,
 			titleLengthProgress,
 			descriptionLengthProgress,
+			replacementVariablesExplanation,
 		} = this.props;
 		const replacementVariables = this.decodeSeparatorVariable( this.props.replacementVariables );
 		const { activeField, hoveredField, isOpen } = this.state;
@@ -130,6 +131,7 @@ class SnippetEditor extends React.Component {
 					onChange={ this.handleChange }
 					onFocus={ this.setFieldFocus }
 					replacementVariables={ replacementVariables }
+					replacementVariablesExplanation={ replacementVariablesExplanation }
 					titleLengthProgress={ titleLengthProgress }
 					descriptionLengthProgress={ descriptionLengthProgress }
 				/>
@@ -404,6 +406,7 @@ SnippetEditor.propTypes = {
 	mapDataToPreview: PropTypes.func,
 	keyword: PropTypes.string,
 	locale: PropTypes.string,
+	replacementVariablesExplanation: PropTypes.string,
 };
 
 SnippetEditor.defaultProps = {

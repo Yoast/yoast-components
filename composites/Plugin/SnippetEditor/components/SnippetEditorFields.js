@@ -94,17 +94,22 @@ const InputContainerDescription = InputContainer.extend`
 `;
 
 const FormSection = styled.div`
-	margin: 32px 0;
+	margin: 32px 0 0;
 `;
 
 const StyledEditor = styled.section`
-	padding: 10px 20px 20px 20px;
+	padding: 10px 20px 0 20px;
 `;
 
 const SimulatedLabel = styled.div`
 	cursor: pointer;
 	font-size: 16px;
 	font-family: Arial, Roboto-Regular, HelveticaNeue, sans-serif;
+`;
+
+const ReplacementVariableExplanation = styled.p`
+	margin: 16px 0;
+	font-size: 13px;
 `;
 
 class SnippetEditorFields extends React.Component {
@@ -208,6 +213,7 @@ class SnippetEditorFields extends React.Component {
 			activeField,
 			hoveredField,
 			replacementVariables,
+			replacementVariablesExplanation,
 			titleLengthProgress,
 			descriptionLengthProgress,
 			onFocus,
@@ -293,6 +299,7 @@ class SnippetEditorFields extends React.Component {
 						value={ descriptionLengthProgress.actual }
 						progressColor={ this.getProgressColor( descriptionLengthProgress.score ) }
 					/>
+					<ReplacementVariableExplanation>{ replacementVariablesExplanation }</ReplacementVariableExplanation>
 				</FormSection>
 			</StyledEditor>
 		);
@@ -331,6 +338,7 @@ SnippetEditorFields.propTypes = {
 	hoveredField: PropTypes.oneOf( [ "title", "slug", "description" ] ),
 	titleLengthProgress: lengthProgressShape,
 	descriptionLengthProgress: lengthProgressShape,
+	replacementVariablesExplanation: PropTypes.string,
 };
 
 SnippetEditorFields.defaultProps = {
@@ -346,6 +354,8 @@ SnippetEditorFields.defaultProps = {
 		actual: 0,
 		score: 0,
 	},
+	replacementVariablesExplanation: __( "Type '%' to add snippet variables. " +
+		"See the 'Help' tab on this page to see all available variables.", "yoast-components" ),
 };
 
 export default SnippetEditorFields;
