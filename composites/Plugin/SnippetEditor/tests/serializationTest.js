@@ -52,6 +52,7 @@ describe( "editor unserialization", () => {
 		const input = "%%title%% %%post_type%% test test123";
 		const expected = {
 			blocks: [ {
+				key: "block",
 				text: "title post_type test test123",
 				entityRanges: [ {
 					offset: 6,

@@ -72,8 +72,6 @@ class ReplacementVariableEditor extends React.Component {
 		const { content: rawContent, replacementVariables } = this.props;
 		const unserialized = unserializeEditor( rawContent, replacementVariables );
 
-		console.log( unserialized );
-
 		this.state = {
 			editorState: createEditorState( unserialized ),
 			searchValue: "",
@@ -87,6 +85,7 @@ class ReplacementVariableEditor extends React.Component {
 		 * `rawContent === serialize( unserialize( rawContent ) )`
 		 */
 		this._serializedContent = rawContent;
+		this._unserializedContentLength = unserialized.blocks[ 0 ].text.length;
 
 		this.onChange = this.onChange.bind( this );
 		this.onSearchChange = this.onSearchChange.bind( this );
@@ -107,30 +106,32 @@ class ReplacementVariableEditor extends React.Component {
 	 * Serializes the current content and calls the onChange handler with this
 	 * content.
 	 *
-	 * @param {string} serializedContent The current content of the editor.
+	 * @param {EditorState} editorState The current state of the editor.
 	 *
-	 * @returns {void}
+	 * @returns {Object}
+	 * @returns {Object.serializedContent} The serialized content.
+	 * @returns {Object.nextEditorState}   The new editor state.
 	 */
-	serializeContent( serializedContent ) {
-		if ( this._serializedContent !== serializedContent ) {
-			this._serializedContent = serializedContent;
-
-			this.props.onChange( this._serializedContent );
-		}
-	}
-
 	reserialize( editorState ) {
 		let nextEditorState = editorState;
-		const serializedContent = serializeEditorState(
-			editorState.getCurrentContent()
-		);
+		const serializedContent = serializeEditorState( editorState.getCurrentContent() );
+
 		if ( this._serializedContent !== serializedContent ) {
 			const unserialized = unserializeEditor(
 				serializedContent,
 				this.state.replacementVariables
 			);
-			console.log( unserialized );
-			nextEditorState = createEditorState( unserialized );
+
+			const newContentLength = unserialized.blocks[ 0 ].text.length;
+			const contentLengthDiff = newContentLength - this._unserializedContentLength;
+			this._unserializedContentLength = newContentLength;
+			const newCursorPosition = this.state.editorState.getSelection().getFocusOffset() + contentLengthDiff;
+
+			nextEditorState = EditorState.push( this.state.editorState, convertFromRaw( unserialized ) );
+			nextEditorState = EditorState.forceSelection( nextEditorState, editorState.getSelection().merge( {
+				focusOffset: newCursorPosition,
+				anchorOffset: newCursorPosition,
+			} ) );
 		}
 		return {
 			serializedContent,

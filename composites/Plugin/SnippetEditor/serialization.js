@@ -183,6 +183,7 @@ export function unserializeEditor( content, tags ) {
 	const blocks = [ {
 		entityRanges,
 		text: content,
+		key: "block",
 	} ];
 
 	return {
