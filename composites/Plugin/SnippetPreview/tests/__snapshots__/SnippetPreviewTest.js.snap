@@ -85,14 +85,14 @@ exports[`SnippetPreview changes the colors of the description if it was generate
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -257,13 +257,13 @@ exports[`SnippetPreview changes the colors of the description if it was generate
 <section>
   <div>
     <div
-      className="yoast-help-button c0"
+      className="yoast-help c0"
     >
       <button
-        aria-controls="yoast-help-4-text"
+        aria-controls="yoast-help-4-panel"
         aria-expanded={false}
         aria-label="Help on the Snippet Preview"
-        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+        className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
         onClick={[Function]}
         type="button"
       >
@@ -283,14 +283,9 @@ exports[`SnippetPreview changes the colors of the description if it was generate
         </svg>
       </button>
       <div
-        aria-hidden={true}
-        className="yoast-help-button__helpDiv c10"
-        id="yoast-help-4-text"
-        style={
-          Object {
-            "maxHeight": "0",
-          }
-        }
+        className="yoast-help__panel c10"
+        id="yoast-help-4-panel"
+        onTransitionEnd={[Function]}
       >
         <p
           className="c11"
@@ -500,14 +495,14 @@ exports[`SnippetPreview highlights keywords even if they are transliterated 1`] 
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -672,13 +667,13 @@ exports[`SnippetPreview highlights keywords even if they are transliterated 1`] 
 <section>
   <div>
     <div
-      className="yoast-help-button c0"
+      className="yoast-help c0"
     >
       <button
-        aria-controls="yoast-help-12-text"
+        aria-controls="yoast-help-12-panel"
         aria-expanded={false}
         aria-label="Help on the Snippet Preview"
-        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+        className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
         onClick={[Function]}
         type="button"
       >
@@ -698,14 +693,9 @@ exports[`SnippetPreview highlights keywords even if they are transliterated 1`] 
         </svg>
       </button>
       <div
-        aria-hidden={true}
-        className="yoast-help-button__helpDiv c10"
-        id="yoast-help-12-text"
-        style={
-          Object {
-            "maxHeight": "0",
-          }
-        }
+        className="yoast-help__panel c10"
+        id="yoast-help-12-panel"
+        onTransitionEnd={[Function]}
       >
         <p
           className="c11"
@@ -918,14 +908,14 @@ exports[`SnippetPreview highlights keywords inside the description and url 1`] =
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -1090,13 +1080,13 @@ exports[`SnippetPreview highlights keywords inside the description and url 1`] =
 <section>
   <div>
     <div
-      className="yoast-help-button c0"
+      className="yoast-help c0"
     >
       <button
-        aria-controls="yoast-help-11-text"
+        aria-controls="yoast-help-11-panel"
         aria-expanded={false}
         aria-label="Help on the Snippet Preview"
-        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+        className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
         onClick={[Function]}
         type="button"
       >
@@ -1116,14 +1106,9 @@ exports[`SnippetPreview highlights keywords inside the description and url 1`] =
         </svg>
       </button>
       <div
-        aria-hidden={true}
-        className="yoast-help-button__helpDiv c10"
-        id="yoast-help-11-text"
-        style={
-          Object {
-            "maxHeight": "0",
-          }
-        }
+        className="yoast-help__panel c10"
+        id="yoast-help-11-panel"
+        onTransitionEnd={[Function]}
       >
         <p
           className="c11"
@@ -1324,14 +1309,14 @@ exports[`SnippetPreview mobile mode renders an AMP logo when isAmp is true 1`] =
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -1525,13 +1510,13 @@ exports[`SnippetPreview mobile mode renders an AMP logo when isAmp is true 1`] =
 <section>
   <div>
     <div
-      className="yoast-help-button c0"
+      className="yoast-help c0"
     >
       <button
-        aria-controls="yoast-help-16-text"
+        aria-controls="yoast-help-16-panel"
         aria-expanded={false}
         aria-label="Help on the Snippet Preview"
-        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+        className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
         onClick={[Function]}
         type="button"
       >
@@ -1551,14 +1536,9 @@ exports[`SnippetPreview mobile mode renders an AMP logo when isAmp is true 1`] =
         </svg>
       </button>
       <div
-        aria-hidden={true}
-        className="yoast-help-button__helpDiv c10"
-        id="yoast-help-16-text"
-        style={
-          Object {
-            "maxHeight": "0",
-          }
-        }
+        className="yoast-help__panel c10"
+        id="yoast-help-16-panel"
+        onTransitionEnd={[Function]}
       >
         <p
           className="c11"
@@ -1760,14 +1740,14 @@ exports[`SnippetPreview mobile mode renders differently than desktop 1`] = `
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -1950,13 +1930,13 @@ exports[`SnippetPreview mobile mode renders differently than desktop 1`] = `
 <section>
   <div>
     <div
-      className="yoast-help-button c0"
+      className="yoast-help c0"
     >
       <button
-        aria-controls="yoast-help-15-text"
+        aria-controls="yoast-help-15-panel"
         aria-expanded={false}
         aria-label="Help on the Snippet Preview"
-        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+        className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
         onClick={[Function]}
         type="button"
       >
@@ -1976,14 +1956,9 @@ exports[`SnippetPreview mobile mode renders differently than desktop 1`] = `
         </svg>
       </button>
       <div
-        aria-hidden={true}
-        className="yoast-help-button__helpDiv c10"
-        id="yoast-help-15-text"
-        style={
-          Object {
-            "maxHeight": "0",
-          }
-        }
+        className="yoast-help__panel c10"
+        id="yoast-help-15-panel"
+        onTransitionEnd={[Function]}
       >
         <p
           className="c11"
@@ -2182,14 +2157,14 @@ exports[`SnippetPreview renders a SnippetPreview in the default mode 1`] = `
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -2372,13 +2347,13 @@ exports[`SnippetPreview renders a SnippetPreview in the default mode 1`] = `
 <section>
   <div>
     <div
-      className="yoast-help-button c0"
+      className="yoast-help c0"
     >
       <button
-        aria-controls="yoast-help-1-text"
+        aria-controls="yoast-help-1-panel"
         aria-expanded={false}
         aria-label="Help on the Snippet Preview"
-        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+        className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
         onClick={[Function]}
         type="button"
       >
@@ -2398,14 +2373,9 @@ exports[`SnippetPreview renders a SnippetPreview in the default mode 1`] = `
         </svg>
       </button>
       <div
-        aria-hidden={true}
-        className="yoast-help-button__helpDiv c10"
-        id="yoast-help-1-text"
-        style={
-          Object {
-            "maxHeight": "0",
-          }
-        }
+        className="yoast-help__panel c10"
+        id="yoast-help-1-panel"
+        onTransitionEnd={[Function]}
       >
         <p
           className="c11"
@@ -2616,14 +2586,14 @@ exports[`SnippetPreview renders a SnippetPreview that looks like Google 1`] = `
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -2788,13 +2758,13 @@ exports[`SnippetPreview renders a SnippetPreview that looks like Google 1`] = `
 <section>
   <div>
     <div
-      className="yoast-help-button c0"
+      className="yoast-help c0"
     >
       <button
-        aria-controls="yoast-help-2-text"
+        aria-controls="yoast-help-2-panel"
         aria-expanded={false}
         aria-label="Help on the Snippet Preview"
-        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+        className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
         onClick={[Function]}
         type="button"
       >
@@ -2814,14 +2784,9 @@ exports[`SnippetPreview renders a SnippetPreview that looks like Google 1`] = `
         </svg>
       </button>
       <div
-        aria-hidden={true}
-        className="yoast-help-button__helpDiv c10"
-        id="yoast-help-2-text"
-        style={
-          Object {
-            "maxHeight": "0",
-          }
-        }
+        className="yoast-help__panel c10"
+        id="yoast-help-2-panel"
+        onTransitionEnd={[Function]}
       >
         <p
           className="c11"
@@ -3031,14 +2996,14 @@ exports[`SnippetPreview renders a caret on activation 1`] = `
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -3215,13 +3180,13 @@ exports[`SnippetPreview renders a caret on activation 1`] = `
 <section>
   <div>
     <div
-      className="yoast-help-button c0"
+      className="yoast-help c0"
     >
       <button
-        aria-controls="yoast-help-8-text"
+        aria-controls="yoast-help-8-panel"
         aria-expanded={false}
         aria-label="Help on the Snippet Preview"
-        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+        className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
         onClick={[Function]}
         type="button"
       >
@@ -3241,14 +3206,9 @@ exports[`SnippetPreview renders a caret on activation 1`] = `
         </svg>
       </button>
       <div
-        aria-hidden={true}
-        className="yoast-help-button__helpDiv c10"
-        id="yoast-help-8-text"
-        style={
-          Object {
-            "maxHeight": "0",
-          }
-        }
+        className="yoast-help__panel c10"
+        id="yoast-help-8-panel"
+        onTransitionEnd={[Function]}
       >
         <p
           className="c11"
@@ -3458,14 +3418,14 @@ exports[`SnippetPreview renders a caret on activation 2`] = `
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -3642,13 +3602,13 @@ exports[`SnippetPreview renders a caret on activation 2`] = `
 <section>
   <div>
     <div
-      className="yoast-help-button c0"
+      className="yoast-help c0"
     >
       <button
-        aria-controls="yoast-help-9-text"
+        aria-controls="yoast-help-9-panel"
         aria-expanded={false}
         aria-label="Help on the Snippet Preview"
-        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+        className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
         onClick={[Function]}
         type="button"
       >
@@ -3668,14 +3628,9 @@ exports[`SnippetPreview renders a caret on activation 2`] = `
         </svg>
       </button>
       <div
-        aria-hidden={true}
-        className="yoast-help-button__helpDiv c10"
-        id="yoast-help-9-text"
-        style={
-          Object {
-            "maxHeight": "0",
-          }
-        }
+        className="yoast-help__panel c10"
+        id="yoast-help-9-panel"
+        onTransitionEnd={[Function]}
       >
         <p
           className="c11"
@@ -3885,14 +3840,14 @@ exports[`SnippetPreview renders a caret on activation 3`] = `
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -4069,13 +4024,13 @@ exports[`SnippetPreview renders a caret on activation 3`] = `
 <section>
   <div>
     <div
-      className="yoast-help-button c0"
+      className="yoast-help c0"
     >
       <button
-        aria-controls="yoast-help-10-text"
+        aria-controls="yoast-help-10-panel"
         aria-expanded={false}
         aria-label="Help on the Snippet Preview"
-        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+        className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
         onClick={[Function]}
         type="button"
       >
@@ -4095,14 +4050,9 @@ exports[`SnippetPreview renders a caret on activation 3`] = `
         </svg>
       </button>
       <div
-        aria-hidden={true}
-        className="yoast-help-button__helpDiv c10"
-        id="yoast-help-10-text"
-        style={
-          Object {
-            "maxHeight": "0",
-          }
-        }
+        className="yoast-help__panel c10"
+        id="yoast-help-10-panel"
+        onTransitionEnd={[Function]}
       >
         <p
           className="c11"
@@ -4312,14 +4262,14 @@ exports[`SnippetPreview renders a caret on hover 1`] = `
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -4496,13 +4446,13 @@ exports[`SnippetPreview renders a caret on hover 1`] = `
 <section>
   <div>
     <div
-      className="yoast-help-button c0"
+      className="yoast-help c0"
     >
       <button
-        aria-controls="yoast-help-5-text"
+        aria-controls="yoast-help-5-panel"
         aria-expanded={false}
         aria-label="Help on the Snippet Preview"
-        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+        className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
         onClick={[Function]}
         type="button"
       >
@@ -4522,14 +4472,9 @@ exports[`SnippetPreview renders a caret on hover 1`] = `
         </svg>
       </button>
       <div
-        aria-hidden={true}
-        className="yoast-help-button__helpDiv c10"
-        id="yoast-help-5-text"
-        style={
-          Object {
-            "maxHeight": "0",
-          }
-        }
+        className="yoast-help__panel c10"
+        id="yoast-help-5-panel"
+        onTransitionEnd={[Function]}
       >
         <p
           className="c11"
@@ -4739,14 +4684,14 @@ exports[`SnippetPreview renders a caret on hover 2`] = `
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -4923,13 +4868,13 @@ exports[`SnippetPreview renders a caret on hover 2`] = `
 <section>
   <div>
     <div
-      className="yoast-help-button c0"
+      className="yoast-help c0"
     >
       <button
-        aria-controls="yoast-help-6-text"
+        aria-controls="yoast-help-6-panel"
         aria-expanded={false}
         aria-label="Help on the Snippet Preview"
-        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+        className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
         onClick={[Function]}
         type="button"
       >
@@ -4949,14 +4894,9 @@ exports[`SnippetPreview renders a caret on hover 2`] = `
         </svg>
       </button>
       <div
-        aria-hidden={true}
-        className="yoast-help-button__helpDiv c10"
-        id="yoast-help-6-text"
-        style={
-          Object {
-            "maxHeight": "0",
-          }
-        }
+        className="yoast-help__panel c10"
+        id="yoast-help-6-panel"
+        onTransitionEnd={[Function]}
       >
         <p
           className="c11"
@@ -5166,14 +5106,14 @@ exports[`SnippetPreview renders a caret on hover 3`] = `
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -5350,13 +5290,13 @@ exports[`SnippetPreview renders a caret on hover 3`] = `
 <section>
   <div>
     <div
-      className="yoast-help-button c0"
+      className="yoast-help c0"
     >
       <button
-        aria-controls="yoast-help-7-text"
+        aria-controls="yoast-help-7-panel"
         aria-expanded={false}
         aria-label="Help on the Snippet Preview"
-        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+        className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
         onClick={[Function]}
         type="button"
       >
@@ -5376,14 +5316,9 @@ exports[`SnippetPreview renders a caret on hover 3`] = `
         </svg>
       </button>
       <div
-        aria-hidden={true}
-        className="yoast-help-button__helpDiv c10"
-        id="yoast-help-7-text"
-        style={
-          Object {
-            "maxHeight": "0",
-          }
-        }
+        className="yoast-help__panel c10"
+        id="yoast-help-7-panel"
+        onTransitionEnd={[Function]}
       >
         <p
           className="c11"
@@ -5593,14 +5528,14 @@ exports[`SnippetPreview shows the date if a date is passed 1`] = `
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -5769,13 +5704,13 @@ exports[`SnippetPreview shows the date if a date is passed 1`] = `
 <section>
   <div>
     <div
-      className="yoast-help-button c0"
+      className="yoast-help c0"
     >
       <button
-        aria-controls="yoast-help-3-text"
+        aria-controls="yoast-help-3-panel"
         aria-expanded={false}
         aria-label="Help on the Snippet Preview"
-        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+        className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
         onClick={[Function]}
         type="button"
       >
@@ -5795,14 +5730,9 @@ exports[`SnippetPreview shows the date if a date is passed 1`] = `
         </svg>
       </button>
       <div
-        aria-hidden={true}
-        className="yoast-help-button__helpDiv c10"
-        id="yoast-help-3-text"
-        style={
-          Object {
-            "maxHeight": "0",
-          }
-        }
+        className="yoast-help__panel c10"
+        id="yoast-help-3-panel"
+        onTransitionEnd={[Function]}
       >
         <p
           className="c11"

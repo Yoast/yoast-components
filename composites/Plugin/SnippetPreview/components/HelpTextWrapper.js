@@ -15,15 +15,15 @@ import { rgba } from "../../../../style-guide/helpers";
 const HelpTextContainer = styled.div`
 	max-width: 600px;
 	font-weight: normal;
-	margin: 0 20px 10px 25px;
+	margin: 0 20px 0 25px;
 `;
 
-const HelpTextDiv = styled.div`
+const HelpTextPanel = styled.div`
+	display: ${ props => props.panelDisplay };
 	max-width: 400px;
-	display: block;
-	transition: all 0.5s ease;
+	transition: max-height 0.2s ease;
 	overflow: hidden;
-	max-height: 0;
+	max-height: ${ props => props.panelMaxHeight };
 `;
 
 const HelpTextButton = styled( Button )`
@@ -77,19 +77,141 @@ class HelpTextWrapper extends React.Component {
 		super( props );
 
 		this.state = {
+			isHidden: true,
 			isExpanded: false,
+			panelMaxHeight: "0",
 		};
 
 		this.uniqueId = uniqueId( "yoast-help-" );
+
+		this.onButtonClick = this.onButtonClick.bind( this );
+		this.setMaxHeight = this.setMaxHeight.bind( this );
+		this.resetMaxHeight = this.resetMaxHeight.bind( this );
+		this.expandPanel = this.expandPanel.bind( this );
+		this.collapsePanel = this.collapsePanel.bind( this );
+		this.onTransitionEnd = this.onTransitionEnd.bind( this );
+		this.setHelpPanelRef = this.setHelpPanelRef.bind( this );
 	}
 
 	/**
-	 * Toggles the help text expanded state.
+	 * Handles the click event on the toggle button.
 	 *
 	 * @returns {void}
 	 */
 	onButtonClick() {
-		this.setState( { isExpanded: ! this.state.isExpanded } );
+		if ( this.state.isExpanded ) {
+			this.collapsePanel();
+		} else {
+			this.expandPanel();
+		}
+	}
+
+	/**
+	 * Sets the Help panel height to a value in pixels.
+	 *
+	 * We use the max value between clientHeight, offsetHeight, and scrollHeight
+	 * so we always get the actual height in pixels whether the panel is collapsed,
+	 * expanded, and also while the animation is running. Inspired by jQuery.
+	 *
+	 * @returns {void}
+	 */
+	setMaxHeight() {
+		const height = Math.max(
+			this.helpTextPanel.clientHeight,
+			this.helpTextPanel.offsetHeight,
+			this.helpTextPanel.scrollHeight
+		);
+
+		this.setState( {
+			panelMaxHeight: height + "px",
+		} );
+	}
+
+	/**
+	 * Resets the Help panel max height to "0".
+	 *
+	 * @returns {void}
+	 */
+	resetMaxHeight() {
+		this.setState( {
+			panelMaxHeight: "0",
+		} );
+	}
+
+	/**
+	 * Sets the isExpanded and isHidden states.
+	 *
+	 * @returns {void}
+	 */
+	expandPanel() {
+		this.setState( {
+			isHidden: false,
+			isExpanded: true,
+		} );
+	}
+
+	/**
+	 * Sets the isExpanded state to false.
+	 *
+	 * @returns {void}
+	 */
+	collapsePanel() {
+		this.setState( {
+			isExpanded: false,
+		} );
+	}
+
+	/**
+	 * Toggles the max-height values after an update has occurred.
+	 *
+	 * @param {Object} prevProps The previous props.
+	 * @param {Object} prevState The previous state.
+	 * @returns {void}
+	 */
+	componentDidUpdate( prevProps, prevState ) {
+		// When the Help panel is opening we set its max-height value.
+		if ( ! prevState.isExpanded && this.state.isExpanded ) {
+			this.setMaxHeight();
+		}
+
+		/*
+		 * When the Help panel is closing, we first set the max-height to a value
+		 * in pixels and then to "0" so the CSS animation can run.
+		 */
+		if ( prevState.isExpanded && ! this.state.isExpanded ) {
+			this.setMaxHeight();
+			setTimeout( () => {
+				this.resetMaxHeight();
+			}, 50 );
+		}
+	}
+
+	/**
+	 * Handles the relevant state properties when the transition has completed.
+	 *
+	 * @returns {void}
+	 */
+	onTransitionEnd() {
+		if ( this.state.panelMaxHeight === "0" ) {
+			this.setState( {
+				isHidden: true,
+			} );
+		} else {
+			this.setState( {
+				panelMaxHeight: "none",
+			} );
+		}
+	}
+
+	/**
+	 * Sets the Help panel element reference for later use.
+	 *
+	 * @param {Object} panelElement The Help panel element.
+	 *
+	 * @returns {void}
+	 */
+	setHelpPanelRef( panelElement ) {
+		this.helpTextPanel = panelElement;
 	}
 
 	/**
@@ -98,17 +220,17 @@ class HelpTextWrapper extends React.Component {
 	 * @returns {ReactElement} The rendered help text wrapper.
 	 */
 	render() {
-		const helpTextId = `${ this.uniqueId }-text`;
+		const helpPanelId = `${ this.uniqueId }-panel`;
 
 		return (
 			<HelpTextContainer
 				className={ this.props.className }
 			>
 				<HelpTextButton
-					className={ this.props.className + "__yoast-help-button" }
-					onClick={ this.onButtonClick.bind( this ) }
+					className={ this.props.className + "__button" }
+					onClick={ this.onButtonClick }
 					aria-expanded={ this.state.isExpanded }
-					aria-controls={ helpTextId }
+					aria-controls={ helpPanelId }
 					aria-label={ this.props.helpTextButtonLabel }
 				>
 					<StyledSvg
@@ -117,14 +239,16 @@ class HelpTextWrapper extends React.Component {
 						icon="question-circle"
 					/>
 				</HelpTextButton>
-				<HelpTextDiv
-					id={ helpTextId }
-					className={ this.props.className + "__helpDiv" }
-					aria-hidden={ ! this.state.isExpanded }
-					style={ { maxHeight: this.state.isExpanded ? "200px" : "0" } }
+				<HelpTextPanel
+					id={ helpPanelId }
+					className={ this.props.className + "__panel" }
+					onTransitionEnd={ this.onTransitionEnd }
+					innerRef={ this.setHelpPanelRef }
+					panelMaxHeight={ this.state.panelMaxHeight }
+					panelDisplay={ this.state.isHidden ? "none" : "block" }
 				>
 					<HelpText text={ this.props.helpText } />
-				</HelpTextDiv>
+				</HelpTextPanel>
 			</HelpTextContainer>
 		);
 	}
@@ -140,7 +264,7 @@ HelpTextWrapper.propTypes = {
 };
 
 HelpTextWrapper.defaultProps = {
-	className: "yoast-help-button",
+	className: "yoast-help",
 	helpText: "",
 };
 

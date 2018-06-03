@@ -88,14 +88,14 @@ exports[`SnippetEditor accepts a custom data mapping function 1`] = `
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -353,13 +353,13 @@ exports[`SnippetEditor accepts a custom data mapping function 1`] = `
   <section>
     <div>
       <div
-        className="yoast-help-button c0"
+        className="yoast-help c0"
       >
         <button
-          aria-controls="yoast-help-6-text"
+          aria-controls="yoast-help-6-panel"
           aria-expanded={false}
           aria-label="Help on the Snippet Preview"
-          className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+          className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
           onClick={[Function]}
           type="button"
         >
@@ -379,14 +379,9 @@ exports[`SnippetEditor accepts a custom data mapping function 1`] = `
           </svg>
         </button>
         <div
-          aria-hidden={true}
-          className="yoast-help-button__helpDiv c10"
-          id="yoast-help-6-text"
-          style={
-            Object {
-              "maxHeight": "0",
-            }
-          }
+          className="yoast-help__panel c10"
+          id="yoast-help-6-panel"
+          onTransitionEnd={[Function]}
         >
           <p
             className="c11"
@@ -779,14 +774,14 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -1236,7 +1231,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
       <section>
         <div>
           <HelpTextWrapper
-            className="yoast-help-button"
+            className="yoast-help"
             helpText={
               Array [
                 "This is a rendering of what this post might look like in Google's search results. ",
@@ -1250,90 +1245,90 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
             helpTextButtonLabel="Help on the Snippet Preview"
           >
             <HelpTextWrapper__HelpTextContainer
-              className="yoast-help-button"
+              className="yoast-help"
             >
               <div
-                className="yoast-help-button c0"
+                className="yoast-help c0"
               >
                 <HelpTextWrapper__HelpTextButton
-                  aria-controls="yoast-help-16-text"
+                  aria-controls="yoast-help-16-panel"
                   aria-expanded={false}
                   aria-label="Help on the Snippet Preview"
-                  className="yoast-help-button__yoast-help-button"
+                  className="yoast-help__button"
                   onClick={[Function]}
                 >
                   <Button
-                    aria-controls="yoast-help-16-text"
+                    aria-controls="yoast-help-16-panel"
                     aria-expanded={false}
                     aria-label="Help on the Snippet Preview"
-                    className="yoast-help-button__yoast-help-button c1"
+                    className="yoast-help__button c1"
                     onClick={[Function]}
                   >
                     <Button
-                      aria-controls="yoast-help-16-text"
+                      aria-controls="yoast-help-16-panel"
                       aria-expanded={false}
                       aria-label="Help on the Snippet Preview"
                       backgroundColor="#f7f7f7"
                       borderColor="#ccc"
                       boxShadowColor="#ccc"
-                      className="yoast-help-button__yoast-help-button c1 c2"
+                      className="yoast-help__button c1 c2"
                       onClick={[Function]}
                       textColor="#555"
                       type="button"
                     >
                       <Button
-                        aria-controls="yoast-help-16-text"
+                        aria-controls="yoast-help-16-panel"
                         aria-expanded={false}
                         aria-label="Help on the Snippet Preview"
                         backgroundColor="#f7f7f7"
                         borderColor="#ccc"
                         boxShadowColor="#ccc"
-                        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3"
+                        className="yoast-help__button c1 c2 Button-kDSBcD c3"
                         onClick={[Function]}
                         textColor="#555"
                         type="button"
                       >
                         <Button
-                          aria-controls="yoast-help-16-text"
+                          aria-controls="yoast-help-16-panel"
                           aria-expanded={false}
                           aria-label="Help on the Snippet Preview"
                           backgroundColor="#f7f7f7"
                           borderColor="#ccc"
                           boxShadowColor="#ccc"
-                          className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4"
+                          className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4"
                           onClick={[Function]}
                           textColor="#555"
                           type="button"
                         >
                           <Button
-                            aria-controls="yoast-help-16-text"
+                            aria-controls="yoast-help-16-panel"
                             aria-expanded={false}
                             aria-label="Help on the Snippet Preview"
                             backgroundColor="#f7f7f7"
                             borderColor="#ccc"
                             boxShadowColor="#ccc"
-                            className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
+                            className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
                             onClick={[Function]}
                             textColor="#555"
                             type="button"
                           >
                             <Button__BaseButton
-                              aria-controls="yoast-help-16-text"
+                              aria-controls="yoast-help-16-panel"
                               aria-expanded={false}
                               aria-label="Help on the Snippet Preview"
                               backgroundColor="#f7f7f7"
                               borderColor="#ccc"
                               boxShadowColor="#ccc"
-                              className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
+                              className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
                               onClick={[Function]}
                               textColor="#555"
                               type="button"
                             >
                               <button
-                                aria-controls="yoast-help-16-text"
+                                aria-controls="yoast-help-16-panel"
                                 aria-expanded={false}
                                 aria-label="Help on the Snippet Preview"
-                                className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+                                className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
                                 onClick={[Function]}
                                 type="button"
                               >
@@ -1383,25 +1378,18 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
                     </Button>
                   </Button>
                 </HelpTextWrapper__HelpTextButton>
-                <HelpTextWrapper__HelpTextDiv
-                  aria-hidden={true}
-                  className="yoast-help-button__helpDiv"
-                  id="yoast-help-16-text"
-                  style={
-                    Object {
-                      "maxHeight": "0",
-                    }
-                  }
+                <HelpTextWrapper__HelpTextPanel
+                  className="yoast-help__panel"
+                  id="yoast-help-16-panel"
+                  innerRef={[Function]}
+                  onTransitionEnd={[Function]}
+                  panelDisplay="none"
+                  panelMaxHeight="0"
                 >
                   <div
-                    aria-hidden={true}
-                    className="yoast-help-button__helpDiv c10"
-                    id="yoast-help-16-text"
-                    style={
-                      Object {
-                        "maxHeight": "0",
-                      }
-                    }
+                    className="yoast-help__panel c10"
+                    id="yoast-help-16-panel"
+                    onTransitionEnd={[Function]}
                   >
                     <HelpText
                       text={
@@ -1443,7 +1431,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
                       </HelpText__YoastHelpText>
                     </HelpText>
                   </div>
-                </HelpTextWrapper__HelpTextDiv>
+                </HelpTextWrapper__HelpTextPanel>
               </div>
             </HelpTextWrapper__HelpTextContainer>
           </HelpTextWrapper>
@@ -2395,14 +2383,14 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -2852,7 +2840,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
       <section>
         <div>
           <HelpTextWrapper
-            className="yoast-help-button"
+            className="yoast-help"
             helpText={
               Array [
                 "This is a rendering of what this post might look like in Google's search results. ",
@@ -2866,90 +2854,90 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
             helpTextButtonLabel="Help on the Snippet Preview"
           >
             <HelpTextWrapper__HelpTextContainer
-              className="yoast-help-button"
+              className="yoast-help"
             >
               <div
-                className="yoast-help-button c0"
+                className="yoast-help c0"
               >
                 <HelpTextWrapper__HelpTextButton
-                  aria-controls="yoast-help-16-text"
+                  aria-controls="yoast-help-16-panel"
                   aria-expanded={false}
                   aria-label="Help on the Snippet Preview"
-                  className="yoast-help-button__yoast-help-button"
+                  className="yoast-help__button"
                   onClick={[Function]}
                 >
                   <Button
-                    aria-controls="yoast-help-16-text"
+                    aria-controls="yoast-help-16-panel"
                     aria-expanded={false}
                     aria-label="Help on the Snippet Preview"
-                    className="yoast-help-button__yoast-help-button c1"
+                    className="yoast-help__button c1"
                     onClick={[Function]}
                   >
                     <Button
-                      aria-controls="yoast-help-16-text"
+                      aria-controls="yoast-help-16-panel"
                       aria-expanded={false}
                       aria-label="Help on the Snippet Preview"
                       backgroundColor="#f7f7f7"
                       borderColor="#ccc"
                       boxShadowColor="#ccc"
-                      className="yoast-help-button__yoast-help-button c1 c2"
+                      className="yoast-help__button c1 c2"
                       onClick={[Function]}
                       textColor="#555"
                       type="button"
                     >
                       <Button
-                        aria-controls="yoast-help-16-text"
+                        aria-controls="yoast-help-16-panel"
                         aria-expanded={false}
                         aria-label="Help on the Snippet Preview"
                         backgroundColor="#f7f7f7"
                         borderColor="#ccc"
                         boxShadowColor="#ccc"
-                        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3"
+                        className="yoast-help__button c1 c2 Button-kDSBcD c3"
                         onClick={[Function]}
                         textColor="#555"
                         type="button"
                       >
                         <Button
-                          aria-controls="yoast-help-16-text"
+                          aria-controls="yoast-help-16-panel"
                           aria-expanded={false}
                           aria-label="Help on the Snippet Preview"
                           backgroundColor="#f7f7f7"
                           borderColor="#ccc"
                           boxShadowColor="#ccc"
-                          className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4"
+                          className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4"
                           onClick={[Function]}
                           textColor="#555"
                           type="button"
                         >
                           <Button
-                            aria-controls="yoast-help-16-text"
+                            aria-controls="yoast-help-16-panel"
                             aria-expanded={false}
                             aria-label="Help on the Snippet Preview"
                             backgroundColor="#f7f7f7"
                             borderColor="#ccc"
                             boxShadowColor="#ccc"
-                            className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
+                            className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
                             onClick={[Function]}
                             textColor="#555"
                             type="button"
                           >
                             <Button__BaseButton
-                              aria-controls="yoast-help-16-text"
+                              aria-controls="yoast-help-16-panel"
                               aria-expanded={false}
                               aria-label="Help on the Snippet Preview"
                               backgroundColor="#f7f7f7"
                               borderColor="#ccc"
                               boxShadowColor="#ccc"
-                              className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
+                              className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
                               onClick={[Function]}
                               textColor="#555"
                               type="button"
                             >
                               <button
-                                aria-controls="yoast-help-16-text"
+                                aria-controls="yoast-help-16-panel"
                                 aria-expanded={false}
                                 aria-label="Help on the Snippet Preview"
-                                className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+                                className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
                                 onClick={[Function]}
                                 type="button"
                               >
@@ -2999,25 +2987,18 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
                     </Button>
                   </Button>
                 </HelpTextWrapper__HelpTextButton>
-                <HelpTextWrapper__HelpTextDiv
-                  aria-hidden={true}
-                  className="yoast-help-button__helpDiv"
-                  id="yoast-help-16-text"
-                  style={
-                    Object {
-                      "maxHeight": "0",
-                    }
-                  }
+                <HelpTextWrapper__HelpTextPanel
+                  className="yoast-help__panel"
+                  id="yoast-help-16-panel"
+                  innerRef={[Function]}
+                  onTransitionEnd={[Function]}
+                  panelDisplay="none"
+                  panelMaxHeight="0"
                 >
                   <div
-                    aria-hidden={true}
-                    className="yoast-help-button__helpDiv c10"
-                    id="yoast-help-16-text"
-                    style={
-                      Object {
-                        "maxHeight": "0",
-                      }
-                    }
+                    className="yoast-help__panel c10"
+                    id="yoast-help-16-panel"
+                    onTransitionEnd={[Function]}
                   >
                     <HelpText
                       text={
@@ -3059,7 +3040,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
                       </HelpText__YoastHelpText>
                     </HelpText>
                   </div>
-                </HelpTextWrapper__HelpTextDiv>
+                </HelpTextWrapper__HelpTextPanel>
               </div>
             </HelpTextWrapper__HelpTextContainer>
           </HelpTextWrapper>
@@ -4011,14 +3992,14 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -4468,7 +4449,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
       <section>
         <div>
           <HelpTextWrapper
-            className="yoast-help-button"
+            className="yoast-help"
             helpText={
               Array [
                 "This is a rendering of what this post might look like in Google's search results. ",
@@ -4482,90 +4463,90 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
             helpTextButtonLabel="Help on the Snippet Preview"
           >
             <HelpTextWrapper__HelpTextContainer
-              className="yoast-help-button"
+              className="yoast-help"
             >
               <div
-                className="yoast-help-button c0"
+                className="yoast-help c0"
               >
                 <HelpTextWrapper__HelpTextButton
-                  aria-controls="yoast-help-16-text"
+                  aria-controls="yoast-help-16-panel"
                   aria-expanded={false}
                   aria-label="Help on the Snippet Preview"
-                  className="yoast-help-button__yoast-help-button"
+                  className="yoast-help__button"
                   onClick={[Function]}
                 >
                   <Button
-                    aria-controls="yoast-help-16-text"
+                    aria-controls="yoast-help-16-panel"
                     aria-expanded={false}
                     aria-label="Help on the Snippet Preview"
-                    className="yoast-help-button__yoast-help-button c1"
+                    className="yoast-help__button c1"
                     onClick={[Function]}
                   >
                     <Button
-                      aria-controls="yoast-help-16-text"
+                      aria-controls="yoast-help-16-panel"
                       aria-expanded={false}
                       aria-label="Help on the Snippet Preview"
                       backgroundColor="#f7f7f7"
                       borderColor="#ccc"
                       boxShadowColor="#ccc"
-                      className="yoast-help-button__yoast-help-button c1 c2"
+                      className="yoast-help__button c1 c2"
                       onClick={[Function]}
                       textColor="#555"
                       type="button"
                     >
                       <Button
-                        aria-controls="yoast-help-16-text"
+                        aria-controls="yoast-help-16-panel"
                         aria-expanded={false}
                         aria-label="Help on the Snippet Preview"
                         backgroundColor="#f7f7f7"
                         borderColor="#ccc"
                         boxShadowColor="#ccc"
-                        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3"
+                        className="yoast-help__button c1 c2 Button-kDSBcD c3"
                         onClick={[Function]}
                         textColor="#555"
                         type="button"
                       >
                         <Button
-                          aria-controls="yoast-help-16-text"
+                          aria-controls="yoast-help-16-panel"
                           aria-expanded={false}
                           aria-label="Help on the Snippet Preview"
                           backgroundColor="#f7f7f7"
                           borderColor="#ccc"
                           boxShadowColor="#ccc"
-                          className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4"
+                          className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4"
                           onClick={[Function]}
                           textColor="#555"
                           type="button"
                         >
                           <Button
-                            aria-controls="yoast-help-16-text"
+                            aria-controls="yoast-help-16-panel"
                             aria-expanded={false}
                             aria-label="Help on the Snippet Preview"
                             backgroundColor="#f7f7f7"
                             borderColor="#ccc"
                             boxShadowColor="#ccc"
-                            className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
+                            className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
                             onClick={[Function]}
                             textColor="#555"
                             type="button"
                           >
                             <Button__BaseButton
-                              aria-controls="yoast-help-16-text"
+                              aria-controls="yoast-help-16-panel"
                               aria-expanded={false}
                               aria-label="Help on the Snippet Preview"
                               backgroundColor="#f7f7f7"
                               borderColor="#ccc"
                               boxShadowColor="#ccc"
-                              className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
+                              className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
                               onClick={[Function]}
                               textColor="#555"
                               type="button"
                             >
                               <button
-                                aria-controls="yoast-help-16-text"
+                                aria-controls="yoast-help-16-panel"
                                 aria-expanded={false}
                                 aria-label="Help on the Snippet Preview"
-                                className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+                                className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
                                 onClick={[Function]}
                                 type="button"
                               >
@@ -4615,25 +4596,18 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
                     </Button>
                   </Button>
                 </HelpTextWrapper__HelpTextButton>
-                <HelpTextWrapper__HelpTextDiv
-                  aria-hidden={true}
-                  className="yoast-help-button__helpDiv"
-                  id="yoast-help-16-text"
-                  style={
-                    Object {
-                      "maxHeight": "0",
-                    }
-                  }
+                <HelpTextWrapper__HelpTextPanel
+                  className="yoast-help__panel"
+                  id="yoast-help-16-panel"
+                  innerRef={[Function]}
+                  onTransitionEnd={[Function]}
+                  panelDisplay="none"
+                  panelMaxHeight="0"
                 >
                   <div
-                    aria-hidden={true}
-                    className="yoast-help-button__helpDiv c10"
-                    id="yoast-help-16-text"
-                    style={
-                      Object {
-                        "maxHeight": "0",
-                      }
-                    }
+                    className="yoast-help__panel c10"
+                    id="yoast-help-16-panel"
+                    onTransitionEnd={[Function]}
                   >
                     <HelpText
                       text={
@@ -4675,7 +4649,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
                       </HelpText__YoastHelpText>
                     </HelpText>
                   </div>
-                </HelpTextWrapper__HelpTextDiv>
+                </HelpTextWrapper__HelpTextPanel>
               </div>
             </HelpTextWrapper__HelpTextContainer>
           </HelpTextWrapper>
@@ -5627,14 +5601,14 @@ exports[`SnippetEditor closes when calling close() 1`] = `
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -6084,7 +6058,7 @@ exports[`SnippetEditor closes when calling close() 1`] = `
       <section>
         <div>
           <HelpTextWrapper
-            className="yoast-help-button"
+            className="yoast-help"
             helpText={
               Array [
                 "This is a rendering of what this post might look like in Google's search results. ",
@@ -6098,90 +6072,90 @@ exports[`SnippetEditor closes when calling close() 1`] = `
             helpTextButtonLabel="Help on the Snippet Preview"
           >
             <HelpTextWrapper__HelpTextContainer
-              className="yoast-help-button"
+              className="yoast-help"
             >
               <div
-                className="yoast-help-button c0"
+                className="yoast-help c0"
               >
                 <HelpTextWrapper__HelpTextButton
-                  aria-controls="yoast-help-9-text"
+                  aria-controls="yoast-help-9-panel"
                   aria-expanded={false}
                   aria-label="Help on the Snippet Preview"
-                  className="yoast-help-button__yoast-help-button"
+                  className="yoast-help__button"
                   onClick={[Function]}
                 >
                   <Button
-                    aria-controls="yoast-help-9-text"
+                    aria-controls="yoast-help-9-panel"
                     aria-expanded={false}
                     aria-label="Help on the Snippet Preview"
-                    className="yoast-help-button__yoast-help-button c1"
+                    className="yoast-help__button c1"
                     onClick={[Function]}
                   >
                     <Button
-                      aria-controls="yoast-help-9-text"
+                      aria-controls="yoast-help-9-panel"
                       aria-expanded={false}
                       aria-label="Help on the Snippet Preview"
                       backgroundColor="#f7f7f7"
                       borderColor="#ccc"
                       boxShadowColor="#ccc"
-                      className="yoast-help-button__yoast-help-button c1 c2"
+                      className="yoast-help__button c1 c2"
                       onClick={[Function]}
                       textColor="#555"
                       type="button"
                     >
                       <Button
-                        aria-controls="yoast-help-9-text"
+                        aria-controls="yoast-help-9-panel"
                         aria-expanded={false}
                         aria-label="Help on the Snippet Preview"
                         backgroundColor="#f7f7f7"
                         borderColor="#ccc"
                         boxShadowColor="#ccc"
-                        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3"
+                        className="yoast-help__button c1 c2 Button-kDSBcD c3"
                         onClick={[Function]}
                         textColor="#555"
                         type="button"
                       >
                         <Button
-                          aria-controls="yoast-help-9-text"
+                          aria-controls="yoast-help-9-panel"
                           aria-expanded={false}
                           aria-label="Help on the Snippet Preview"
                           backgroundColor="#f7f7f7"
                           borderColor="#ccc"
                           boxShadowColor="#ccc"
-                          className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4"
+                          className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4"
                           onClick={[Function]}
                           textColor="#555"
                           type="button"
                         >
                           <Button
-                            aria-controls="yoast-help-9-text"
+                            aria-controls="yoast-help-9-panel"
                             aria-expanded={false}
                             aria-label="Help on the Snippet Preview"
                             backgroundColor="#f7f7f7"
                             borderColor="#ccc"
                             boxShadowColor="#ccc"
-                            className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
+                            className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
                             onClick={[Function]}
                             textColor="#555"
                             type="button"
                           >
                             <Button__BaseButton
-                              aria-controls="yoast-help-9-text"
+                              aria-controls="yoast-help-9-panel"
                               aria-expanded={false}
                               aria-label="Help on the Snippet Preview"
                               backgroundColor="#f7f7f7"
                               borderColor="#ccc"
                               boxShadowColor="#ccc"
-                              className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
+                              className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
                               onClick={[Function]}
                               textColor="#555"
                               type="button"
                             >
                               <button
-                                aria-controls="yoast-help-9-text"
+                                aria-controls="yoast-help-9-panel"
                                 aria-expanded={false}
                                 aria-label="Help on the Snippet Preview"
-                                className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+                                className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
                                 onClick={[Function]}
                                 type="button"
                               >
@@ -6231,25 +6205,18 @@ exports[`SnippetEditor closes when calling close() 1`] = `
                     </Button>
                   </Button>
                 </HelpTextWrapper__HelpTextButton>
-                <HelpTextWrapper__HelpTextDiv
-                  aria-hidden={true}
-                  className="yoast-help-button__helpDiv"
-                  id="yoast-help-9-text"
-                  style={
-                    Object {
-                      "maxHeight": "0",
-                    }
-                  }
+                <HelpTextWrapper__HelpTextPanel
+                  className="yoast-help__panel"
+                  id="yoast-help-9-panel"
+                  innerRef={[Function]}
+                  onTransitionEnd={[Function]}
+                  panelDisplay="none"
+                  panelMaxHeight="0"
                 >
                   <div
-                    aria-hidden={true}
-                    className="yoast-help-button__helpDiv c10"
-                    id="yoast-help-9-text"
-                    style={
-                      Object {
-                        "maxHeight": "0",
-                      }
-                    }
+                    className="yoast-help__panel c10"
+                    id="yoast-help-9-panel"
+                    onTransitionEnd={[Function]}
                   >
                     <HelpText
                       text={
@@ -6291,7 +6258,7 @@ exports[`SnippetEditor closes when calling close() 1`] = `
                       </HelpText__YoastHelpText>
                     </HelpText>
                   </div>
-                </HelpTextWrapper__HelpTextDiv>
+                </HelpTextWrapper__HelpTextPanel>
               </div>
             </HelpTextWrapper__HelpTextContainer>
           </HelpTextWrapper>
@@ -7234,14 +7201,14 @@ exports[`SnippetEditor closes when calling close() 2`] = `
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -7572,7 +7539,7 @@ exports[`SnippetEditor closes when calling close() 2`] = `
       <section>
         <div>
           <HelpTextWrapper
-            className="yoast-help-button"
+            className="yoast-help"
             helpText={
               Array [
                 "This is a rendering of what this post might look like in Google's search results. ",
@@ -7586,90 +7553,90 @@ exports[`SnippetEditor closes when calling close() 2`] = `
             helpTextButtonLabel="Help on the Snippet Preview"
           >
             <HelpTextWrapper__HelpTextContainer
-              className="yoast-help-button"
+              className="yoast-help"
             >
               <div
-                className="yoast-help-button c0"
+                className="yoast-help c0"
               >
                 <HelpTextWrapper__HelpTextButton
-                  aria-controls="yoast-help-9-text"
+                  aria-controls="yoast-help-9-panel"
                   aria-expanded={false}
                   aria-label="Help on the Snippet Preview"
-                  className="yoast-help-button__yoast-help-button"
+                  className="yoast-help__button"
                   onClick={[Function]}
                 >
                   <Button
-                    aria-controls="yoast-help-9-text"
+                    aria-controls="yoast-help-9-panel"
                     aria-expanded={false}
                     aria-label="Help on the Snippet Preview"
-                    className="yoast-help-button__yoast-help-button c1"
+                    className="yoast-help__button c1"
                     onClick={[Function]}
                   >
                     <Button
-                      aria-controls="yoast-help-9-text"
+                      aria-controls="yoast-help-9-panel"
                       aria-expanded={false}
                       aria-label="Help on the Snippet Preview"
                       backgroundColor="#f7f7f7"
                       borderColor="#ccc"
                       boxShadowColor="#ccc"
-                      className="yoast-help-button__yoast-help-button c1 c2"
+                      className="yoast-help__button c1 c2"
                       onClick={[Function]}
                       textColor="#555"
                       type="button"
                     >
                       <Button
-                        aria-controls="yoast-help-9-text"
+                        aria-controls="yoast-help-9-panel"
                         aria-expanded={false}
                         aria-label="Help on the Snippet Preview"
                         backgroundColor="#f7f7f7"
                         borderColor="#ccc"
                         boxShadowColor="#ccc"
-                        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3"
+                        className="yoast-help__button c1 c2 Button-kDSBcD c3"
                         onClick={[Function]}
                         textColor="#555"
                         type="button"
                       >
                         <Button
-                          aria-controls="yoast-help-9-text"
+                          aria-controls="yoast-help-9-panel"
                           aria-expanded={false}
                           aria-label="Help on the Snippet Preview"
                           backgroundColor="#f7f7f7"
                           borderColor="#ccc"
                           boxShadowColor="#ccc"
-                          className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4"
+                          className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4"
                           onClick={[Function]}
                           textColor="#555"
                           type="button"
                         >
                           <Button
-                            aria-controls="yoast-help-9-text"
+                            aria-controls="yoast-help-9-panel"
                             aria-expanded={false}
                             aria-label="Help on the Snippet Preview"
                             backgroundColor="#f7f7f7"
                             borderColor="#ccc"
                             boxShadowColor="#ccc"
-                            className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
+                            className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
                             onClick={[Function]}
                             textColor="#555"
                             type="button"
                           >
                             <Button__BaseButton
-                              aria-controls="yoast-help-9-text"
+                              aria-controls="yoast-help-9-panel"
                               aria-expanded={false}
                               aria-label="Help on the Snippet Preview"
                               backgroundColor="#f7f7f7"
                               borderColor="#ccc"
                               boxShadowColor="#ccc"
-                              className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
+                              className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
                               onClick={[Function]}
                               textColor="#555"
                               type="button"
                             >
                               <button
-                                aria-controls="yoast-help-9-text"
+                                aria-controls="yoast-help-9-panel"
                                 aria-expanded={false}
                                 aria-label="Help on the Snippet Preview"
-                                className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+                                className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
                                 onClick={[Function]}
                                 type="button"
                               >
@@ -7719,25 +7686,18 @@ exports[`SnippetEditor closes when calling close() 2`] = `
                     </Button>
                   </Button>
                 </HelpTextWrapper__HelpTextButton>
-                <HelpTextWrapper__HelpTextDiv
-                  aria-hidden={true}
-                  className="yoast-help-button__helpDiv"
-                  id="yoast-help-9-text"
-                  style={
-                    Object {
-                      "maxHeight": "0",
-                    }
-                  }
+                <HelpTextWrapper__HelpTextPanel
+                  className="yoast-help__panel"
+                  id="yoast-help-9-panel"
+                  innerRef={[Function]}
+                  onTransitionEnd={[Function]}
+                  panelDisplay="none"
+                  panelMaxHeight="0"
                 >
                   <div
-                    aria-hidden={true}
-                    className="yoast-help-button__helpDiv c10"
-                    id="yoast-help-9-text"
-                    style={
-                      Object {
-                        "maxHeight": "0",
-                      }
-                    }
+                    className="yoast-help__panel c10"
+                    id="yoast-help-9-panel"
+                    onTransitionEnd={[Function]}
                   >
                     <HelpText
                       text={
@@ -7779,7 +7739,7 @@ exports[`SnippetEditor closes when calling close() 2`] = `
                       </HelpText__YoastHelpText>
                     </HelpText>
                   </div>
-                </HelpTextWrapper__HelpTextDiv>
+                </HelpTextWrapper__HelpTextPanel>
               </div>
             </HelpTextWrapper__HelpTextContainer>
           </HelpTextWrapper>
@@ -8485,14 +8445,14 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -8974,7 +8934,7 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
       <section>
         <div>
           <HelpTextWrapper
-            className="yoast-help-button"
+            className="yoast-help"
             helpText={
               Array [
                 "This is a rendering of what this post might look like in Google's search results. ",
@@ -8988,90 +8948,90 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
             helpTextButtonLabel="Help on the Snippet Preview"
           >
             <HelpTextWrapper__HelpTextContainer
-              className="yoast-help-button"
+              className="yoast-help"
             >
               <div
-                className="yoast-help-button c0"
+                className="yoast-help c0"
               >
                 <HelpTextWrapper__HelpTextButton
-                  aria-controls="yoast-help-22-text"
+                  aria-controls="yoast-help-22-panel"
                   aria-expanded={false}
                   aria-label="Help on the Snippet Preview"
-                  className="yoast-help-button__yoast-help-button"
+                  className="yoast-help__button"
                   onClick={[Function]}
                 >
                   <Button
-                    aria-controls="yoast-help-22-text"
+                    aria-controls="yoast-help-22-panel"
                     aria-expanded={false}
                     aria-label="Help on the Snippet Preview"
-                    className="yoast-help-button__yoast-help-button c1"
+                    className="yoast-help__button c1"
                     onClick={[Function]}
                   >
                     <Button
-                      aria-controls="yoast-help-22-text"
+                      aria-controls="yoast-help-22-panel"
                       aria-expanded={false}
                       aria-label="Help on the Snippet Preview"
                       backgroundColor="#f7f7f7"
                       borderColor="#ccc"
                       boxShadowColor="#ccc"
-                      className="yoast-help-button__yoast-help-button c1 c2"
+                      className="yoast-help__button c1 c2"
                       onClick={[Function]}
                       textColor="#555"
                       type="button"
                     >
                       <Button
-                        aria-controls="yoast-help-22-text"
+                        aria-controls="yoast-help-22-panel"
                         aria-expanded={false}
                         aria-label="Help on the Snippet Preview"
                         backgroundColor="#f7f7f7"
                         borderColor="#ccc"
                         boxShadowColor="#ccc"
-                        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3"
+                        className="yoast-help__button c1 c2 Button-kDSBcD c3"
                         onClick={[Function]}
                         textColor="#555"
                         type="button"
                       >
                         <Button
-                          aria-controls="yoast-help-22-text"
+                          aria-controls="yoast-help-22-panel"
                           aria-expanded={false}
                           aria-label="Help on the Snippet Preview"
                           backgroundColor="#f7f7f7"
                           borderColor="#ccc"
                           boxShadowColor="#ccc"
-                          className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4"
+                          className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4"
                           onClick={[Function]}
                           textColor="#555"
                           type="button"
                         >
                           <Button
-                            aria-controls="yoast-help-22-text"
+                            aria-controls="yoast-help-22-panel"
                             aria-expanded={false}
                             aria-label="Help on the Snippet Preview"
                             backgroundColor="#f7f7f7"
                             borderColor="#ccc"
                             boxShadowColor="#ccc"
-                            className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
+                            className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
                             onClick={[Function]}
                             textColor="#555"
                             type="button"
                           >
                             <Button__BaseButton
-                              aria-controls="yoast-help-22-text"
+                              aria-controls="yoast-help-22-panel"
                               aria-expanded={false}
                               aria-label="Help on the Snippet Preview"
                               backgroundColor="#f7f7f7"
                               borderColor="#ccc"
                               boxShadowColor="#ccc"
-                              className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
+                              className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
                               onClick={[Function]}
                               textColor="#555"
                               type="button"
                             >
                               <button
-                                aria-controls="yoast-help-22-text"
+                                aria-controls="yoast-help-22-panel"
                                 aria-expanded={false}
                                 aria-label="Help on the Snippet Preview"
-                                className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+                                className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
                                 onClick={[Function]}
                                 type="button"
                               >
@@ -9121,25 +9081,18 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
                     </Button>
                   </Button>
                 </HelpTextWrapper__HelpTextButton>
-                <HelpTextWrapper__HelpTextDiv
-                  aria-hidden={true}
-                  className="yoast-help-button__helpDiv"
-                  id="yoast-help-22-text"
-                  style={
-                    Object {
-                      "maxHeight": "0",
-                    }
-                  }
+                <HelpTextWrapper__HelpTextPanel
+                  className="yoast-help__panel"
+                  id="yoast-help-22-panel"
+                  innerRef={[Function]}
+                  onTransitionEnd={[Function]}
+                  panelDisplay="none"
+                  panelMaxHeight="0"
                 >
                   <div
-                    aria-hidden={true}
-                    className="yoast-help-button__helpDiv c10"
-                    id="yoast-help-22-text"
-                    style={
-                      Object {
-                        "maxHeight": "0",
-                      }
-                    }
+                    className="yoast-help__panel c10"
+                    id="yoast-help-22-panel"
+                    onTransitionEnd={[Function]}
                   >
                     <HelpText
                       text={
@@ -9181,7 +9134,7 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
                       </HelpText__YoastHelpText>
                     </HelpText>
                   </div>
-                </HelpTextWrapper__HelpTextDiv>
+                </HelpTextWrapper__HelpTextPanel>
               </div>
             </HelpTextWrapper__HelpTextContainer>
           </HelpTextWrapper>
@@ -10133,14 +10086,14 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -10622,7 +10575,7 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
       <section>
         <div>
           <HelpTextWrapper
-            className="yoast-help-button"
+            className="yoast-help"
             helpText={
               Array [
                 "This is a rendering of what this post might look like in Google's search results. ",
@@ -10636,90 +10589,90 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
             helpTextButtonLabel="Help on the Snippet Preview"
           >
             <HelpTextWrapper__HelpTextContainer
-              className="yoast-help-button"
+              className="yoast-help"
             >
               <div
-                className="yoast-help-button c0"
+                className="yoast-help c0"
               >
                 <HelpTextWrapper__HelpTextButton
-                  aria-controls="yoast-help-20-text"
+                  aria-controls="yoast-help-20-panel"
                   aria-expanded={false}
                   aria-label="Help on the Snippet Preview"
-                  className="yoast-help-button__yoast-help-button"
+                  className="yoast-help__button"
                   onClick={[Function]}
                 >
                   <Button
-                    aria-controls="yoast-help-20-text"
+                    aria-controls="yoast-help-20-panel"
                     aria-expanded={false}
                     aria-label="Help on the Snippet Preview"
-                    className="yoast-help-button__yoast-help-button c1"
+                    className="yoast-help__button c1"
                     onClick={[Function]}
                   >
                     <Button
-                      aria-controls="yoast-help-20-text"
+                      aria-controls="yoast-help-20-panel"
                       aria-expanded={false}
                       aria-label="Help on the Snippet Preview"
                       backgroundColor="#f7f7f7"
                       borderColor="#ccc"
                       boxShadowColor="#ccc"
-                      className="yoast-help-button__yoast-help-button c1 c2"
+                      className="yoast-help__button c1 c2"
                       onClick={[Function]}
                       textColor="#555"
                       type="button"
                     >
                       <Button
-                        aria-controls="yoast-help-20-text"
+                        aria-controls="yoast-help-20-panel"
                         aria-expanded={false}
                         aria-label="Help on the Snippet Preview"
                         backgroundColor="#f7f7f7"
                         borderColor="#ccc"
                         boxShadowColor="#ccc"
-                        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3"
+                        className="yoast-help__button c1 c2 Button-kDSBcD c3"
                         onClick={[Function]}
                         textColor="#555"
                         type="button"
                       >
                         <Button
-                          aria-controls="yoast-help-20-text"
+                          aria-controls="yoast-help-20-panel"
                           aria-expanded={false}
                           aria-label="Help on the Snippet Preview"
                           backgroundColor="#f7f7f7"
                           borderColor="#ccc"
                           boxShadowColor="#ccc"
-                          className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4"
+                          className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4"
                           onClick={[Function]}
                           textColor="#555"
                           type="button"
                         >
                           <Button
-                            aria-controls="yoast-help-20-text"
+                            aria-controls="yoast-help-20-panel"
                             aria-expanded={false}
                             aria-label="Help on the Snippet Preview"
                             backgroundColor="#f7f7f7"
                             borderColor="#ccc"
                             boxShadowColor="#ccc"
-                            className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
+                            className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
                             onClick={[Function]}
                             textColor="#555"
                             type="button"
                           >
                             <Button__BaseButton
-                              aria-controls="yoast-help-20-text"
+                              aria-controls="yoast-help-20-panel"
                               aria-expanded={false}
                               aria-label="Help on the Snippet Preview"
                               backgroundColor="#f7f7f7"
                               borderColor="#ccc"
                               boxShadowColor="#ccc"
-                              className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
+                              className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
                               onClick={[Function]}
                               textColor="#555"
                               type="button"
                             >
                               <button
-                                aria-controls="yoast-help-20-text"
+                                aria-controls="yoast-help-20-panel"
                                 aria-expanded={false}
                                 aria-label="Help on the Snippet Preview"
-                                className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+                                className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
                                 onClick={[Function]}
                                 type="button"
                               >
@@ -10769,25 +10722,18 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
                     </Button>
                   </Button>
                 </HelpTextWrapper__HelpTextButton>
-                <HelpTextWrapper__HelpTextDiv
-                  aria-hidden={true}
-                  className="yoast-help-button__helpDiv"
-                  id="yoast-help-20-text"
-                  style={
-                    Object {
-                      "maxHeight": "0",
-                    }
-                  }
+                <HelpTextWrapper__HelpTextPanel
+                  className="yoast-help__panel"
+                  id="yoast-help-20-panel"
+                  innerRef={[Function]}
+                  onTransitionEnd={[Function]}
+                  panelDisplay="none"
+                  panelMaxHeight="0"
                 >
                   <div
-                    aria-hidden={true}
-                    className="yoast-help-button__helpDiv c10"
-                    id="yoast-help-20-text"
-                    style={
-                      Object {
-                        "maxHeight": "0",
-                      }
-                    }
+                    className="yoast-help__panel c10"
+                    id="yoast-help-20-panel"
+                    onTransitionEnd={[Function]}
                   >
                     <HelpText
                       text={
@@ -10829,7 +10775,7 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
                       </HelpText__YoastHelpText>
                     </HelpText>
                   </div>
-                </HelpTextWrapper__HelpTextDiv>
+                </HelpTextWrapper__HelpTextPanel>
               </div>
             </HelpTextWrapper__HelpTextContainer>
           </HelpTextWrapper>
@@ -11845,14 +11791,14 @@ exports[`SnippetEditor highlights a focused field 1`] = `
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -12110,13 +12056,13 @@ exports[`SnippetEditor highlights a focused field 1`] = `
   <section>
     <div>
       <div
-        className="yoast-help-button c0"
+        className="yoast-help c0"
       >
         <button
-          aria-controls="yoast-help-3-text"
+          aria-controls="yoast-help-3-panel"
           aria-expanded={false}
           aria-label="Help on the Snippet Preview"
-          className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+          className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
           onClick={[Function]}
           type="button"
         >
@@ -12136,14 +12082,9 @@ exports[`SnippetEditor highlights a focused field 1`] = `
           </svg>
         </button>
         <div
-          aria-hidden={true}
-          className="yoast-help-button__helpDiv c10"
-          id="yoast-help-3-text"
-          style={
-            Object {
-              "maxHeight": "0",
-            }
-          }
+          className="yoast-help__panel c10"
+          id="yoast-help-3-panel"
+          onTransitionEnd={[Function]}
         >
           <p
             className="c11"
@@ -12454,14 +12395,14 @@ exports[`SnippetEditor highlights a hovered field 1`] = `
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -12719,13 +12660,13 @@ exports[`SnippetEditor highlights a hovered field 1`] = `
   <section>
     <div>
       <div
-        className="yoast-help-button c0"
+        className="yoast-help c0"
       >
         <button
-          aria-controls="yoast-help-2-text"
+          aria-controls="yoast-help-2-panel"
           aria-expanded={false}
           aria-label="Help on the Snippet Preview"
-          className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+          className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
           onClick={[Function]}
           type="button"
         >
@@ -12745,14 +12686,9 @@ exports[`SnippetEditor highlights a hovered field 1`] = `
           </svg>
         </button>
         <div
-          aria-hidden={true}
-          className="yoast-help-button__helpDiv c10"
-          id="yoast-help-2-text"
-          style={
-            Object {
-              "maxHeight": "0",
-            }
-          }
+          className="yoast-help__panel c10"
+          id="yoast-help-2-panel"
+          onTransitionEnd={[Function]}
         >
           <p
             className="c11"
@@ -13072,14 +13008,14 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -13541,7 +13477,7 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
       <section>
         <div>
           <HelpTextWrapper
-            className="yoast-help-button"
+            className="yoast-help"
             helpText={
               Array [
                 "This is a rendering of what this post might look like in Google's search results. ",
@@ -13555,90 +13491,90 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
             helpTextButtonLabel="Help on the Snippet Preview"
           >
             <HelpTextWrapper__HelpTextContainer
-              className="yoast-help-button"
+              className="yoast-help"
             >
               <div
-                className="yoast-help-button c0"
+                className="yoast-help c0"
               >
                 <HelpTextWrapper__HelpTextButton
-                  aria-controls="yoast-help-13-text"
+                  aria-controls="yoast-help-13-panel"
                   aria-expanded={false}
                   aria-label="Help on the Snippet Preview"
-                  className="yoast-help-button__yoast-help-button"
+                  className="yoast-help__button"
                   onClick={[Function]}
                 >
                   <Button
-                    aria-controls="yoast-help-13-text"
+                    aria-controls="yoast-help-13-panel"
                     aria-expanded={false}
                     aria-label="Help on the Snippet Preview"
-                    className="yoast-help-button__yoast-help-button c1"
+                    className="yoast-help__button c1"
                     onClick={[Function]}
                   >
                     <Button
-                      aria-controls="yoast-help-13-text"
+                      aria-controls="yoast-help-13-panel"
                       aria-expanded={false}
                       aria-label="Help on the Snippet Preview"
                       backgroundColor="#f7f7f7"
                       borderColor="#ccc"
                       boxShadowColor="#ccc"
-                      className="yoast-help-button__yoast-help-button c1 c2"
+                      className="yoast-help__button c1 c2"
                       onClick={[Function]}
                       textColor="#555"
                       type="button"
                     >
                       <Button
-                        aria-controls="yoast-help-13-text"
+                        aria-controls="yoast-help-13-panel"
                         aria-expanded={false}
                         aria-label="Help on the Snippet Preview"
                         backgroundColor="#f7f7f7"
                         borderColor="#ccc"
                         boxShadowColor="#ccc"
-                        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3"
+                        className="yoast-help__button c1 c2 Button-kDSBcD c3"
                         onClick={[Function]}
                         textColor="#555"
                         type="button"
                       >
                         <Button
-                          aria-controls="yoast-help-13-text"
+                          aria-controls="yoast-help-13-panel"
                           aria-expanded={false}
                           aria-label="Help on the Snippet Preview"
                           backgroundColor="#f7f7f7"
                           borderColor="#ccc"
                           boxShadowColor="#ccc"
-                          className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4"
+                          className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4"
                           onClick={[Function]}
                           textColor="#555"
                           type="button"
                         >
                           <Button
-                            aria-controls="yoast-help-13-text"
+                            aria-controls="yoast-help-13-panel"
                             aria-expanded={false}
                             aria-label="Help on the Snippet Preview"
                             backgroundColor="#f7f7f7"
                             borderColor="#ccc"
                             boxShadowColor="#ccc"
-                            className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
+                            className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
                             onClick={[Function]}
                             textColor="#555"
                             type="button"
                           >
                             <Button__BaseButton
-                              aria-controls="yoast-help-13-text"
+                              aria-controls="yoast-help-13-panel"
                               aria-expanded={false}
                               aria-label="Help on the Snippet Preview"
                               backgroundColor="#f7f7f7"
                               borderColor="#ccc"
                               boxShadowColor="#ccc"
-                              className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
+                              className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
                               onClick={[Function]}
                               textColor="#555"
                               type="button"
                             >
                               <button
-                                aria-controls="yoast-help-13-text"
+                                aria-controls="yoast-help-13-panel"
                                 aria-expanded={false}
                                 aria-label="Help on the Snippet Preview"
-                                className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+                                className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
                                 onClick={[Function]}
                                 type="button"
                               >
@@ -13688,25 +13624,18 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
                     </Button>
                   </Button>
                 </HelpTextWrapper__HelpTextButton>
-                <HelpTextWrapper__HelpTextDiv
-                  aria-hidden={true}
-                  className="yoast-help-button__helpDiv"
-                  id="yoast-help-13-text"
-                  style={
-                    Object {
-                      "maxHeight": "0",
-                    }
-                  }
+                <HelpTextWrapper__HelpTextPanel
+                  className="yoast-help__panel"
+                  id="yoast-help-13-panel"
+                  innerRef={[Function]}
+                  onTransitionEnd={[Function]}
+                  panelDisplay="none"
+                  panelMaxHeight="0"
                 >
                   <div
-                    aria-hidden={true}
-                    className="yoast-help-button__helpDiv c10"
-                    id="yoast-help-13-text"
-                    style={
-                      Object {
-                        "maxHeight": "0",
-                      }
-                    }
+                    className="yoast-help__panel c10"
+                    id="yoast-help-13-panel"
+                    onTransitionEnd={[Function]}
                   >
                     <HelpText
                       text={
@@ -13748,7 +13677,7 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
                       </HelpText__YoastHelpText>
                     </HelpText>
                   </div>
-                </HelpTextWrapper__HelpTextDiv>
+                </HelpTextWrapper__HelpTextPanel>
               </div>
             </HelpTextWrapper__HelpTextContainer>
           </HelpTextWrapper>
@@ -14708,14 +14637,14 @@ exports[`SnippetEditor highlights the hovered field when onMouseOver() is called
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -15177,7 +15106,7 @@ exports[`SnippetEditor highlights the hovered field when onMouseOver() is called
       <section>
         <div>
           <HelpTextWrapper
-            className="yoast-help-button"
+            className="yoast-help"
             helpText={
               Array [
                 "This is a rendering of what this post might look like in Google's search results. ",
@@ -15191,90 +15120,90 @@ exports[`SnippetEditor highlights the hovered field when onMouseOver() is called
             helpTextButtonLabel="Help on the Snippet Preview"
           >
             <HelpTextWrapper__HelpTextContainer
-              className="yoast-help-button"
+              className="yoast-help"
             >
               <div
-                className="yoast-help-button c0"
+                className="yoast-help c0"
               >
                 <HelpTextWrapper__HelpTextButton
-                  aria-controls="yoast-help-11-text"
+                  aria-controls="yoast-help-11-panel"
                   aria-expanded={false}
                   aria-label="Help on the Snippet Preview"
-                  className="yoast-help-button__yoast-help-button"
+                  className="yoast-help__button"
                   onClick={[Function]}
                 >
                   <Button
-                    aria-controls="yoast-help-11-text"
+                    aria-controls="yoast-help-11-panel"
                     aria-expanded={false}
                     aria-label="Help on the Snippet Preview"
-                    className="yoast-help-button__yoast-help-button c1"
+                    className="yoast-help__button c1"
                     onClick={[Function]}
                   >
                     <Button
-                      aria-controls="yoast-help-11-text"
+                      aria-controls="yoast-help-11-panel"
                       aria-expanded={false}
                       aria-label="Help on the Snippet Preview"
                       backgroundColor="#f7f7f7"
                       borderColor="#ccc"
                       boxShadowColor="#ccc"
-                      className="yoast-help-button__yoast-help-button c1 c2"
+                      className="yoast-help__button c1 c2"
                       onClick={[Function]}
                       textColor="#555"
                       type="button"
                     >
                       <Button
-                        aria-controls="yoast-help-11-text"
+                        aria-controls="yoast-help-11-panel"
                         aria-expanded={false}
                         aria-label="Help on the Snippet Preview"
                         backgroundColor="#f7f7f7"
                         borderColor="#ccc"
                         boxShadowColor="#ccc"
-                        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3"
+                        className="yoast-help__button c1 c2 Button-kDSBcD c3"
                         onClick={[Function]}
                         textColor="#555"
                         type="button"
                       >
                         <Button
-                          aria-controls="yoast-help-11-text"
+                          aria-controls="yoast-help-11-panel"
                           aria-expanded={false}
                           aria-label="Help on the Snippet Preview"
                           backgroundColor="#f7f7f7"
                           borderColor="#ccc"
                           boxShadowColor="#ccc"
-                          className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4"
+                          className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4"
                           onClick={[Function]}
                           textColor="#555"
                           type="button"
                         >
                           <Button
-                            aria-controls="yoast-help-11-text"
+                            aria-controls="yoast-help-11-panel"
                             aria-expanded={false}
                             aria-label="Help on the Snippet Preview"
                             backgroundColor="#f7f7f7"
                             borderColor="#ccc"
                             boxShadowColor="#ccc"
-                            className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
+                            className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
                             onClick={[Function]}
                             textColor="#555"
                             type="button"
                           >
                             <Button__BaseButton
-                              aria-controls="yoast-help-11-text"
+                              aria-controls="yoast-help-11-panel"
                               aria-expanded={false}
                               aria-label="Help on the Snippet Preview"
                               backgroundColor="#f7f7f7"
                               borderColor="#ccc"
                               boxShadowColor="#ccc"
-                              className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
+                              className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
                               onClick={[Function]}
                               textColor="#555"
                               type="button"
                             >
                               <button
-                                aria-controls="yoast-help-11-text"
+                                aria-controls="yoast-help-11-panel"
                                 aria-expanded={false}
                                 aria-label="Help on the Snippet Preview"
-                                className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+                                className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
                                 onClick={[Function]}
                                 type="button"
                               >
@@ -15324,25 +15253,18 @@ exports[`SnippetEditor highlights the hovered field when onMouseOver() is called
                     </Button>
                   </Button>
                 </HelpTextWrapper__HelpTextButton>
-                <HelpTextWrapper__HelpTextDiv
-                  aria-hidden={true}
-                  className="yoast-help-button__helpDiv"
-                  id="yoast-help-11-text"
-                  style={
-                    Object {
-                      "maxHeight": "0",
-                    }
-                  }
+                <HelpTextWrapper__HelpTextPanel
+                  className="yoast-help__panel"
+                  id="yoast-help-11-panel"
+                  innerRef={[Function]}
+                  onTransitionEnd={[Function]}
+                  panelDisplay="none"
+                  panelMaxHeight="0"
                 >
                   <div
-                    aria-hidden={true}
-                    className="yoast-help-button__helpDiv c10"
-                    id="yoast-help-11-text"
-                    style={
-                      Object {
-                        "maxHeight": "0",
-                      }
-                    }
+                    className="yoast-help__panel c10"
+                    id="yoast-help-11-panel"
+                    onTransitionEnd={[Function]}
                   >
                     <HelpText
                       text={
@@ -15384,7 +15306,7 @@ exports[`SnippetEditor highlights the hovered field when onMouseOver() is called
                       </HelpText__YoastHelpText>
                     </HelpText>
                   </div>
-                </HelpTextWrapper__HelpTextDiv>
+                </HelpTextWrapper__HelpTextPanel>
               </div>
             </HelpTextWrapper__HelpTextContainer>
           </HelpTextWrapper>
@@ -16344,14 +16266,14 @@ exports[`SnippetEditor opens when calling open() 1`] = `
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -16801,7 +16723,7 @@ exports[`SnippetEditor opens when calling open() 1`] = `
       <section>
         <div>
           <HelpTextWrapper
-            className="yoast-help-button"
+            className="yoast-help"
             helpText={
               Array [
                 "This is a rendering of what this post might look like in Google's search results. ",
@@ -16815,90 +16737,90 @@ exports[`SnippetEditor opens when calling open() 1`] = `
             helpTextButtonLabel="Help on the Snippet Preview"
           >
             <HelpTextWrapper__HelpTextContainer
-              className="yoast-help-button"
+              className="yoast-help"
             >
               <div
-                className="yoast-help-button c0"
+                className="yoast-help c0"
               >
                 <HelpTextWrapper__HelpTextButton
-                  aria-controls="yoast-help-7-text"
+                  aria-controls="yoast-help-7-panel"
                   aria-expanded={false}
                   aria-label="Help on the Snippet Preview"
-                  className="yoast-help-button__yoast-help-button"
+                  className="yoast-help__button"
                   onClick={[Function]}
                 >
                   <Button
-                    aria-controls="yoast-help-7-text"
+                    aria-controls="yoast-help-7-panel"
                     aria-expanded={false}
                     aria-label="Help on the Snippet Preview"
-                    className="yoast-help-button__yoast-help-button c1"
+                    className="yoast-help__button c1"
                     onClick={[Function]}
                   >
                     <Button
-                      aria-controls="yoast-help-7-text"
+                      aria-controls="yoast-help-7-panel"
                       aria-expanded={false}
                       aria-label="Help on the Snippet Preview"
                       backgroundColor="#f7f7f7"
                       borderColor="#ccc"
                       boxShadowColor="#ccc"
-                      className="yoast-help-button__yoast-help-button c1 c2"
+                      className="yoast-help__button c1 c2"
                       onClick={[Function]}
                       textColor="#555"
                       type="button"
                     >
                       <Button
-                        aria-controls="yoast-help-7-text"
+                        aria-controls="yoast-help-7-panel"
                         aria-expanded={false}
                         aria-label="Help on the Snippet Preview"
                         backgroundColor="#f7f7f7"
                         borderColor="#ccc"
                         boxShadowColor="#ccc"
-                        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3"
+                        className="yoast-help__button c1 c2 Button-kDSBcD c3"
                         onClick={[Function]}
                         textColor="#555"
                         type="button"
                       >
                         <Button
-                          aria-controls="yoast-help-7-text"
+                          aria-controls="yoast-help-7-panel"
                           aria-expanded={false}
                           aria-label="Help on the Snippet Preview"
                           backgroundColor="#f7f7f7"
                           borderColor="#ccc"
                           boxShadowColor="#ccc"
-                          className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4"
+                          className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4"
                           onClick={[Function]}
                           textColor="#555"
                           type="button"
                         >
                           <Button
-                            aria-controls="yoast-help-7-text"
+                            aria-controls="yoast-help-7-panel"
                             aria-expanded={false}
                             aria-label="Help on the Snippet Preview"
                             backgroundColor="#f7f7f7"
                             borderColor="#ccc"
                             boxShadowColor="#ccc"
-                            className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
+                            className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
                             onClick={[Function]}
                             textColor="#555"
                             type="button"
                           >
                             <Button__BaseButton
-                              aria-controls="yoast-help-7-text"
+                              aria-controls="yoast-help-7-panel"
                               aria-expanded={false}
                               aria-label="Help on the Snippet Preview"
                               backgroundColor="#f7f7f7"
                               borderColor="#ccc"
                               boxShadowColor="#ccc"
-                              className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
+                              className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
                               onClick={[Function]}
                               textColor="#555"
                               type="button"
                             >
                               <button
-                                aria-controls="yoast-help-7-text"
+                                aria-controls="yoast-help-7-panel"
                                 aria-expanded={false}
                                 aria-label="Help on the Snippet Preview"
-                                className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+                                className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
                                 onClick={[Function]}
                                 type="button"
                               >
@@ -16948,25 +16870,18 @@ exports[`SnippetEditor opens when calling open() 1`] = `
                     </Button>
                   </Button>
                 </HelpTextWrapper__HelpTextButton>
-                <HelpTextWrapper__HelpTextDiv
-                  aria-hidden={true}
-                  className="yoast-help-button__helpDiv"
-                  id="yoast-help-7-text"
-                  style={
-                    Object {
-                      "maxHeight": "0",
-                    }
-                  }
+                <HelpTextWrapper__HelpTextPanel
+                  className="yoast-help__panel"
+                  id="yoast-help-7-panel"
+                  innerRef={[Function]}
+                  onTransitionEnd={[Function]}
+                  panelDisplay="none"
+                  panelMaxHeight="0"
                 >
                   <div
-                    aria-hidden={true}
-                    className="yoast-help-button__helpDiv c10"
-                    id="yoast-help-7-text"
-                    style={
-                      Object {
-                        "maxHeight": "0",
-                      }
-                    }
+                    className="yoast-help__panel c10"
+                    id="yoast-help-7-panel"
+                    onTransitionEnd={[Function]}
                   >
                     <HelpText
                       text={
@@ -17008,7 +16923,7 @@ exports[`SnippetEditor opens when calling open() 1`] = `
                       </HelpText__YoastHelpText>
                     </HelpText>
                   </div>
-                </HelpTextWrapper__HelpTextDiv>
+                </HelpTextWrapper__HelpTextPanel>
               </div>
             </HelpTextWrapper__HelpTextContainer>
           </HelpTextWrapper>
@@ -17960,14 +17875,14 @@ exports[`SnippetEditor passes replacement variables to the title and description
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -18428,7 +18343,7 @@ exports[`SnippetEditor passes replacement variables to the title and description
       <section>
         <div>
           <HelpTextWrapper
-            className="yoast-help-button"
+            className="yoast-help"
             helpText={
               Array [
                 "This is a rendering of what this post might look like in Google's search results. ",
@@ -18442,90 +18357,90 @@ exports[`SnippetEditor passes replacement variables to the title and description
             helpTextButtonLabel="Help on the Snippet Preview"
           >
             <HelpTextWrapper__HelpTextContainer
-              className="yoast-help-button"
+              className="yoast-help"
             >
               <div
-                className="yoast-help-button c0"
+                className="yoast-help c0"
               >
                 <HelpTextWrapper__HelpTextButton
-                  aria-controls="yoast-help-18-text"
+                  aria-controls="yoast-help-18-panel"
                   aria-expanded={false}
                   aria-label="Help on the Snippet Preview"
-                  className="yoast-help-button__yoast-help-button"
+                  className="yoast-help__button"
                   onClick={[Function]}
                 >
                   <Button
-                    aria-controls="yoast-help-18-text"
+                    aria-controls="yoast-help-18-panel"
                     aria-expanded={false}
                     aria-label="Help on the Snippet Preview"
-                    className="yoast-help-button__yoast-help-button c1"
+                    className="yoast-help__button c1"
                     onClick={[Function]}
                   >
                     <Button
-                      aria-controls="yoast-help-18-text"
+                      aria-controls="yoast-help-18-panel"
                       aria-expanded={false}
                       aria-label="Help on the Snippet Preview"
                       backgroundColor="#f7f7f7"
                       borderColor="#ccc"
                       boxShadowColor="#ccc"
-                      className="yoast-help-button__yoast-help-button c1 c2"
+                      className="yoast-help__button c1 c2"
                       onClick={[Function]}
                       textColor="#555"
                       type="button"
                     >
                       <Button
-                        aria-controls="yoast-help-18-text"
+                        aria-controls="yoast-help-18-panel"
                         aria-expanded={false}
                         aria-label="Help on the Snippet Preview"
                         backgroundColor="#f7f7f7"
                         borderColor="#ccc"
                         boxShadowColor="#ccc"
-                        className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3"
+                        className="yoast-help__button c1 c2 Button-kDSBcD c3"
                         onClick={[Function]}
                         textColor="#555"
                         type="button"
                       >
                         <Button
-                          aria-controls="yoast-help-18-text"
+                          aria-controls="yoast-help-18-panel"
                           aria-expanded={false}
                           aria-label="Help on the Snippet Preview"
                           backgroundColor="#f7f7f7"
                           borderColor="#ccc"
                           boxShadowColor="#ccc"
-                          className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4"
+                          className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4"
                           onClick={[Function]}
                           textColor="#555"
                           type="button"
                         >
                           <Button
-                            aria-controls="yoast-help-18-text"
+                            aria-controls="yoast-help-18-panel"
                             aria-expanded={false}
                             aria-label="Help on the Snippet Preview"
                             backgroundColor="#f7f7f7"
                             borderColor="#ccc"
                             boxShadowColor="#ccc"
-                            className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
+                            className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5"
                             onClick={[Function]}
                             textColor="#555"
                             type="button"
                           >
                             <Button__BaseButton
-                              aria-controls="yoast-help-18-text"
+                              aria-controls="yoast-help-18-panel"
                               aria-expanded={false}
                               aria-label="Help on the Snippet Preview"
                               backgroundColor="#f7f7f7"
                               borderColor="#ccc"
                               boxShadowColor="#ccc"
-                              className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
+                              className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6"
                               onClick={[Function]}
                               textColor="#555"
                               type="button"
                             >
                               <button
-                                aria-controls="yoast-help-18-text"
+                                aria-controls="yoast-help-18-panel"
                                 aria-expanded={false}
                                 aria-label="Help on the Snippet Preview"
-                                className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+                                className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
                                 onClick={[Function]}
                                 type="button"
                               >
@@ -18575,25 +18490,18 @@ exports[`SnippetEditor passes replacement variables to the title and description
                     </Button>
                   </Button>
                 </HelpTextWrapper__HelpTextButton>
-                <HelpTextWrapper__HelpTextDiv
-                  aria-hidden={true}
-                  className="yoast-help-button__helpDiv"
-                  id="yoast-help-18-text"
-                  style={
-                    Object {
-                      "maxHeight": "0",
-                    }
-                  }
+                <HelpTextWrapper__HelpTextPanel
+                  className="yoast-help__panel"
+                  id="yoast-help-18-panel"
+                  innerRef={[Function]}
+                  onTransitionEnd={[Function]}
+                  panelDisplay="none"
+                  panelMaxHeight="0"
                 >
                   <div
-                    aria-hidden={true}
-                    className="yoast-help-button__helpDiv c10"
-                    id="yoast-help-18-text"
-                    style={
-                      Object {
-                        "maxHeight": "0",
-                      }
-                    }
+                    className="yoast-help__panel c10"
+                    id="yoast-help-18-panel"
+                    onTransitionEnd={[Function]}
                   >
                     <HelpText
                       text={
@@ -18635,7 +18543,7 @@ exports[`SnippetEditor passes replacement variables to the title and description
                       </HelpText__YoastHelpText>
                     </HelpText>
                   </div>
-                </HelpTextWrapper__HelpTextDiv>
+                </HelpTextWrapper__HelpTextPanel>
               </div>
             </HelpTextWrapper__HelpTextContainer>
           </HelpTextWrapper>
@@ -19611,14 +19519,14 @@ exports[`SnippetEditor passes the date prop 1`] = `
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -19880,13 +19788,13 @@ exports[`SnippetEditor passes the date prop 1`] = `
   <section>
     <div>
       <div
-        className="yoast-help-button c0"
+        className="yoast-help c0"
       >
         <button
-          aria-controls="yoast-help-5-text"
+          aria-controls="yoast-help-5-panel"
           aria-expanded={false}
           aria-label="Help on the Snippet Preview"
-          className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+          className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
           onClick={[Function]}
           type="button"
         >
@@ -19906,14 +19814,9 @@ exports[`SnippetEditor passes the date prop 1`] = `
           </svg>
         </button>
         <div
-          aria-hidden={true}
-          className="yoast-help-button__helpDiv c10"
-          id="yoast-help-5-text"
-          style={
-            Object {
-              "maxHeight": "0",
-            }
-          }
+          className="yoast-help__panel c10"
+          id="yoast-help-5-panel"
+          onTransitionEnd={[Function]}
         >
           <p
             className="c11"
@@ -20315,14 +20218,14 @@ exports[`SnippetEditor renders in desktop mode 1`] = `
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -20562,13 +20465,13 @@ exports[`SnippetEditor renders in desktop mode 1`] = `
   <section>
     <div>
       <div
-        className="yoast-help-button c0"
+        className="yoast-help c0"
       >
         <button
-          aria-controls="yoast-help-4-text"
+          aria-controls="yoast-help-4-panel"
           aria-expanded={false}
           aria-label="Help on the Snippet Preview"
-          className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+          className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
           onClick={[Function]}
           type="button"
         >
@@ -20588,14 +20491,9 @@ exports[`SnippetEditor renders in desktop mode 1`] = `
           </svg>
         </button>
         <div
-          aria-hidden={true}
-          className="yoast-help-button__helpDiv c10"
-          id="yoast-help-4-text"
-          style={
-            Object {
-              "maxHeight": "0",
-            }
-          }
+          className="yoast-help__panel c10"
+          id="yoast-help-4-panel"
+          onTransitionEnd={[Function]}
         >
           <p
             className="c11"
@@ -20905,14 +20803,14 @@ exports[`SnippetEditor shows and editor 1`] = `
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -21170,13 +21068,13 @@ exports[`SnippetEditor shows and editor 1`] = `
   <section>
     <div>
       <div
-        className="yoast-help-button c0"
+        className="yoast-help c0"
       >
         <button
-          aria-controls="yoast-help-1-text"
+          aria-controls="yoast-help-1-panel"
           aria-expanded={false}
           aria-label="Help on the Snippet Preview"
-          className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+          className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
           onClick={[Function]}
           type="button"
         >
@@ -21196,14 +21094,9 @@ exports[`SnippetEditor shows and editor 1`] = `
           </svg>
         </button>
         <div
-          aria-hidden={true}
-          className="yoast-help-button__helpDiv c10"
-          id="yoast-help-1-text"
-          style={
-            Object {
-              "maxHeight": "0",
-            }
-          }
+          className="yoast-help__panel c10"
+          id="yoast-help-1-panel"
+          onTransitionEnd={[Function]}
         >
           <p
             className="c11"

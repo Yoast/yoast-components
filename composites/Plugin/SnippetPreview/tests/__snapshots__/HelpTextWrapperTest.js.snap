@@ -73,14 +73,14 @@ exports[`HelpTextWrapper matches the snapshot by default 1`] = `
 .c0 {
   max-width: 600px;
   font-weight: normal;
-  margin: 0 20px 10px 25px;
+  margin: 0 20px 0 25px;
 }
 
 .c10 {
+  display: none;
   max-width: 400px;
-  display: block;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: max-height 0.2s ease;
+  transition: max-height 0.2s ease;
   overflow: hidden;
   max-height: 0;
 }
@@ -148,13 +148,13 @@ exports[`HelpTextWrapper matches the snapshot by default 1`] = `
 }
 
 <div
-  className="yoast-help-button c0"
+  className="yoast-help c0"
 >
   <button
-    aria-controls="yoast-help-1-text"
+    aria-controls="yoast-help-1-panel"
     aria-expanded={false}
     aria-label="Open help"
-    className="yoast-help-button__yoast-help-button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
+    className="yoast-help__button c1 c2 Button-kDSBcD c3 Button-kDSBcD c4 Button-kDSBcD c5 Button-kDSBcD c6 c7"
     onClick={[Function]}
     type="button"
   >
@@ -174,14 +174,9 @@ exports[`HelpTextWrapper matches the snapshot by default 1`] = `
     </svg>
   </button>
   <div
-    aria-hidden={true}
-    className="yoast-help-button__helpDiv c10"
-    id="yoast-help-1-text"
-    style={
-      Object {
-        "maxHeight": "0",
-      }
-    }
+    className="yoast-help__panel c10"
+    id="yoast-help-1-panel"
+    onTransitionEnd={[Function]}
   >
     <p
       className="c11"
