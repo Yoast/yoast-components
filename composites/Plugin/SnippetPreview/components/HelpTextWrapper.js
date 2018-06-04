@@ -20,7 +20,7 @@ const HelpTextContainer = styled.div`
 
 const HelpTextPanel = styled.div`
 	display: ${ props => props.panelDisplay };
-	max-width: 400px;
+	max-width: ${ props => props.maxWidth };
 	transition: max-height 0.2s ease;
 	overflow: hidden;
 	max-height: ${ props => props.panelMaxHeight };
@@ -246,6 +246,7 @@ class HelpTextWrapper extends React.Component {
 					innerRef={ this.setHelpPanelRef }
 					panelMaxHeight={ this.state.panelMaxHeight }
 					panelDisplay={ this.state.isHidden ? "none" : "block" }
+					maxWidth={ this.props.maxWidth }
 				>
 					<HelpText text={ this.props.helpText } />
 				</HelpTextPanel>
@@ -257,6 +258,7 @@ class HelpTextWrapper extends React.Component {
 HelpTextWrapper.propTypes = {
 	className: PropTypes.string,
 	helpTextButtonLabel: PropTypes.string.isRequired,
+	maxWidth: PropTypes.string,
 	helpText: PropTypes.oneOfType( [
 		PropTypes.string,
 		PropTypes.array,
@@ -265,6 +267,7 @@ HelpTextWrapper.propTypes = {
 
 HelpTextWrapper.defaultProps = {
 	className: "yoast-help",
+	maxWidth: null,
 	helpText: "",
 };
 

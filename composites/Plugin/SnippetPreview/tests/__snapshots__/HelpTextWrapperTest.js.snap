@@ -78,7 +78,6 @@ exports[`HelpTextWrapper matches the snapshot by default 1`] = `
 
 .c10 {
   display: none;
-  max-width: 400px;
   -webkit-transition: max-height 0.2s ease;
   transition: max-height 0.2s ease;
   overflow: hidden;

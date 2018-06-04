@@ -1243,6 +1243,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
               ]
             }
             helpTextButtonLabel="Help on the Snippet Preview"
+            maxWidth="400px"
           >
             <HelpTextWrapper__HelpTextContainer
               className="yoast-help"
@@ -1382,6 +1383,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
                   className="yoast-help__panel"
                   id="yoast-help-16-panel"
                   innerRef={[Function]}
+                  maxWidth="400px"
                   onTransitionEnd={[Function]}
                   panelDisplay="none"
                   panelMaxHeight="0"
@@ -2852,6 +2854,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
               ]
             }
             helpTextButtonLabel="Help on the Snippet Preview"
+            maxWidth="400px"
           >
             <HelpTextWrapper__HelpTextContainer
               className="yoast-help"
@@ -2991,6 +2994,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
                   className="yoast-help__panel"
                   id="yoast-help-16-panel"
                   innerRef={[Function]}
+                  maxWidth="400px"
                   onTransitionEnd={[Function]}
                   panelDisplay="none"
                   panelMaxHeight="0"
@@ -4461,6 +4465,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
               ]
             }
             helpTextButtonLabel="Help on the Snippet Preview"
+            maxWidth="400px"
           >
             <HelpTextWrapper__HelpTextContainer
               className="yoast-help"
@@ -4600,6 +4605,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
                   className="yoast-help__panel"
                   id="yoast-help-16-panel"
                   innerRef={[Function]}
+                  maxWidth="400px"
                   onTransitionEnd={[Function]}
                   panelDisplay="none"
                   panelMaxHeight="0"
@@ -6070,6 +6076,7 @@ exports[`SnippetEditor closes when calling close() 1`] = `
               ]
             }
             helpTextButtonLabel="Help on the Snippet Preview"
+            maxWidth="400px"
           >
             <HelpTextWrapper__HelpTextContainer
               className="yoast-help"
@@ -6209,6 +6216,7 @@ exports[`SnippetEditor closes when calling close() 1`] = `
                   className="yoast-help__panel"
                   id="yoast-help-9-panel"
                   innerRef={[Function]}
+                  maxWidth="400px"
                   onTransitionEnd={[Function]}
                   panelDisplay="none"
                   panelMaxHeight="0"
@@ -7551,6 +7559,7 @@ exports[`SnippetEditor closes when calling close() 2`] = `
               ]
             }
             helpTextButtonLabel="Help on the Snippet Preview"
+            maxWidth="400px"
           >
             <HelpTextWrapper__HelpTextContainer
               className="yoast-help"
@@ -7690,6 +7699,7 @@ exports[`SnippetEditor closes when calling close() 2`] = `
                   className="yoast-help__panel"
                   id="yoast-help-9-panel"
                   innerRef={[Function]}
+                  maxWidth="400px"
                   onTransitionEnd={[Function]}
                   panelDisplay="none"
                   panelMaxHeight="0"
@@ -8946,6 +8956,7 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
               ]
             }
             helpTextButtonLabel="Help on the Snippet Preview"
+            maxWidth="400px"
           >
             <HelpTextWrapper__HelpTextContainer
               className="yoast-help"
@@ -9085,6 +9096,7 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
                   className="yoast-help__panel"
                   id="yoast-help-22-panel"
                   innerRef={[Function]}
+                  maxWidth="400px"
                   onTransitionEnd={[Function]}
                   panelDisplay="none"
                   panelMaxHeight="0"
@@ -10587,6 +10599,7 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
               ]
             }
             helpTextButtonLabel="Help on the Snippet Preview"
+            maxWidth="400px"
           >
             <HelpTextWrapper__HelpTextContainer
               className="yoast-help"
@@ -10726,6 +10739,7 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
                   className="yoast-help__panel"
                   id="yoast-help-20-panel"
                   innerRef={[Function]}
+                  maxWidth="400px"
                   onTransitionEnd={[Function]}
                   panelDisplay="none"
                   panelMaxHeight="0"
@@ -13489,6 +13503,7 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
               ]
             }
             helpTextButtonLabel="Help on the Snippet Preview"
+            maxWidth="400px"
           >
             <HelpTextWrapper__HelpTextContainer
               className="yoast-help"
@@ -13628,6 +13643,7 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
                   className="yoast-help__panel"
                   id="yoast-help-13-panel"
                   innerRef={[Function]}
+                  maxWidth="400px"
                   onTransitionEnd={[Function]}
                   panelDisplay="none"
                   panelMaxHeight="0"
@@ -15118,6 +15134,7 @@ exports[`SnippetEditor highlights the hovered field when onMouseOver() is called
               ]
             }
             helpTextButtonLabel="Help on the Snippet Preview"
+            maxWidth="400px"
           >
             <HelpTextWrapper__HelpTextContainer
               className="yoast-help"
@@ -15257,6 +15274,7 @@ exports[`SnippetEditor highlights the hovered field when onMouseOver() is called
                   className="yoast-help__panel"
                   id="yoast-help-11-panel"
                   innerRef={[Function]}
+                  maxWidth="400px"
                   onTransitionEnd={[Function]}
                   panelDisplay="none"
                   panelMaxHeight="0"
@@ -16735,6 +16753,7 @@ exports[`SnippetEditor opens when calling open() 1`] = `
               ]
             }
             helpTextButtonLabel="Help on the Snippet Preview"
+            maxWidth="400px"
           >
             <HelpTextWrapper__HelpTextContainer
               className="yoast-help"
@@ -16874,6 +16893,7 @@ exports[`SnippetEditor opens when calling open() 1`] = `
                   className="yoast-help__panel"
                   id="yoast-help-7-panel"
                   innerRef={[Function]}
+                  maxWidth="400px"
                   onTransitionEnd={[Function]}
                   panelDisplay="none"
                   panelMaxHeight="0"
@@ -18355,6 +18375,7 @@ exports[`SnippetEditor passes replacement variables to the title and description
               ]
             }
             helpTextButtonLabel="Help on the Snippet Preview"
+            maxWidth="400px"
           >
             <HelpTextWrapper__HelpTextContainer
               className="yoast-help"
@@ -18494,6 +18515,7 @@ exports[`SnippetEditor passes replacement variables to the title and description
                   className="yoast-help__panel"
                   id="yoast-help-18-panel"
                   innerRef={[Function]}
+                  maxWidth="400px"
                   onTransitionEnd={[Function]}
                   panelDisplay="none"
                   panelMaxHeight="0"
