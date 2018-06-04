@@ -10,6 +10,7 @@ import colors from "../../../../style-guide/colors.json";
 import { Button } from "../../Shared/components/Button";
 import SvgIcon from "../../Shared/components/SvgIcon";
 import { rgba } from "../../../../style-guide/helpers";
+import { getHeight } from "../../../../utils/dom";
 
 
 const HelpTextContainer = styled.div`
@@ -109,18 +110,10 @@ class HelpTextWrapper extends React.Component {
 	/**
 	 * Sets the Help panel height to a value in pixels.
 	 *
-	 * We use the max value between clientHeight, offsetHeight, and scrollHeight
-	 * so we always get the actual height in pixels whether the panel is collapsed,
-	 * expanded, and also while the animation is running. Inspired by jQuery.
-	 *
 	 * @returns {void}
 	 */
 	setMaxHeight() {
-		const height = Math.max(
-			this.helpTextPanel.clientHeight,
-			this.helpTextPanel.offsetHeight,
-			this.helpTextPanel.scrollHeight
-		);
+		const height = getHeight( this.helpTextPanel );
 
 		this.setState( {
 			panelMaxHeight: height + "px",
