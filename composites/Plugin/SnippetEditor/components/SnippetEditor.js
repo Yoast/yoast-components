@@ -273,15 +273,17 @@ class SnippetEditor extends React.Component {
 	mapDataToPreview( originalData, generatedDescription ) {
 		const { baseUrl, mapDataToPreview } = this.props;
 
-		const mappedData = {
+		let mappedData = {
 			title: this.processReplacementVariables( originalData.title ),
-			url: baseUrl.replace( "https://", "" ) + originalData.slug,
+			url: originalData.slug,
 			description: this.processReplacementVariables( originalData.description || generatedDescription ),
 		};
 
 		if ( mapDataToPreview ) {
-			return mapDataToPreview( mappedData, originalData );
+			mappedData =  mapDataToPreview( mappedData, originalData );
 		}
+
+		mappedData.url = baseUrl.replace( "https://", "" ) + mappedData.url;
 
 		return mappedData;
 	}
