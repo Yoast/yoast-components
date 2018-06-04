@@ -12,7 +12,6 @@ import SvgIcon from "../../Shared/components/SvgIcon";
 import { rgba } from "../../../../style-guide/helpers";
 import { getHeight } from "../../../../utils/dom";
 
-
 const HelpTextContainer = styled.div`
 	max-width: 600px;
 	font-weight: normal;
@@ -20,8 +19,8 @@ const HelpTextContainer = styled.div`
 `;
 
 const HelpTextPanel = styled.div`
-	display: ${ props => props.panelDisplay };
-	max-width: ${ props => props.maxWidth };
+	display: ${ props => props.isHidden ? "none" : "block" };
+	max-width: ${ props => props.panelMaxWidth };
 	transition: max-height 0.2s ease;
 	overflow: hidden;
 	max-height: ${ props => props.panelMaxHeight };
@@ -34,9 +33,7 @@ const HelpTextButton = styled( Button )`
 	height: 30px;
 	border-radius: 50%;
 	border: 1px solid transparent;
-	clip: rect(1px 1px 1px 1px);
 	box-shadow: none;
-	position: relative;
 	display: block;
 	margin: -44px -10px 10px 0;
 	background-color: transparent;
@@ -132,7 +129,7 @@ class HelpTextWrapper extends React.Component {
 	}
 
 	/**
-	 * Sets the isExpanded and isHidden states.
+	 * Unhides and expands the Help panel.
 	 *
 	 * @returns {void}
 	 */
@@ -144,7 +141,7 @@ class HelpTextWrapper extends React.Component {
 	}
 
 	/**
-	 * Sets the isExpanded state to false.
+	 * Collapses the Help panel.
 	 *
 	 * @returns {void}
 	 */
@@ -162,7 +159,7 @@ class HelpTextWrapper extends React.Component {
 	 * @returns {void}
 	 */
 	componentDidUpdate( prevProps, prevState ) {
-		// When the Help panel is opening we set its max-height value.
+		// When the Help panel is opening we set its max-height value in pixels.
 		if ( ! prevState.isExpanded && this.state.isExpanded ) {
 			this.setMaxHeight();
 		}
@@ -180,16 +177,18 @@ class HelpTextWrapper extends React.Component {
 	}
 
 	/**
-	 * Handles the relevant state properties when the transition has completed.
+	 * Handles the relevant state properties when the CSS transition has completed.
 	 *
 	 * @returns {void}
 	 */
 	onTransitionEnd() {
+		// Hides the Help panel at the end of the closing animation.
 		if ( this.state.panelMaxHeight === "0" ) {
 			this.setState( {
 				isHidden: true,
 			} );
 		} else {
+			// Removes the Help panel max-height at the end of the opening animation.
 			this.setState( {
 				panelMaxHeight: "none",
 			} );
@@ -238,8 +237,8 @@ class HelpTextWrapper extends React.Component {
 					onTransitionEnd={ this.onTransitionEnd }
 					innerRef={ this.setHelpPanelRef }
 					panelMaxHeight={ this.state.panelMaxHeight }
-					panelDisplay={ this.state.isHidden ? "none" : "block" }
-					maxWidth={ this.props.maxWidth }
+					isHidden={ this.state.isHidden }
+					panelMaxWidth={ this.props.panelMaxWidth }
 				>
 					<HelpText text={ this.props.helpText } />
 				</HelpTextPanel>
@@ -251,7 +250,7 @@ class HelpTextWrapper extends React.Component {
 HelpTextWrapper.propTypes = {
 	className: PropTypes.string,
 	helpTextButtonLabel: PropTypes.string.isRequired,
-	maxWidth: PropTypes.string,
+	panelMaxWidth: PropTypes.string,
 	helpText: PropTypes.oneOfType( [
 		PropTypes.string,
 		PropTypes.array,
@@ -260,7 +259,7 @@ HelpTextWrapper.propTypes = {
 
 HelpTextWrapper.defaultProps = {
 	className: "yoast-help",
-	maxWidth: null,
+	panelMaxWidth: null,
 	helpText: "",
 };
 
