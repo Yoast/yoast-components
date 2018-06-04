@@ -134,11 +134,6 @@ exports[`SnippetEditor accepts a custom data mapping function 1`] = `
   box-shadow: none;
 }
 
-.c8 {
-  vertical-align: center;
-  position: relative;
-}
-
 .c8:hover {
   fill: #0066cd;
 }
@@ -815,11 +810,6 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
 
 .c1:active {
   box-shadow: none;
-}
-
-.c8 {
-  vertical-align: center;
-  position: relative;
 }
 
 .c8:hover {
@@ -2425,11 +2415,6 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
   box-shadow: none;
 }
 
-.c8 {
-  vertical-align: center;
-  position: relative;
-}
-
 .c8:hover {
   fill: #0066cd;
 }
@@ -4031,11 +4016,6 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
 
 .c1:active {
   box-shadow: none;
-}
-
-.c8 {
-  vertical-align: center;
-  position: relative;
 }
 
 .c8:hover {
@@ -5641,11 +5621,6 @@ exports[`SnippetEditor closes when calling close() 1`] = `
   box-shadow: none;
 }
 
-.c8 {
-  vertical-align: center;
-  position: relative;
-}
-
 .c8:hover {
   fill: #0066cd;
 }
@@ -7240,11 +7215,6 @@ exports[`SnippetEditor closes when calling close() 2`] = `
   box-shadow: none;
 }
 
-.c8 {
-  vertical-align: center;
-  position: relative;
-}
-
 .c8:hover {
   fill: #0066cd;
 }
@@ -8481,11 +8451,6 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
 
 .c1:active {
   box-shadow: none;
-}
-
-.c8 {
-  vertical-align: center;
-  position: relative;
 }
 
 .c8:hover {
@@ -10121,11 +10086,6 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
 
 .c1:active {
   box-shadow: none;
-}
-
-.c8 {
-  vertical-align: center;
-  position: relative;
 }
 
 .c8:hover {
@@ -11827,11 +11787,6 @@ exports[`SnippetEditor highlights a focused field 1`] = `
   box-shadow: none;
 }
 
-.c8 {
-  vertical-align: center;
-  position: relative;
-}
-
 .c8:hover {
   fill: #0066cd;
 }
@@ -12426,11 +12381,6 @@ exports[`SnippetEditor highlights a hovered field 1`] = `
 
 .c1:active {
   box-shadow: none;
-}
-
-.c8 {
-  vertical-align: center;
-  position: relative;
 }
 
 .c8:hover {
@@ -13036,11 +12986,6 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
 
 .c1:active {
   box-shadow: none;
-}
-
-.c8 {
-  vertical-align: center;
-  position: relative;
 }
 
 .c8:hover {
@@ -14666,11 +14611,6 @@ exports[`SnippetEditor highlights the hovered field when onMouseOver() is called
   box-shadow: none;
 }
 
-.c8 {
-  vertical-align: center;
-  position: relative;
-}
-
 .c8:hover {
   fill: #0066cd;
 }
@@ -16294,11 +16234,6 @@ exports[`SnippetEditor opens when calling open() 1`] = `
   box-shadow: none;
 }
 
-.c8 {
-  vertical-align: center;
-  position: relative;
-}
-
 .c8:hover {
   fill: #0066cd;
 }
@@ -17900,11 +17835,6 @@ exports[`SnippetEditor passes replacement variables to the title and description
 
 .c1:active {
   box-shadow: none;
-}
-
-.c8 {
-  vertical-align: center;
-  position: relative;
 }
 
 .c8:hover {
@@ -19545,11 +19475,6 @@ exports[`SnippetEditor passes the date prop 1`] = `
   box-shadow: none;
 }
 
-.c8 {
-  vertical-align: center;
-  position: relative;
-}
-
 .c8:hover {
   fill: #0066cd;
 }
@@ -20241,11 +20166,6 @@ exports[`SnippetEditor renders in desktop mode 1`] = `
   box-shadow: none;
 }
 
-.c8 {
-  vertical-align: center;
-  position: relative;
-}
-
 .c8:hover {
   fill: #0066cd;
 }
@@ -20821,11 +20741,6 @@ exports[`SnippetEditor shows and editor 1`] = `
 
 .c1:active {
   box-shadow: none;
-}
-
-.c8 {
-  vertical-align: center;
-  position: relative;
 }
 
 .c8:hover {

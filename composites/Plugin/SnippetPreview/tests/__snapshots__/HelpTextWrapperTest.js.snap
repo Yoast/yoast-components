@@ -118,11 +118,6 @@ exports[`HelpTextWrapper matches the snapshot by default 1`] = `
   box-shadow: none;
 }
 
-.c8 {
-  vertical-align: center;
-  position: relative;
-}
-
 .c8:hover {
   fill: #0066cd;
 }

@@ -58,8 +58,6 @@ const HelpTextButton = styled( Button )`
 `;
 
 const StyledSvg = styled( SvgIcon )`
-	vertical-align: center;
-	position: relative;
 	&:hover {
 		fill: ${ colors.$color_blue };
 	}
