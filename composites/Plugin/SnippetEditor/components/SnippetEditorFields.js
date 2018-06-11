@@ -62,6 +62,14 @@ const InputContainer = styled.div.attrs( {
 	font-size: 14px;
 	cursor: text;
 
+	.draftJsMentionPlugin__mention__29BEd {
+		color: ${ colors.$color_white };
+		background-color: ${ colors.$color_pink_dark };
+		padding: 0px 8px;
+		margin: 0 2px;
+		border-radius: 17px;
+	}
+
 	&::before {
 		display: block;
 		position: absolute;
@@ -75,17 +83,8 @@ const InputContainer = styled.div.attrs( {
 	}
 `;
 
-const InputContainerWithStyledEntities = InputContainer.extend`
-	.draftJsMentionPlugin__mention__29BEd {
-		color: ${ colors.$color_white };
-		background-color: ${ colors.$color_pink_dark };
-		padding: 0px 8px;
-		margin: 0 2px;
-		border-radius: 17px;
-	}
-`;
 
-const TitleInputContainer = InputContainerWithStyledEntities.extend`
+const TitleInputContainer = InputContainer.extend`
 	.public-DraftStyleDefault-block {
 		line-height: 24px;
 		height: 24px;
@@ -108,7 +107,7 @@ const SlugInput = styled.input`
 	}
 `;
 
-const DescriptionInputContainer = InputContainerWithStyledEntities.extend`
+const DescriptionInputContainer = InputContainer.extend`
 	min-height: 60px;
 	padding: 2px 6px;
 	line-height: 24px;
