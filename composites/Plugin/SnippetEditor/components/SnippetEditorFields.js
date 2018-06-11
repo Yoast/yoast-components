@@ -83,7 +83,6 @@ const InputContainer = styled.div.attrs( {
 	}
 `;
 
-
 const TitleInputContainer = InputContainer.extend`
 	.public-DraftStyleDefault-block {
 		line-height: 24px;
