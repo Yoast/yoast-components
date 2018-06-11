@@ -1075,7 +1075,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
-  margin-bottom: 11px;
+  margin-bottom: 9px;
 }
 
 .c23 {
@@ -2938,7 +2938,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
-  margin-bottom: 11px;
+  margin-bottom: 9px;
 }
 
 .c23 {
@@ -4801,7 +4801,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
-  margin-bottom: 11px;
+  margin-bottom: 9px;
 }
 
 .c23 {
@@ -6664,7 +6664,7 @@ exports[`SnippetEditor closes when calling close() 1`] = `
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
-  margin-bottom: 11px;
+  margin-bottom: 9px;
 }
 
 .c23 {
@@ -9708,7 +9708,7 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
-  margin-bottom: 11px;
+  margin-bottom: 9px;
 }
 
 .c23 {
@@ -11571,7 +11571,7 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
-  margin-bottom: 11px;
+  margin-bottom: 9px;
 }
 
 .c23 {
@@ -14524,7 +14524,7 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
-  margin-bottom: 11px;
+  margin-bottom: 9px;
 }
 
 .c24 {
@@ -16407,7 +16407,7 @@ exports[`SnippetEditor highlights the hovered field when onMouseEnter() is calle
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
-  margin-bottom: 11px;
+  margin-bottom: 9px;
 }
 
 .c24 {
@@ -18290,7 +18290,7 @@ exports[`SnippetEditor opens when calling open() 1`] = `
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
-  margin-bottom: 11px;
+  margin-bottom: 9px;
 }
 
 .c23 {
@@ -20153,7 +20153,7 @@ exports[`SnippetEditor passes replacement variables to the title and description
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
-  margin-bottom: 11px;
+  margin-bottom: 9px;
 }
 
 .c23 {
@@ -22690,7 +22690,7 @@ exports[`SnippetEditor removes the highlight when calling unsetFieldFocus 1`] = 
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
-  margin-bottom: 11px;
+  margin-bottom: 9px;
 }
 
 .c23 {

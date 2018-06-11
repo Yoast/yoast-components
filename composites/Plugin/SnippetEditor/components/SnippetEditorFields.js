@@ -124,7 +124,7 @@ const SimulatedLabel = styled.div`
 	cursor: pointer;
 	font-size: 16px;
 	font-family: Arial, Roboto-Regular, HelveticaNeue, sans-serif;
-	margin-bottom: 11px;
+	margin-bottom: 9px;
 `;
 
 const TriggerReplacementVariableSuggestionsButton = Button.extend`
