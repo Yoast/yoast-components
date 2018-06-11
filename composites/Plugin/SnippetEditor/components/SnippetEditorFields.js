@@ -75,7 +75,17 @@ const InputContainer = styled.div.attrs( {
 	}
 `;
 
-const TitleInputContainer = InputContainer.extend`
+const InputContainerWithStyledEntities = InputContainer.extend`
+	.draftJsMentionPlugin__mention__29BEd {
+		color: ${ colors.$color_white };
+		background-color: ${ colors.$color_pink_dark };
+		padding: 0px 8px;
+		margin: 0 2px;
+		border-radius: 17px;
+	}
+`;
+
+const TitleInputContainer = InputContainerWithStyledEntities.extend`
 	.public-DraftStyleDefault-block {
 		line-height: 24px;
 		height: 24px;
@@ -98,25 +108,25 @@ const SlugInput = styled.input`
 	}
 `;
 
-const DescriptionInputContainer = InputContainer.extend`
+const DescriptionInputContainer = InputContainerWithStyledEntities.extend`
 	min-height: 60px;
 	padding: 2px 6px;
-	line-height: 19.6px;
+	line-height: 24px;
 `;
 
 const FormSection = styled.div`
-	margin: 32px 0;
+	margin: 24px 0;
 `;
 
 const StyledEditor = styled.section`
-	padding: 10px 20px 20px 20px;
+	padding: 10px 20px 0px 20px;
 `;
 
 const SimulatedLabel = styled.div`
 	cursor: pointer;
 	font-size: 16px;
 	font-family: Arial, Roboto-Regular, HelveticaNeue, sans-serif;
-	margin-bottom: 5px;
+	margin-bottom: 11px;
 `;
 
 const TriggerReplacementVariableSuggestionsButton = Button.extend`
@@ -127,7 +137,7 @@ const TriggerReplacementVariableSuggestionsButton = Button.extend`
 	fill: ${ colors.$color_grey_dark };
 	padding-left: 8px;
 	float: right;
-	margin-top: -35px; // negative height + 2 for spacing
+	margin-top: -33px; // negative height
 
 	${ props => props.isSmallerThanMobileWidth && `
 		float: none;
