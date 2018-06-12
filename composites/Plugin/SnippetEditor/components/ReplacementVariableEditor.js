@@ -12,6 +12,7 @@ import { __, _n, sprintf } from "@wordpress/i18n";
 
 // Internal dependencies.
 import { replacementVariablesShape } from "../constants";
+import { Mention } from "./Mention";
 import {
 	serializeEditor,
 	unserializeEditor,
@@ -119,6 +120,7 @@ class ReplacementVariableEditor extends React.Component {
 		this.mentionsPlugin = createMentionPlugin( {
 			mentionTrigger: "%",
 			entityMutability: "IMMUTABLE",
+			mentionComponent: Mention,
 		} );
 
 		this.singleLinePlugin = createSingleLinePlugin( {

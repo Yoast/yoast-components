@@ -949,14 +949,6 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
   cursor: text;
 }
 
-.c32 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
-}
-
 .c32::before {
   display: block;
   position: absolute;
@@ -991,14 +983,6 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
   cursor: text;
 }
 
-.c34 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
-}
-
 .c34::before {
   display: block;
   position: absolute;
@@ -1027,14 +1011,6 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
   min-height: 60px;
   padding: 2px 6px;
   line-height: 24px;
-}
-
-.c36 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
 }
 
 .c36::before {
@@ -2812,14 +2788,6 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
   cursor: text;
 }
 
-.c32 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
-}
-
 .c32::before {
   display: block;
   position: absolute;
@@ -2854,14 +2822,6 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
   cursor: text;
 }
 
-.c34 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
-}
-
 .c34::before {
   display: block;
   position: absolute;
@@ -2890,14 +2850,6 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
   min-height: 60px;
   padding: 2px 6px;
   line-height: 24px;
-}
-
-.c36 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
 }
 
 .c36::before {
@@ -4675,14 +4627,6 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
   cursor: text;
 }
 
-.c32 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
-}
-
 .c32::before {
   display: block;
   position: absolute;
@@ -4717,14 +4661,6 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
   cursor: text;
 }
 
-.c34 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
-}
-
 .c34::before {
   display: block;
   position: absolute;
@@ -4753,14 +4689,6 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
   min-height: 60px;
   padding: 2px 6px;
   line-height: 24px;
-}
-
-.c36 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
 }
 
 .c36::before {
@@ -6538,14 +6466,6 @@ exports[`SnippetEditor closes when calling close() 1`] = `
   cursor: text;
 }
 
-.c32 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
-}
-
 .c32::before {
   display: block;
   position: absolute;
@@ -6580,14 +6500,6 @@ exports[`SnippetEditor closes when calling close() 1`] = `
   cursor: text;
 }
 
-.c34 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
-}
-
 .c34::before {
   display: block;
   position: absolute;
@@ -6616,14 +6528,6 @@ exports[`SnippetEditor closes when calling close() 1`] = `
   min-height: 60px;
   padding: 2px 6px;
   line-height: 24px;
-}
-
-.c36 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
 }
 
 .c36::before {
@@ -9582,14 +9486,6 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
   cursor: text;
 }
 
-.c32 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
-}
-
 .c32::before {
   display: block;
   position: absolute;
@@ -9624,14 +9520,6 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
   cursor: text;
 }
 
-.c34 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
-}
-
 .c34::before {
   display: block;
   position: absolute;
@@ -9660,14 +9548,6 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
   min-height: 60px;
   padding: 2px 6px;
   line-height: 24px;
-}
-
-.c36 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
 }
 
 .c36::before {
@@ -11445,14 +11325,6 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
   cursor: text;
 }
 
-.c32 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
-}
-
 .c32::before {
   display: block;
   position: absolute;
@@ -11487,14 +11359,6 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
   cursor: text;
 }
 
-.c34 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
-}
-
 .c34::before {
   display: block;
   position: absolute;
@@ -11523,14 +11387,6 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
   min-height: 60px;
   padding: 2px 6px;
   line-height: 24px;
-}
-
-.c36 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
 }
 
 .c36::before {
@@ -14398,14 +14254,6 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
   cursor: text;
 }
 
-.c33 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
-}
-
 .c33::before {
   display: block;
   position: absolute;
@@ -14440,14 +14288,6 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
   cursor: text;
 }
 
-.c35 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
-}
-
 .c35::before {
   display: block;
   position: absolute;
@@ -14476,14 +14316,6 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
   min-height: 60px;
   padding: 2px 6px;
   line-height: 24px;
-}
-
-.c37 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
 }
 
 .c37::before {
@@ -16281,14 +16113,6 @@ exports[`SnippetEditor highlights the hovered field when onMouseEnter() is calle
   cursor: text;
 }
 
-.c33 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
-}
-
 .c33::before {
   display: block;
   position: absolute;
@@ -16323,14 +16147,6 @@ exports[`SnippetEditor highlights the hovered field when onMouseEnter() is calle
   cursor: text;
 }
 
-.c35 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
-}
-
 .c35::before {
   display: block;
   position: absolute;
@@ -16359,14 +16175,6 @@ exports[`SnippetEditor highlights the hovered field when onMouseEnter() is calle
   min-height: 60px;
   padding: 2px 6px;
   line-height: 24px;
-}
-
-.c37 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
 }
 
 .c37::before {
@@ -18164,14 +17972,6 @@ exports[`SnippetEditor opens when calling open() 1`] = `
   cursor: text;
 }
 
-.c32 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
-}
-
 .c32::before {
   display: block;
   position: absolute;
@@ -18206,14 +18006,6 @@ exports[`SnippetEditor opens when calling open() 1`] = `
   cursor: text;
 }
 
-.c34 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
-}
-
 .c34::before {
   display: block;
   position: absolute;
@@ -18242,14 +18034,6 @@ exports[`SnippetEditor opens when calling open() 1`] = `
   min-height: 60px;
   padding: 2px 6px;
   line-height: 24px;
-}
-
-.c36 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
 }
 
 .c36::before {
@@ -20027,14 +19811,6 @@ exports[`SnippetEditor passes replacement variables to the title and description
   cursor: text;
 }
 
-.c32 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
-}
-
 .c32::before {
   display: block;
   position: absolute;
@@ -20069,14 +19845,6 @@ exports[`SnippetEditor passes replacement variables to the title and description
   cursor: text;
 }
 
-.c34 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
-}
-
 .c34::before {
   display: block;
   position: absolute;
@@ -20105,14 +19873,6 @@ exports[`SnippetEditor passes replacement variables to the title and description
   min-height: 60px;
   padding: 2px 6px;
   line-height: 24px;
-}
-
-.c36 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
 }
 
 .c36::before {
@@ -22564,14 +22324,6 @@ exports[`SnippetEditor removes the highlight when calling unsetFieldFocus 1`] = 
   cursor: text;
 }
 
-.c32 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
-}
-
 .c32::before {
   display: block;
   position: absolute;
@@ -22606,14 +22358,6 @@ exports[`SnippetEditor removes the highlight when calling unsetFieldFocus 1`] = 
   cursor: text;
 }
 
-.c34 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
-}
-
 .c34::before {
   display: block;
   position: absolute;
@@ -22642,14 +22386,6 @@ exports[`SnippetEditor removes the highlight when calling unsetFieldFocus 1`] = 
   min-height: 60px;
   padding: 2px 6px;
   line-height: 24px;
-}
-
-.c36 .draftJsMentionPlugin__mention__29BEd {
-  color: #fff;
-  background-color: #a4286a;
-  padding: 0px 8px;
-  margin: 0 2px;
-  border-radius: 17px;
 }
 
 .c36::before {

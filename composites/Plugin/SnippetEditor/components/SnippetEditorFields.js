@@ -62,14 +62,6 @@ const InputContainer = styled.div.attrs( {
 	font-size: 14px;
 	cursor: text;
 
-	.draftJsMentionPlugin__mention__29BEd {
-		color: ${ colors.$color_white };
-		background-color: ${ colors.$color_pink_dark };
-		padding: 0px 8px;
-		margin: 0 2px;
-		border-radius: 17px;
-	}
-
 	&::before {
 		display: block;
 		position: absolute;
