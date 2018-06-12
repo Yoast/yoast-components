@@ -99,22 +99,22 @@ const SlugInput = styled.input`
 const DescriptionInputContainer = InputContainer.extend`
 	min-height: 60px;
 	padding: 2px 6px;
-	line-height: 19.6px;
+	line-height: 24px;
 `;
 
 const FormSection = styled.div`
-	margin: 32px 0;
+	margin: 24px 0;
 `;
 
 const StyledEditor = styled.section`
-	padding: 10px 20px 20px 20px;
+	padding: 10px 20px 0px 20px;
 `;
 
 const SimulatedLabel = styled.div`
 	cursor: pointer;
 	font-size: 16px;
 	font-family: Arial, Roboto-Regular, HelveticaNeue, sans-serif;
-	margin-bottom: 5px;
+	margin-bottom: 9px;
 `;
 
 const TriggerReplacementVariableSuggestionsButton = Button.extend`
@@ -125,7 +125,7 @@ const TriggerReplacementVariableSuggestionsButton = Button.extend`
 	fill: ${ colors.$color_grey_dark };
 	padding-left: 8px;
 	float: right;
-	margin-top: -35px; // negative height + 2 for spacing
+	margin-top: -33px; // negative height
 
 	${ props => props.isSmallerThanMobileWidth && `
 		float: none;

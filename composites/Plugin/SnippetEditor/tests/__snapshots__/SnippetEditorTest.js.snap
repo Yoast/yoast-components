@@ -718,7 +718,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
   fill: #555;
   padding-left: 8px;
   float: right;
-  margin-top: -35px;
+  margin-top: -33px;
   float: none;
   margin-top: 0;
   margin-bottom: 2px;
@@ -1007,7 +1007,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
   cursor: text;
   min-height: 60px;
   padding: 2px 6px;
-  line-height: 19.6px;
+  line-height: 24px;
 }
 
 .c36::before {
@@ -1037,18 +1037,18 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 1
 }
 
 .c29 {
-  margin: 32px 0;
+  margin: 24px 0;
 }
 
 .c28 {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 0px 20px;
 }
 
 .c30 {
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
-  margin-bottom: 5px;
+  margin-bottom: 9px;
 }
 
 .c23 {
@@ -2554,7 +2554,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
   fill: #555;
   padding-left: 8px;
   float: right;
-  margin-top: -35px;
+  margin-top: -33px;
   float: none;
   margin-top: 0;
   margin-bottom: 2px;
@@ -2843,7 +2843,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
   cursor: text;
   min-height: 60px;
   padding: 2px 6px;
-  line-height: 19.6px;
+  line-height: 24px;
 }
 
 .c36::before {
@@ -2873,18 +2873,18 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 2
 }
 
 .c29 {
-  margin: 32px 0;
+  margin: 24px 0;
 }
 
 .c28 {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 0px 20px;
 }
 
 .c30 {
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
-  margin-bottom: 5px;
+  margin-bottom: 9px;
 }
 
 .c23 {
@@ -4390,7 +4390,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
   fill: #555;
   padding-left: 8px;
   float: right;
-  margin-top: -35px;
+  margin-top: -33px;
   float: none;
   margin-top: 0;
   margin-bottom: 2px;
@@ -4679,7 +4679,7 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
   cursor: text;
   min-height: 60px;
   padding: 2px 6px;
-  line-height: 19.6px;
+  line-height: 24px;
 }
 
 .c36::before {
@@ -4709,18 +4709,18 @@ exports[`SnippetEditor calls callbacks when the editors are focused or changed 3
 }
 
 .c29 {
-  margin: 32px 0;
+  margin: 24px 0;
 }
 
 .c28 {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 0px 20px;
 }
 
 .c30 {
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
-  margin-bottom: 5px;
+  margin-bottom: 9px;
 }
 
 .c23 {
@@ -6226,7 +6226,7 @@ exports[`SnippetEditor closes when calling close() 1`] = `
   fill: #555;
   padding-left: 8px;
   float: right;
-  margin-top: -35px;
+  margin-top: -33px;
   float: none;
   margin-top: 0;
   margin-bottom: 2px;
@@ -6515,7 +6515,7 @@ exports[`SnippetEditor closes when calling close() 1`] = `
   cursor: text;
   min-height: 60px;
   padding: 2px 6px;
-  line-height: 19.6px;
+  line-height: 24px;
 }
 
 .c36::before {
@@ -6545,18 +6545,18 @@ exports[`SnippetEditor closes when calling close() 1`] = `
 }
 
 .c29 {
-  margin: 32px 0;
+  margin: 24px 0;
 }
 
 .c28 {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 0px 20px;
 }
 
 .c30 {
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
-  margin-bottom: 5px;
+  margin-bottom: 9px;
 }
 
 .c23 {
@@ -9243,7 +9243,7 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
   fill: #555;
   padding-left: 8px;
   float: right;
-  margin-top: -35px;
+  margin-top: -33px;
   float: none;
   margin-top: 0;
   margin-bottom: 2px;
@@ -9532,7 +9532,7 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
   cursor: text;
   min-height: 60px;
   padding: 2px 6px;
-  line-height: 19.6px;
+  line-height: 24px;
 }
 
 .c36::before {
@@ -9562,18 +9562,18 @@ exports[`SnippetEditor colored progress bars can handle a score of 6 1`] = `
 }
 
 .c29 {
-  margin: 32px 0;
+  margin: 24px 0;
 }
 
 .c28 {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 0px 20px;
 }
 
 .c30 {
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
-  margin-bottom: 5px;
+  margin-bottom: 9px;
 }
 
 .c23 {
@@ -11079,7 +11079,7 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
   fill: #555;
   padding-left: 8px;
   float: right;
-  margin-top: -35px;
+  margin-top: -33px;
   float: none;
   margin-top: 0;
   margin-bottom: 2px;
@@ -11368,7 +11368,7 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
   cursor: text;
   min-height: 60px;
   padding: 2px 6px;
-  line-height: 19.6px;
+  line-height: 24px;
 }
 
 .c36::before {
@@ -11398,18 +11398,18 @@ exports[`SnippetEditor colored progress bars can handle scores of 3 and 9 1`] = 
 }
 
 .c29 {
-  margin: 32px 0;
+  margin: 24px 0;
 }
 
 .c28 {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 0px 20px;
 }
 
 .c30 {
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
-  margin-bottom: 5px;
+  margin-bottom: 9px;
 }
 
 .c23 {
@@ -14005,7 +14005,7 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
   fill: #555;
   padding-left: 8px;
   float: right;
-  margin-top: -35px;
+  margin-top: -33px;
   float: none;
   margin-top: 0;
   margin-bottom: 2px;
@@ -14294,7 +14294,7 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
   cursor: text;
   min-height: 60px;
   padding: 2px 6px;
-  line-height: 19.6px;
+  line-height: 24px;
 }
 
 .c37::before {
@@ -14324,18 +14324,18 @@ exports[`SnippetEditor highlights the active ReplacementVariableEditor when call
 }
 
 .c30 {
-  margin: 32px 0;
+  margin: 24px 0;
 }
 
 .c29 {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 0px 20px;
 }
 
 .c31 {
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
-  margin-bottom: 5px;
+  margin-bottom: 9px;
 }
 
 .c24 {
@@ -15861,7 +15861,7 @@ exports[`SnippetEditor highlights the hovered field when onMouseEnter() is calle
   fill: #555;
   padding-left: 8px;
   float: right;
-  margin-top: -35px;
+  margin-top: -33px;
   float: none;
   margin-top: 0;
   margin-bottom: 2px;
@@ -16150,7 +16150,7 @@ exports[`SnippetEditor highlights the hovered field when onMouseEnter() is calle
   cursor: text;
   min-height: 60px;
   padding: 2px 6px;
-  line-height: 19.6px;
+  line-height: 24px;
 }
 
 .c37::before {
@@ -16180,18 +16180,18 @@ exports[`SnippetEditor highlights the hovered field when onMouseEnter() is calle
 }
 
 .c30 {
-  margin: 32px 0;
+  margin: 24px 0;
 }
 
 .c29 {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 0px 20px;
 }
 
 .c31 {
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
-  margin-bottom: 5px;
+  margin-bottom: 9px;
 }
 
 .c24 {
@@ -17717,7 +17717,7 @@ exports[`SnippetEditor opens when calling open() 1`] = `
   fill: #555;
   padding-left: 8px;
   float: right;
-  margin-top: -35px;
+  margin-top: -33px;
   float: none;
   margin-top: 0;
   margin-bottom: 2px;
@@ -18006,7 +18006,7 @@ exports[`SnippetEditor opens when calling open() 1`] = `
   cursor: text;
   min-height: 60px;
   padding: 2px 6px;
-  line-height: 19.6px;
+  line-height: 24px;
 }
 
 .c36::before {
@@ -18036,18 +18036,18 @@ exports[`SnippetEditor opens when calling open() 1`] = `
 }
 
 .c29 {
-  margin: 32px 0;
+  margin: 24px 0;
 }
 
 .c28 {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 0px 20px;
 }
 
 .c30 {
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
-  margin-bottom: 5px;
+  margin-bottom: 9px;
 }
 
 .c23 {
@@ -19553,7 +19553,7 @@ exports[`SnippetEditor passes replacement variables to the title and description
   fill: #555;
   padding-left: 8px;
   float: right;
-  margin-top: -35px;
+  margin-top: -33px;
   float: none;
   margin-top: 0;
   margin-bottom: 2px;
@@ -19842,7 +19842,7 @@ exports[`SnippetEditor passes replacement variables to the title and description
   cursor: text;
   min-height: 60px;
   padding: 2px 6px;
-  line-height: 19.6px;
+  line-height: 24px;
 }
 
 .c36::before {
@@ -19872,18 +19872,18 @@ exports[`SnippetEditor passes replacement variables to the title and description
 }
 
 .c29 {
-  margin: 32px 0;
+  margin: 24px 0;
 }
 
 .c28 {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 0px 20px;
 }
 
 .c30 {
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
-  margin-bottom: 5px;
+  margin-bottom: 9px;
 }
 
 .c23 {
@@ -22063,7 +22063,7 @@ exports[`SnippetEditor removes the highlight when calling unsetFieldFocus 1`] = 
   fill: #555;
   padding-left: 8px;
   float: right;
-  margin-top: -35px;
+  margin-top: -33px;
   float: none;
   margin-top: 0;
   margin-bottom: 2px;
@@ -22352,7 +22352,7 @@ exports[`SnippetEditor removes the highlight when calling unsetFieldFocus 1`] = 
   cursor: text;
   min-height: 60px;
   padding: 2px 6px;
-  line-height: 19.6px;
+  line-height: 24px;
 }
 
 .c36::before {
@@ -22382,18 +22382,18 @@ exports[`SnippetEditor removes the highlight when calling unsetFieldFocus 1`] = 
 }
 
 .c29 {
-  margin: 32px 0;
+  margin: 24px 0;
 }
 
 .c28 {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 0px 20px;
 }
 
 .c30 {
   cursor: pointer;
   font-size: 16px;
   font-family: Arial,Roboto-Regular,HelveticaNeue,sans-serif;
-  margin-bottom: 5px;
+  margin-bottom: 9px;
 }
 
 .c23 {
