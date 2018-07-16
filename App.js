@@ -86,14 +86,15 @@ const components = [
 		component: <ButtonsWrapper />,
 	},
 	{
-		id: "ContentOptimizationContainer",
+		id: "ContentOptimizationContainer.js",
 		name: "Content optimization container",
-		component: <ContentOptimizationContainer />,
+		component: <ContentOptimizationContainer
+			{ ...( new SnippetEditor().getSnippetEditorProps() ) }
+		/>,
 	},
 ];
 
 class App extends React.Component {
-
 	constructor() {
 		super();
 
