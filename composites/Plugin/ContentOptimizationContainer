@@ -1,0 +1,18 @@
+import React from "react";
+
+import SnippetEditor from "./SnippetEditor/components/SnippetEditor";
+
+/**
+ * @param {object} props The properties of the rendered components.
+ *
+ * @returns {ReactElement} The ContentOptimizationContainer component.
+ */
+export default function ContentOptimizationContainer( props ) {
+	return (
+		<div>
+			<SnippetEditor
+				{ ...props.snippetEditorProps }
+			/>
+		</div>
+	);
+}
