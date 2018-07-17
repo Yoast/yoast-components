@@ -88,9 +88,7 @@ const components = [
 	{
 		id: "ContentOptimizationContainer.js",
 		name: "Content optimization container",
-		component: <ContentOptimizationContainer
-			{ ...( new SnippetEditor().getSnippetEditorProps() ) }
-		/>,
+		component: <ContentOptimizationContainer showSnippetEditor={ true } showContentAnalysis={ true } />,
 	},
 ];
 
