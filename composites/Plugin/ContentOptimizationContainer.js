@@ -38,4 +38,4 @@ ContentOptimizationContainer.propTypes = {
 ContentOptimizationContainer.defaultProps = {
 	showSnippetEditor: false,
 	showContentAnalysis: false,
-}
+};
