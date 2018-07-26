@@ -14,6 +14,7 @@ import SnippetEditor from "./app/SnippetEditorExample";
 import Checkbox from "./composites/Plugin/Shared/components/Checkbox";
 import KeywordExample from "./app/KeywordExample";
 import ButtonsWrapper from "./app/ButtonsWrapper";
+import ContentOptimizationContainer from "./composites/Plugin/ContentOptimizationContainer";
 
 const components = [
 	{
@@ -83,6 +84,11 @@ const components = [
 		id: "buttons",
 		name: "Buttons",
 		component: <ButtonsWrapper />,
+	},
+	{
+		id: "ContentOptimizationContainer.js",
+		name: "Content optimization container",
+		component: <ContentOptimizationContainer showSnippetEditor={ true } showContentAnalysis={ true } />,
 	},
 ];
 
