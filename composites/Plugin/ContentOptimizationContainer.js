@@ -13,11 +13,13 @@ const Paper = styled.div`
 `;
 
 /**
- * @param {object} props                     The properties of the rendered components.
+ * Renders the ContentOptimizationContainer.
+ *
+ * @param {Object} props                     The properties of the rendered components.
  * @param {bool}   props.showSnippetEditor   Whether or not to show the Snippet editor.
  * @param {bool}   props.showContentAnalysis Whether or not to show the Content analysis.
  *
- * @returns {ReactElement} The ContentOptimizationContainer.js component.
+ * @returns {ReactElement} The ContentOptimizationContainer component.
  */
 export default function ContentOptimizationContainer( props ) {
 	const { showSnippetEditor, showContentAnalysis } = props;
