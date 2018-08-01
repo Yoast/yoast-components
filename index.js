@@ -45,7 +45,7 @@ export {
 	Loader,
 	Synonyms,
 	Collabsible,
-}
+};
 
 export * from "./composites/Plugin/SnippetPreview";
 export * from "./composites/Plugin/SnippetEditor";
