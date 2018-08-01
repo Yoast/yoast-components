@@ -14,7 +14,9 @@ import { default as LanguageNotice } from "./composites/Plugin/Shared/components
 import { default as YoastButton } from "./composites/Plugin/Shared/components/YoastButton";
 import { default as YoastModal } from "./composites/Plugin/Shared/components/YoastModal";
 import { default as SvgIcon } from "./composites/Plugin/Shared/components/SvgIcon";
-import { default as Collabsible } from ".//composites/Plugin/shared/components/Collapsible";
+import { default as Collabsible } from "./composites/Plugin/shared/components/Collapsible";
+import { default as Icon } from "./composites/Plugin/Shared/components/Icon";
+
 import { default as ContentAnalysis } from "./composites/Plugin/ContentAnalysis/components/ContentAnalysis";
 import { default as HelpCenter } from "./composites/Plugin/HelpCenter/HelpCenter.js";
 import { default as Synonyms } from "./composites/Plugin/Synonyms/actions/synonyms";
@@ -23,7 +25,8 @@ import { default as LinkSuggestions } from "./composites/LinkSuggestions/LinkSug
 // Composites/KeywordSuggestions imports.
 import { default as KeywordSuggestions } from "./composites/KeywordSuggestions/KeywordSuggestions";
 // Composites/basic imports.
-import { default as Loader } from "./yoast-components/composites/basic/Loader";
+import { default as Loader } from "./composites/basic/Loader";
+import { default as YoastSeoIcon } from "./composites/basic/YoastSeoIcon";
 
 export {
 	OnboardingWizard,
@@ -43,6 +46,8 @@ export {
 	Loader,
 	Synonyms,
 	Collabsible,
+	Icon,
+	YoastSeoIcon,
 };
 
 export * from "./composites/Plugin/SnippetPreview";
