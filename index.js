@@ -14,6 +14,7 @@ import { default as LanguageNotice } from "./composites/Plugin/Shared/components
 import { default as YoastButton } from "./composites/Plugin/Shared/components/YoastButton";
 import { default as YoastModal } from "./composites/Plugin/Shared/components/YoastModal";
 import { default as SvgIcon } from "./composites/Plugin/Shared/components/SvgIcon";
+import { default as SynonymsInput } from "./composites/Plugin/Shared/components/SynonymsInput";
 import { default as Collabsible } from ".//composites/Plugin/shared/components/Collapsible";
 import { default as ContentAnalysis } from "./composites/Plugin/ContentAnalysis/components/ContentAnalysis";
 import { default as HelpCenter } from "./composites/Plugin/HelpCenter/HelpCenter.js";
@@ -35,6 +36,7 @@ export {
 	LanguageNotice,
 	ContentAnalysis,
 	Collapsible,
+	SynonymsInput,
 	LoadingIndicator,
 	ScoreAssessment,
 	YoastButton,
