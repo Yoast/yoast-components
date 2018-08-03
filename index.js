@@ -51,7 +51,6 @@ export {
 export { default as SynonymsInput } from "./composites/Plugin/Shared/components/SynonymsInput";
 export * from "./composites/Plugin/SnippetPreview";
 export * from "./composites/Plugin/SnippetEditor";
-export * from "./composites/Plugin/Synonyms";
 export * from "./forms";
 export { default as colors } from "./style-guide/colors.json";
 export { default as utils } from "./utils";
