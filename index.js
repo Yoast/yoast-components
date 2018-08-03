@@ -17,7 +17,6 @@ import { default as YoastModal } from "./composites/Plugin/Shared/components/Yoa
 import { default as SvgIcon } from "./composites/Plugin/Shared/components/SvgIcon";
 import { default as ContentAnalysis } from "./composites/Plugin/ContentAnalysis/components/ContentAnalysis";
 import { default as HelpCenter } from "./composites/Plugin/HelpCenter/HelpCenter.js";
-import { default as Synonyms } from "./composites/Plugin/Synonyms/actions/synonyms";
 import CornerstoneToggle from "./composites/Plugin/CornerstoneContent/components/CornerstoneToggle";
 
 // Composites/LinkSuggestions imports.
@@ -43,7 +42,6 @@ export {
 	YoastModal,
 	SvgIcon,
 	Loader,
-	Synonyms,
 	CornerstoneToggle,
 	sendRequest,
 };
