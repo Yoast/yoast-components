@@ -68,3 +68,5 @@ export { default as KeywordInput } from "./composites/Plugin/Shared/components/K
 export { default as Icon } from "./composites/Plugin/Shared/components/Icon";
 export { default as YoastSeoIcon } from "./composites/basic/YoastSeoIcon";
 export { setOverallReadabilityScore, setOverallSeoScore } from "./composites/Plugin/ContentAnalysis/actions/contentAnalysis";
+export { insightsReducer } from "./redux/reducers/insights";
+export { setProminentWords } from "./redux/actions/insights";
