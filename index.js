@@ -63,10 +63,12 @@ export { default as decodeHTML } from "./composites/OnboardingWizard/helpers/htm
 export { WordpressFeed } from "./composites/Plugin/DashboardWidget/components/WordpressFeed";
 export { SeoAssesment } from "./composites/Plugin/DashboardWidget/components/SeoAssessment";
 export { default as VideoTutorial } from "./composites/HelpCenter/views/VideoTutorial";
-export { setReadabilityResults, setSeoResultsForKeyword } from "./composites/Plugin/ContentAnalysis/actions/contentAnalysis";
 export { default as KeywordInput } from "./composites/Plugin/Shared/components/KeywordInput";
 export { default as Icon } from "./composites/Plugin/Shared/components/Icon";
 export { default as YoastSeoIcon } from "./composites/basic/YoastSeoIcon";
-export { setOverallReadabilityScore, setOverallSeoScore } from "./composites/Plugin/ContentAnalysis/actions/contentAnalysis";
 export { insightsReducer } from "./redux/reducers/insights";
 export { setProminentWords } from "./redux/actions/insights";
+export { setReadabilityResults,
+	setSeoResultsForKeyword,
+	setOverallReadabilityScore,
+	setOverallSeoScore } from "./composites/Plugin/ContentAnalysis/actions/contentAnalysis";
