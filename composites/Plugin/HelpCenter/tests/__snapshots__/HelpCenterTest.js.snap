@@ -104,6 +104,12 @@ exports[`the HelpCenter matches the snapshot 1`] = `
   }
 }
 
+@media all and (-ms-high-contrast:none),(-ms-high-contrast:active) {
+  .c1::after {
+    min-height: 32px;
+  }
+}
+
 @media screen and ( max-width:768px ) {
   .c0 {
     margin: 0 0 1em;
@@ -254,6 +260,12 @@ exports[`the HelpCenter with props matches the snapshot 1`] = `
     display: inline-block;
     content: "";
     min-height: 48px;
+  }
+}
+
+@media all and (-ms-high-contrast:none),(-ms-high-contrast:active) {
+  .c1::after {
+    min-height: 32px;
   }
 }
 
