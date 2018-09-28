@@ -33,6 +33,13 @@ export const HelpCenterButton = styled( HelpCenterButtonBase )`
 	svg {
 		margin: 0 16px;
 	}
+
+	// Only needed for IE 10+. Don't add spaces within brackets for this to work.
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		::after {
+			min-height: 32px;
+		}
+	}
 `;
 
 HelpCenterButtonBase.propTypes = {
