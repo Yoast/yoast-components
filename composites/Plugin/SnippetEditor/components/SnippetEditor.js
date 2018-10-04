@@ -425,21 +425,26 @@ class SnippetEditor extends React.Component {
 
 		const mappedData = {
 			title: this.processReplacementVariables( originalData.title, replacementVariables ),
-			url: shortenedBaseUrl + originalData.slug,
+			url: this.buildPermalink( shortenedBaseUrl, originalData ),
 			description: description,
-		};
-
-		const context = {
-			shortenedBaseUrl,
 		};
 
 		// The mapping by the passed mapping function should happen before measuring.
 		if ( mapEditorDataToPreview ) {
-			return mapEditorDataToPreview( mappedData, context );
+			return mapEditorDataToPreview(
+				mappedData,
+				{ shortenedBaseUrl }
+			);
 		}
 
-
 		return mappedData;
+	}
+
+	buildPermalink( url, originalData ) {
+		let permalink = url.replace( "%category%", originalData.primaryTaxonomySlug );
+		permalink = permalink.replace( "%postname%", originalData.slug );
+
+		return permalink;
 	}
 
 	/**
