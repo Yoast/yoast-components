@@ -440,9 +440,20 @@ class SnippetEditor extends React.Component {
 		return mappedData;
 	}
 
+	/**
+	 * Builds the permalink based on the permalink structure and the passed URL.
+	 *
+	 * If categories are a part of the permalink, then this will be replaced as well.
+	 *
+	 * @param {string} url          The URL to base the permalink on.
+	 * @param {Object} originalData The original post data.
+	 *
+	 * @returns {string} The formatted permalink.
+	 */
 	buildPermalink( url, originalData ) {
-		let permalink = url.replace( "%category%", originalData.primaryTaxonomySlug );
-		permalink = permalink.replace( "%postname%", originalData.slug );
+		let slug      = Object.values( originalData.parents ).join( "/" ) + "/" + originalData.primaryTaxonomySlug;
+		let permalink = url.replace( "%category%", slug );
+		permalink     = permalink.replace( "%postname%", originalData.slug );
 
 		return permalink;
 	}

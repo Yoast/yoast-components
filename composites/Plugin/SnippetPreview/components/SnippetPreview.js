@@ -431,6 +431,7 @@ export default class SnippetPreview extends PureComponent {
 	 * Returns the breadcrumbs string to be rendered.
 	 *
 	 * @param {string} url The url to use to build the breadcrumbs.
+	 *
 	 * @returns {string} The breadcrumbs.
 	 */
 	getBreadcrumbs( url ) {
