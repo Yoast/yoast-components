@@ -21,11 +21,18 @@ const defaultData = {
 };
 
 const defaultArgs = {
-	baseUrl: "http://example.org/",
+	baseUrl: "http://example.org/%postname%",
 	data: defaultData,
 	onChange: jest.fn(),
 };
 
+/**
+ * Renders a snapshot based on the passed and default arguments.
+ *
+ * @param {Object} changedArgs The changed arguments.
+ *
+ * @returns {void}
+ */
 const renderSnapshotWithArgs = ( changedArgs ) => {
 	const args = { ...defaultArgs, ...changedArgs };
 	const tree = createComponentWithIntl( <SnippetEditor { ...args } />, { locale: "en" } )
@@ -34,11 +41,25 @@ const renderSnapshotWithArgs = ( changedArgs ) => {
 	expect( tree ).toMatchSnapshot();
 };
 
+/**
+ * Mounts the component with the passed and default arguments.
+ *
+ * @param {Object} changedArgs The changed arguments.
+ *
+ * @returns {Object} The mounted component.
+ */
 const mountWithArgs = ( changedArgs ) => {
 	const args = { ...defaultArgs, ...changedArgs };
 	return mountWithIntl( <SnippetEditor { ...args } /> );
 };
 
+/**
+ * Creates a shallow copy of the component with the passed and default arguments.
+ *
+ * @param {Object} changedArgs The changed arguments.
+ *
+ * @returns {Object} The shallow copy component.
+ */
 const shallowWithArgs = ( changedArgs ) => {
 	const args = { ...defaultArgs, ...changedArgs };
 	return shallowWithIntl( <SnippetEditor { ...args } /> );
@@ -78,14 +99,17 @@ describe( "SnippetEditor", () => {
 				description: "Totally different description",
 			};
 		} );
+
 		const defaultMappedData = {
 			title: "Test title",
 			url: "example.org/test-slug",
 			description: "Test description, replacement value",
 		};
+
 		const context = {
-			shortenedBaseUrl: "example.org/",
+			shortenedBaseUrl: "example.org/%postname%",
 		};
+
 		const replacementVariables = [
 			{
 				name: "replacement_variable",
