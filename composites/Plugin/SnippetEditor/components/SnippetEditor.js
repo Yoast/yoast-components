@@ -112,6 +112,7 @@ class SnippetEditor extends React.Component {
 	 * @param {string}   props.data.slug                         The initial slug.
 	 * @param {string}   props.data.description                  The initial description.
 	 * @param {string}   props.baseUrl                           The base URL to use for the preview.
+	 * @param {string}   props.permalink                         The permalink of the post.
 	 * @param {string}   props.mode                              The mode the editor should be in.
 	 * @param {Function} props.onChange                          Called when the data changes.
 	 * @param {Object}   props.titleLengthProgress               The values for the title length assessment.
@@ -414,7 +415,7 @@ class SnippetEditor extends React.Component {
 	 * @returns {Object} The data for the preview.
 	 */
 	mapDataToMeasurements( originalData, replacementVariables = this.props.replacementVariables ) {
-		const { baseUrl, mapEditorDataToPreview } = this.props;
+		const { baseUrl, permalink, mapEditorDataToPreview } = this.props;
 
 		let description = this.processReplacementVariables( originalData.description, replacementVariables );
 
@@ -422,10 +423,11 @@ class SnippetEditor extends React.Component {
 		description = stripSpaces( description );
 
 		const shortenedBaseUrl = baseUrl.replace( /^http:\/\//i, "" );
+		const shortenedPermalink = permalink.replace( /^http:\/\//i, "" );
 
 		const mappedData = {
 			title: this.processReplacementVariables( originalData.title, replacementVariables ),
-			url: this.buildPermalink( shortenedBaseUrl, originalData ),
+			url: this.buildPermalink( shortenedPermalink, originalData ),
 			description: description,
 		};
 
@@ -597,6 +599,7 @@ SnippetEditor.propTypes = {
 	} ).isRequired,
 	descriptionEditorFieldPlaceholder: PropTypes.string,
 	baseUrl: PropTypes.string.isRequired,
+	permalink: PropTypes.string.isRequired,
 	mode: PropTypes.oneOf( MODES ),
 	date: PropTypes.string,
 	onChange: PropTypes.func.isRequired,

@@ -21,7 +21,8 @@ const defaultData = {
 };
 
 const defaultArgs = {
-	baseUrl: "http://example.org/%postname%",
+	baseUrl: "http://example.org/",
+	permalink: "http://example.org/%postname%",
 	data: defaultData,
 	onChange: jest.fn(),
 };
@@ -107,7 +108,7 @@ describe( "SnippetEditor", () => {
 		};
 
 		const context = {
-			shortenedBaseUrl: "example.org/%postname%",
+			shortenedBaseUrl: "example.org/",
 		};
 
 		const replacementVariables = [
