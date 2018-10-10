@@ -415,14 +415,14 @@ class SnippetEditor extends React.Component {
 	 * @returns {Object} The data for the preview.
 	 */
 	mapDataToMeasurements( originalData, replacementVariables = this.props.replacementVariables ) {
-		const { baseUrl, permalink, mapEditorDataToPreview } = this.props;
+		const { baseUrl, permalink = baseUrl, mapEditorDataToPreview } = this.props;
 
 		let description = this.processReplacementVariables( originalData.description, replacementVariables );
 
 		// Strip multiple spaces and spaces at the beginning and end.
 		description = stripSpaces( description );
 
-		const shortenedBaseUrl = baseUrl.replace( /^http:\/\//i, "" );
+		const shortenedBaseUrl   = baseUrl.replace( /^http:\/\//i, "" );
 		const shortenedPermalink = permalink.replace( /^http:\/\//i, "" );
 
 		const mappedData = {
