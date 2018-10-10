@@ -453,7 +453,7 @@ class SnippetEditor extends React.Component {
 	 * @returns {string} The formatted permalink.
 	 */
 	buildPermalink( url, originalData ) {
-		let { slug, parents = [], primaryTaxonomySlug = "" } = originalData;
+		const { slug, parents = [], primaryTaxonomySlug = "" } = originalData;
 
 		if ( originalData.parents ) {
 			parents = Object.values( originalData.parents );
