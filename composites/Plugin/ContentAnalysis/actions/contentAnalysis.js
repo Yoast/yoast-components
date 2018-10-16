@@ -14,6 +14,8 @@ export const UPDATE_READABILITY_RESULT = `${ prefix }UPDATE_READABILITY_RESULT`;
 export const SET_OVERALL_READABILITY_SCORE = `${ prefix }SET_OVERALL_READABILITY_SCORE`;
 export const SET_OVERALL_SEO_SCORE = `${ prefix }SET_OVERALL_SEO_SCORE`;
 
+export const SET_KEYPHRASE_NOTICE = `${ prefix }SET_KEYPHRASE_NOTICE`;
+
 /*
  * Action creators
  */
@@ -135,3 +137,19 @@ export function setOverallSeoScore( overallScore, keyword ) {
 		overallScore: overallScore,
 	};
 }
+
+/**
+ * An action creator for setting the keyphrase notice.
+ *
+ * @param {string} keyphrase the keyphrase for which to show the notice.
+ * @param {string} notice the notice to show to the user.
+ *
+ * @returns {Object} Action.
+ */
+export const setKeyphraseNotice = function( keyphrase, notice ) {
+	return {
+		type: SET_KEYPHRASE_NOTICE,
+		keyphrase: keyphrase,
+		notice: notice,
+	};
+};
