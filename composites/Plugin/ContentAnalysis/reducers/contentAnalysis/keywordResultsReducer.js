@@ -1,5 +1,5 @@
 import { UPDATE_SEO_RESULT, SET_SEO_RESULTS, REMOVE_KEYWORD, SET_SEO_RESULTS_FOR_KEYWORD,
-	SET_OVERALL_SEO_SCORE } from "../../actions/contentAnalysis";
+	SET_OVERALL_SEO_SCORE, SET_KEYPHRASE_NOTICE } from "../../actions/contentAnalysis";
 import findIndex from "lodash/findIndex";
 import omit from "lodash/omit";
 
@@ -91,7 +91,7 @@ function updateSeoResultsForKeyword( state, action ) {
 /**
  * Sets the SEO results for one of more keywords.
  *
- * @param {string} action The action.
+ * @param {Object} action The action.
  * @returns {Object} The SEO results per keyword.
  */
 function setSeoResults( action ) {
@@ -100,6 +100,19 @@ function setSeoResults( action ) {
 		resultsPerKeyword[ keywordResultsPair.keyword ] = { results: keywordResultsPair.results };
 	} );
 	return resultsPerKeyword;
+}
+
+/**
+ * Sets a notice for the specified keyphrase.
+ *
+ * @param {Object} state  The state.
+ * @param {Object} action The action.
+ * @returns {Object} the new state with a notice.
+ */
+function setKeyphraseNotice( state, action ) {
+	return Object.assign( {}, state, {
+		[ action.keyphrase ]: { ...state[ action.keyphrase ], notice: action.notice },
+	} );
 }
 
 /**
@@ -138,6 +151,8 @@ export function keywordResultsReducer( state = initialState, action ) {
 			return updateSeoResultsForKeyword( state, action );
 		case SET_OVERALL_SEO_SCORE:
 			return setOverallSeoScore( state, action );
+		case SET_KEYPHRASE_NOTICE:
+			return setKeyphraseNotice( state, action );
 		default:
 			return state;
 	}
