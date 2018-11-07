@@ -415,7 +415,7 @@ class SnippetEditor extends React.Component {
 	 * @returns {Object} The data for the preview.
 	 */
 	mapDataToMeasurements( originalData, replacementVariables = this.props.replacementVariables ) {
-		const { baseUrl, permalink = baseUrl, mapEditorDataToPreview } = this.props;
+		const { baseUrl, mapEditorDataToPreview } = this.props;
 
 		let description = this.processReplacementVariables( originalData.description, replacementVariables );
 
@@ -423,11 +423,10 @@ class SnippetEditor extends React.Component {
 		description = stripSpaces( description );
 
 		const shortenedBaseUrl   = baseUrl.replace( /^http:\/\//i, "" );
-		const shortenedPermalink = permalink.replace( /^http:\/\//i, "" );
 
 		const mappedData = {
 			title: this.processReplacementVariables( originalData.title, replacementVariables ),
-			url: this.buildPermalink( shortenedPermalink, originalData ),
+			url: this.buildPermalink( originalData ),
 			description: description,
 		};
 
@@ -447,24 +446,23 @@ class SnippetEditor extends React.Component {
 	 *
 	 * If categories are a part of the permalink, then this will be replaced as well.
 	 *
-	 * @param {string} url          The URL to base the permalink on.
 	 * @param {Object} originalData The original post data.
 	 *
 	 * @returns {string} The formatted permalink.
 	 */
-	buildPermalink( url, originalData ) {
-		let parents = [];
-		const { slug, primaryTaxonomySlug = "" } = originalData;
+	buildPermalink( originalData ) {
+		const data = originalData.permalink.data;
+		let structure = originalData.permalink.structure;
 
-		if ( originalData.parents ) {
-			parents = Object.values( originalData.parents );
+		for ( const placeholder in data ) {
+			if ( data.hasOwnProperty( placeholder ) ) {
+				structure = structure.replace( placeholder, data[ placeholder ] );
+			}
 		}
 
-		const categorySlug = [ ...parents, primaryTaxonomySlug ].join( "/" );
-		let permalink      = url.replace( "%category%", categorySlug );
-		permalink          = permalink.replace( "%postname%", slug );
+		structure = structure.replace( /^http:\/\//i, "" );
 
-		return permalink;
+		return structure;
 	}
 
 	/**
