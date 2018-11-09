@@ -22,7 +22,7 @@ const defaultData = {
 
 const defaultArgs = {
 	baseUrl: "http://example.org/",
-	permalink: "http://example.org/%postname%",
+	urlStructure: "http://example.org/%postname%",
 	data: defaultData,
 	onChange: jest.fn(),
 };

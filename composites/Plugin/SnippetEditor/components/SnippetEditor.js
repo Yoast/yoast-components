@@ -112,7 +112,7 @@ class SnippetEditor extends React.Component {
 	 * @param {string}   props.data.slug                         The initial slug.
 	 * @param {string}   props.data.description                  The initial description.
 	 * @param {string}   props.baseUrl                           The base URL to use for the preview.
-	 * @param {string}   props.permalink                         The permalink of the post.
+	 * @param {string}   props.urlStructure                      The URL structure of the post.
 	 * @param {string}   props.mode                              The mode the editor should be in.
 	 * @param {Function} props.onChange                          Called when the data changes.
 	 * @param {Object}   props.titleLengthProgress               The values for the title length assessment.
@@ -415,19 +415,19 @@ class SnippetEditor extends React.Component {
 	 * @returns {Object} The data for the preview.
 	 */
 	mapDataToMeasurements( originalData, replacementVariables = this.props.replacementVariables ) {
-		const { baseUrl, permalink = baseUrl, mapEditorDataToPreview } = this.props;
+		const { baseUrl, urlStructure = baseUrl, mapEditorDataToPreview } = this.props;
 
 		let description = this.processReplacementVariables( originalData.description, replacementVariables );
 
 		// Strip multiple spaces and spaces at the beginning and end.
 		description = stripSpaces( description );
 
-		const shortenedBaseUrl   = baseUrl.replace( /^http:\/\//i, "" );
-		const shortenedPermalink = permalink.replace( /^http:\/\//i, "" );
+		const shortenedBaseUrl      = baseUrl.replace( /^http:\/\//i, "" );
+		const shortenedUrlStructure = urlStructure.replace( /^http:\/\//i, "" );
 
 		const mappedData = {
 			title: this.processReplacementVariables( originalData.title, replacementVariables ),
-			url: this.buildPermalink( shortenedPermalink, originalData ),
+			url: this.buildPermalink( shortenedUrlStructure, originalData ),
 			description: description,
 		};
 
@@ -443,7 +443,7 @@ class SnippetEditor extends React.Component {
 	}
 
 	/**
-	 * Builds the permalink based on the permalink structure and the passed URL.
+	 * Builds the permalink based on the URL structure and the passed URL.
 	 *
 	 * If categories are a part of the permalink, then this will be replaced as well.
 	 *
@@ -600,7 +600,7 @@ SnippetEditor.propTypes = {
 	} ).isRequired,
 	descriptionEditorFieldPlaceholder: PropTypes.string,
 	baseUrl: PropTypes.string.isRequired,
-	permalink: PropTypes.string.isRequired,
+	urlStructure: PropTypes.string.isRequired,
 	mode: PropTypes.oneOf( MODES ),
 	date: PropTypes.string,
 	onChange: PropTypes.func.isRequired,
