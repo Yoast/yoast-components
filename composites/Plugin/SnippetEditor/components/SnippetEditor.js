@@ -415,7 +415,7 @@ class SnippetEditor extends React.Component {
 	 * @returns {Object} The data for the preview.
 	 */
 	mapDataToMeasurements( originalData, replacementVariables = this.props.replacementVariables ) {
-		const { baseUrl, mapEditorDataToPreview } = this.props;
+		const { baseUrl, permalink = baseUrl, mapEditorDataToPreview } = this.props;
 
 		let description = this.processReplacementVariables( originalData.description, replacementVariables );
 
@@ -423,10 +423,11 @@ class SnippetEditor extends React.Component {
 		description = stripSpaces( description );
 
 		const shortenedBaseUrl   = baseUrl.replace( /^http:\/\//i, "" );
+		const shortenedPermalink = permalink.replace( /^http:\/\//i, "" );
 
 		const mappedData = {
 			title: this.processReplacementVariables( originalData.title, replacementVariables ),
-			url: this.buildPermalink( originalData ),
+			url: this.buildPermalink( shortenedPermalink, originalData ),
 			description: description,
 		};
 
@@ -446,23 +447,24 @@ class SnippetEditor extends React.Component {
 	 *
 	 * If categories are a part of the permalink, then this will be replaced as well.
 	 *
+	 * @param {string} url          The URL to base the permalink on.
 	 * @param {Object} originalData The original post data.
 	 *
 	 * @returns {string} The formatted permalink.
 	 */
-	buildPermalink( originalData ) {
-		const data = originalData.permalink.data;
-		let structure = originalData.permalink.structure;
+	buildPermalink( url, originalData ) {
+		let parents = [];
+		const { slug, primaryTaxonomySlug = "" } = originalData;
 
-		for ( const placeholder in data ) {
-			if ( data.hasOwnProperty( placeholder ) ) {
-				structure = structure.replace( placeholder, data[ placeholder ] );
-			}
+		if ( originalData.parents ) {
+			parents = Object.values( originalData.parents );
 		}
 
-		structure = structure.replace( /^http:\/\//i, "" );
+		const categorySlug = [ ...parents, primaryTaxonomySlug ].join( "/" );
+		let permalink      = url.replace( "%category%", categorySlug );
+		permalink          = permalink.replace( "%postname%", slug );
 
-		return structure;
+		return permalink;
 	}
 
 	/**
