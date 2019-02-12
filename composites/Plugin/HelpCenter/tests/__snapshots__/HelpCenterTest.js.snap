@@ -1,128 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the HelpCenter matches the snapshot 1`] = `
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
-  min-height: 48px;
-  margin: 0;
-  padding: 0 16px;
-  padding: 0px 16px;
-  border: 0;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font: 400 14px/24px "Open Sans",sans-serif;
-  text-transform: uppercase;
-  box-shadow: 0 2px 8px 0 rgba( 0,0,0,0.3 );
-  -webkit-transition: box-shadow 150ms ease-out;
-  transition: box-shadow 150ms ease-out;
-}
-
-.c2:hover,
-.c2:focus,
-.c2:active {
-  box-shadow: 0 4px 10px 0 rgba( 0,0,0,0.2 ),inset 0 0 0 100px rgba( 0,0,0,0.1 );
-  color: #fff;
-}
-
-.c2:active {
-  -webkit-transform: translateY( 1px );
-  -ms-transform: translateY( 1px );
-  transform: translateY( 1px );
-  box-shadow: none;
-}
-
-.c3 {
-  color: #fff;
-  background: #64a60a;
-  min-width: 152px;
-  text-shadow: 0 0 2px #000;
-  overflow: visible;
-  cursor: pointer;
-}
-
-.c3::-moz-focus-inner {
-  border-width: 0;
-}
-
-.c3 span {
-  display: inherit;
-  -webkit-align-items: inherit;
-  -webkit-box-align: inherit;
-  -ms-flex-align: inherit;
-  align-items: inherit;
-  -webkit-box-pack: inherit;
-  -webkit-justify-content: inherit;
-  -ms-flex-pack: inherit;
-  justify-content: inherit;
-  width: 100%;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-  min-width: 0;
-  padding: 0 2px;
-  min-height: 32px;
-}
-
-.c1 svg {
-  margin: 0 16px;
-}
-
-.c0 {
-  margin: 0;
-}
-
-.c4 {
-  width: 16px;
-  height: 16px;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-}
-
-@media all and (-ms-high-contrast:none),(-ms-high-contrast:active) {
-  .c2::after {
-    display: inline-block;
-    content: "";
-    min-height: 48px;
-  }
-}
-
-@media screen and ( max-width:768px ) {
-  .c0 {
-    margin: 0 0 1em;
-  }
-}
-
 <div
-  className="yoast-help-center c0"
+  className="yoast-help-center dqwTcV"
 >
   <button
     aria-expanded={false}
-    className="yoast-help-center__button c1 c2 YoastButton-hNXTAd c3"
+    className="yoast-help-center__button hKQmbr eaJwLd"
     onClick={[Function]}
     type="button"
   >
     <span>
       <svg
         aria-hidden={true}
-        className="yoast-svg-icon yoast-svg-icon-question-circle c4"
+        className="yoast-svg-icon yoast-svg-icon-question-circle fuFpel"
         fill="#fff"
         focusable="false"
         role="img"
@@ -137,7 +28,7 @@ exports[`the HelpCenter matches the snapshot 1`] = `
       Need help?
       <svg
         aria-hidden={true}
-        className="yoast-svg-icon yoast-svg-icon-angle-down c4"
+        className="yoast-svg-icon yoast-svg-icon-angle-down bsAFKR"
         fill="#fff"
         focusable="false"
         role="img"
@@ -155,127 +46,19 @@ exports[`the HelpCenter matches the snapshot 1`] = `
 `;
 
 exports[`the HelpCenter with props matches the snapshot 1`] = `
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
-  min-height: 48px;
-  margin: 0;
-  padding: 0 16px;
-  padding: 0px 16px;
-  border: 0;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font: 400 14px/24px "Open Sans",sans-serif;
-  text-transform: uppercase;
-  box-shadow: 0 2px 8px 0 rgba( 0,0,0,0.3 );
-  -webkit-transition: box-shadow 150ms ease-out;
-  transition: box-shadow 150ms ease-out;
-}
-
-.c2:hover,
-.c2:focus,
-.c2:active {
-  box-shadow: 0 4px 10px 0 rgba( 0,0,0,0.2 ),inset 0 0 0 100px rgba( 0,0,0,0.1 );
-  color: #fff;
-}
-
-.c2:active {
-  -webkit-transform: translateY( 1px );
-  -ms-transform: translateY( 1px );
-  transform: translateY( 1px );
-  box-shadow: none;
-}
-
-.c3 {
-  color: #fff;
-  background: #c30;
-  min-width: 152px;
-  overflow: visible;
-  cursor: pointer;
-}
-
-.c3::-moz-focus-inner {
-  border-width: 0;
-}
-
-.c3 span {
-  display: inherit;
-  -webkit-align-items: inherit;
-  -webkit-box-align: inherit;
-  -ms-flex-align: inherit;
-  align-items: inherit;
-  -webkit-box-pack: inherit;
-  -webkit-justify-content: inherit;
-  -ms-flex-pack: inherit;
-  justify-content: inherit;
-  width: 100%;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-  min-width: 0;
-  padding: 0 2px;
-  min-height: 32px;
-}
-
-.c1 svg {
-  margin: 0 16px;
-}
-
-.c0 {
-  margin: 0;
-}
-
-.c4 {
-  width: 16px;
-  height: 16px;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-}
-
-@media all and (-ms-high-contrast:none),(-ms-high-contrast:active) {
-  .c2::after {
-    display: inline-block;
-    content: "";
-    min-height: 48px;
-  }
-}
-
-@media screen and ( max-width:768px ) {
-  .c0 {
-    margin: 0 0 1em;
-  }
-}
-
 <div
-  className="yoast-help-center c0"
+  className="yoast-help-center dqwTcV"
 >
   <button
     aria-expanded={false}
-    className="yoast-help-center__button c1 c2 YoastButton-hNXTAd c3"
+    className="yoast-help-center__button hKQmbr dkhwGC"
     onClick={[Function]}
     type="button"
   >
     <span>
       <svg
         aria-hidden={true}
-        className="yoast-svg-icon yoast-svg-icon-question-circle c4"
+        className="yoast-svg-icon yoast-svg-icon-question-circle gUUUPG"
         fill="#fff"
         focusable="false"
         role="img"
@@ -290,7 +73,7 @@ exports[`the HelpCenter with props matches the snapshot 1`] = `
       Need help?
       <svg
         aria-hidden={true}
-        className="yoast-svg-icon yoast-svg-icon-angle-down c4"
+        className="yoast-svg-icon yoast-svg-icon-angle-down kTRanw"
         fill="#fff"
         focusable="false"
         role="img"
