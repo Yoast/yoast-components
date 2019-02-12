@@ -122,7 +122,7 @@ export const BaseUrl = styled.div`
 	font-size: 14px;
 `;
 
-const BaseUrlOverflowContainer = styled(BaseUrl)`
+const BaseUrlOverflowContainer = styled( BaseUrl )`
 	overflow: hidden;
 	text-overflow: ellipsis;
 	max-width: 100%;

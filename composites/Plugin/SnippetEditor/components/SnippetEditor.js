@@ -33,14 +33,14 @@ import colors from "../../../../style-guide/colors";
 import ErrorBoundary from "../../../basic/ErrorBoundary";
 import { getRtlStyle } from "../../../../utils/helpers/styled-components";
 
-const SnippetEditorButton = styled(Button)`
+const SnippetEditorButton = styled( Button )`
 	height: 33px;
 	border: 1px solid #dbdbdb;
 	box-shadow: none;
 	font-family: Arial, Roboto-Regular, HelveticaNeue, sans-serif;
 `;
 
-const EditSnippetButton = styled(SnippetEditorButton)`
+const EditSnippetButton = styled( SnippetEditorButton )`
 	margin: ${getRtlStyle( "10px 0 0 4px", "10px 4px 0 0" )};
 	fill: ${colors.$color_grey_dark};
 	padding-left: 8px;
@@ -50,7 +50,7 @@ const EditSnippetButton = styled(SnippetEditorButton)`
 	}
 `;
 
-const CloseEditorButton = styled(SnippetEditorButton)`
+const CloseEditorButton = styled( SnippetEditorButton )`
 	margin-top: 24px;
 `;
 
