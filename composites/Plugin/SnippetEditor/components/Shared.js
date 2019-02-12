@@ -130,11 +130,11 @@ export const DescriptionInputContainer = styled( InputContainer )`
 	line-height: 24px;
 
 	.public-DraftEditorPlaceholder-root {
-		color: ${colors.$color_grey_text};
+		color: ${ colors.$color_grey_text };
 	}
 
 	.public-DraftEditorPlaceholder-hasFocus {
-		color: ${colors.$color_grey_text};
+		color: ${ colors.$color_grey_text };
 	}
 `;
 

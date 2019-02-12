@@ -41,12 +41,12 @@ const SnippetEditorButton = styled( Button )`
 `;
 
 const EditSnippetButton = styled( SnippetEditorButton )`
-	margin: ${getRtlStyle( "10px 0 0 4px", "10px 4px 0 0" )};
-	fill: ${colors.$color_grey_dark};
+	margin: ${ getRtlStyle( "10px 0 0 4px", "10px 4px 0 0" ) };
+	fill: ${ colors.$color_grey_dark };
 	padding-left: 8px;
 
 	& svg {
-		${getRtlStyle( "margin-right", "margin-left" )}: 7px;
+		${ getRtlStyle( "margin-right", "margin-left" ) }: 7px;
 	}
 `;
 
