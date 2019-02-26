@@ -3,33 +3,33 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 
 /* Internal dependencies */
-import FacebookSiteName from "./FacebookSiteName";
-import FacebookImage from "./FacebookImage";
+import SiteName from "./SiteName";
+import Image from "./Image";
 
 /**
- * Renders a FacebookPreview component.
+ * Renders a Preview component.
  *
  * @param {object} props The props.
  *
  * @returns {React.Element} The rendered element.
  */
-const FacebookPreview = ( props ) => {
+const Preview = ( props ) => {
 	return (
 		<Fragment>
-			<FacebookImage src={ props.src } alt={ props.alt } />
-			<FacebookSiteName siteName={ props.siteName } />
+			<Image src={ props.src } alt={ props.alt } />
+			<SiteName>{ props.siteName }</SiteName>
 		</Fragment>
 	);
 };
 
-FacebookPreview.propTypes = {
+Preview.propTypes = {
 	siteName: PropTypes.string.isRequired,
 	src: PropTypes.string.isRequired,
 	alt: PropTypes.string,
 };
 
-FacebookPreview.defaultProps = {
+Preview.defaultProps = {
 	alt: "",
 };
 
-export default FacebookPreview;
+export default Preview;

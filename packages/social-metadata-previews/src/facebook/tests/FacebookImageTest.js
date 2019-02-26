@@ -3,7 +3,7 @@ import React from "react";
 import renderer from "react-test-renderer";
 
 /* Internal dependencies */
-import FacebookImage from "../components/FacebookImage";
+import Image from "../FacebookImage";
 import delayComponentSnapshot from "./testHelpers/delayComponentSnapshot";
 
 const importedDetermineFacebookImageProperties = require( "../helpers/determineFacebookImageProperties.js" );
@@ -31,7 +31,7 @@ describe( "FacebookImage Component", () => {
 		} ) );
 
 		renderer.create(
-			<FacebookImage src={ imageUrl } />
+			<Image src={ imageUrl } />
 		);
 
 		expect( importedDetermineFacebookImageProperties.determineFacebookImageProperties ).toBeCalledWith( imageUrl );
@@ -43,7 +43,7 @@ describe( "FacebookImage Component", () => {
 			new Promise( () => {} )
 		);
 		const component = renderer.create(
-			<FacebookImage src="https://yoast.com/app/uploads/2015/09/Author_Joost_x2.png" />
+			<Image src="https://yoast.com/app/uploads/2015/09/Author_Joost_x2.png" />
 		);
 		const tree = component.toJSON();
 		expect( tree ).toMatchSnapshot();
@@ -56,7 +56,7 @@ describe( "FacebookImage Component", () => {
 			width: 300,
 		} ) );
 		const component = renderer.create(
-			<FacebookImage src="https://yoast.com/app/uploads/2015/09/Author_Joost_x2.png" />
+			<Image src="https://yoast.com/app/uploads/2015/09/Author_Joost_x2.png" />
 		);
 
 		// Wait for the determineFacebookImageProperties promise to resolve.
@@ -70,7 +70,7 @@ describe( "FacebookImage Component", () => {
 			width: 600,
 		} ) );
 		const component = renderer.create(
-			<FacebookImage src="https://yoast.com/app/uploads/2015/06/How_to_choose_keywords_FI.png" />
+			<Image src="https://yoast.com/app/uploads/2015/06/How_to_choose_keywords_FI.png" />
 		);
 
 		// Wait for the determineFacebookImageProperties promise to resolve.
@@ -84,7 +84,7 @@ describe( "FacebookImage Component", () => {
 			width: 300,
 		} ) );
 		const component = renderer.create(
-			<FacebookImage src="https://yoast.com/app/uploads/2018/09/avatar_user_1_1537774226.png" />
+			<Image src="https://yoast.com/app/uploads/2018/09/avatar_user_1_1537774226.png" />
 		);
 
 		// Wait for the determineFacebookImageProperties promise to resolve.
@@ -98,7 +98,7 @@ describe( "FacebookImage Component", () => {
 			width: 100,
 		} ) );
 		const component = renderer.create(
-			<FacebookImage src="https://yoast.com/app/uploads/2018/11/Logo_TYPO3-250x105.png" />
+			<Image src="https://yoast.com/app/uploads/2018/11/Logo_TYPO3-250x105.png" />
 		);
 
 		// Wait for the determineFacebookImageProperties promise to resolve.
@@ -109,7 +109,7 @@ describe( "FacebookImage Component", () => {
 		importedDetermineFacebookImageProperties.determineFacebookImageProperties.mockReturnValueOnce( Promise.reject() );
 
 		const component = renderer.create(
-			<FacebookImage src="thisisnoimage" />
+			<Image src="thisisnoimage" />
 		);
 
 		// Wait for the determineFacebookImageProperties promise to resolve.
@@ -119,7 +119,7 @@ describe( "FacebookImage Component", () => {
 
 describe( "getContainerDimensions", () => {
 	it( "gets the container dimensions for a landscape image.", () => {
-		const FacebookImageComponent = new FacebookImage();
+		const FacebookImageComponent = new Image();
 
 		const actual = FacebookImageComponent.getContainerDimensions( "landscape" );
 		const expected = { height: "261px", width: "500px" };
@@ -128,7 +128,7 @@ describe( "getContainerDimensions", () => {
 	} );
 
 	it( "gets the container dimensions for a square image.", () => {
-		const FacebookImageComponent = new FacebookImage();
+		const FacebookImageComponent = new Image();
 
 		const actual = FacebookImageComponent.getContainerDimensions( "square" );
 		const expected = { height: "158px", width: "158px" };
@@ -137,7 +137,7 @@ describe( "getContainerDimensions", () => {
 	} );
 
 	it( "gets the container dimensions for a portrait image.", () => {
-		const FacebookImageComponent = new FacebookImage();
+		const FacebookImageComponent = new Image();
 
 		const actual = FacebookImageComponent.getContainerDimensions( "portrait" );
 		const expected = { height: "236px", width: "158px" };

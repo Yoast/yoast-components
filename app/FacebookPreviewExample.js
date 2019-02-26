@@ -1,7 +1,7 @@
 import React from "react";
 
 import ExamplesContainer from "./ExamplesContainer";
-import FacebookPreview from "../composites/Plugin/SocialPreviews/Facebook/components/FacebookPreview";
+import { FacebookPreview } from "../packages/social-metadata-previews";
 
 /**
  * Returns the FacebookPreview examples.

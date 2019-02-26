@@ -1,6 +1,5 @@
 /* External dependencies */
 import React from "react";
-import styled from "styled-components";
 import PropTypes from "prop-types";
 import { __ } from "@wordpress/i18n";
 
@@ -13,50 +12,14 @@ import {
 	PORTRAIT_WIDTH,
 	SQUARE_HEIGHT,
 	SQUARE_WIDTH,
-} from "../helpers/determineFacebookImageProperties";
-import colors from "../../../../../style-guide/colors.json";
+} from "./helpers/determineFacebookImageProperties";
+import PlaceholderImage from "./PlaceholderImage";
+import ImageContainer from "./ImageContainer";
+import StyledImage from "./StyledImage";
+import ErrorImage from "./ErrorImage";
 
 const MIN_IMAGE_WIDTH = 158;
 const MIN_IMAGE_HEIGHT = 158;
-
-const FacebookImageContainer = styled.div`
-	position: relative;
-	height: ${ props => props.dimensions.height };
-	width: ${ props => props.dimensions.width };
-	overflow: hidden;
-	background-color: ${ colors.$color_white };
-`;
-
-const StyledImage = styled.img`
-	width: ${ props => props.imageProperties.width }px;
-	height: ${ props => props.imageProperties.height }px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-`;
-
-const ErrorImage = styled.p`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	box-sizing: border-box;
-	width: 500px;
-	height: 261px;
-	max-width: 100%;
-	margin: 0;
-	padding: 1em;
-	text-align: center;
-	font-size: 1rem;
-	color: ${ colors.$color_white };
-	background-color: ${ colors.$color_red };
-`;
-
-const PlaceholderImage = styled.div`
-	height: 261px;
-	width: 500px;
-	background-color: ${ colors.$color_grey };
-`;
 
 /**
  * Renders the FacebookImage component.
@@ -65,7 +28,7 @@ const PlaceholderImage = styled.div`
  *
  * @returns {ReactComponent} The FacebookImage component.
  */
-export default class FacebookImage extends React.Component {
+class Image extends React.Component {
 	/**
 	 * The constructor.
 	 *
@@ -149,7 +112,7 @@ export default class FacebookImage extends React.Component {
 		}
 
 		const containerDimensions = this.getContainerDimensions( imageProperties.mode );
-		return <FacebookImageContainer
+		return <ImageContainer
 			dimensions={ containerDimensions }
 		>
 			<StyledImage
@@ -157,15 +120,17 @@ export default class FacebookImage extends React.Component {
 				alt={ this.props.alt }
 				imageProperties={ imageProperties }
 			/>
-		</FacebookImageContainer>;
+		</ImageContainer>;
 	}
 }
 
-FacebookImage.propTypes = {
+Image.propTypes = {
 	src: PropTypes.string.isRequired,
 	alt: PropTypes.string,
 };
 
-FacebookImage.defaultProps = {
+Image.defaultProps = {
 	alt: "",
 };
+
+export default Image;
