@@ -1,5 +1,5 @@
 import Choice from "./Choice";
-import Input from "../../../forms/composites/Textfield";
+import { Input } from "../../../packages/components";
 import HTML from "./Html";
 
 /**

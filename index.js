@@ -15,7 +15,6 @@ import { default as ButtonSection } from "./composites/Plugin/Shared/components/
 import { default as LanguageNotice } from "./composites/Plugin/Shared/components/LanguageNotice";
 import { YoastButton } from "./composites/Plugin/Shared/components/YoastButton";
 import { default as YoastModal } from "./composites/Plugin/Shared/components/YoastModal";
-import { default as SvgIcon } from "./packages/components/src/icons/SvgIcon";
 import { UpsellButton } from "./composites/Plugin/Shared/components/UpsellButton";
 import { UpsellLinkButton } from "./composites/Plugin/Shared/components/UpsellLinkButton";
 import { default as ContentAnalysis } from "./composites/Plugin/ContentAnalysis/components/ContentAnalysis";
@@ -49,7 +48,6 @@ export {
 	ScoreAssessments,
 	YoastButton,
 	YoastModal,
-	SvgIcon,
 	Loader,
 	CornerstoneToggle,
 	sendRequest,
@@ -81,9 +79,7 @@ export { default as WordpressFeed } from "./composites/Plugin/DashboardWidget/co
 export { default as SeoAssessment } from "./composites/Plugin/DashboardWidget/components/SeoAssessment";
 export { default as VideoTutorial } from "./composites/HelpCenter/views/VideoTutorial";
 export { default as KeywordInput } from "./composites/Plugin/Shared/components/KeywordInput";
-export { default as Icon } from "./packages/components/src/icons/Icon";
 export { default as YoastWarning } from "./composites/Plugin/Shared/components/YoastWarning";
-export { default as YoastSeoIcon } from "./packages/components/src/icons/YoastSeoIcon";
 export { insightsReducer } from "./redux/reducers/insights";
 export { setProminentWords } from "./redux/actions/insights";
 export { setReadabilityResults,
