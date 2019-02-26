@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 import colors from "../../../../style-guide/colors.json";
 import { getRtlStyle } from "../../../../utils/helpers/styled-components";
-import SvgIcon from "./SvgIcon";
+import SvgIcon from "../../../../packages/components/src/icons/SvgIcon";
 
 
 const WarningBox = styled.div`

@@ -7,7 +7,7 @@ import { __ } from "@wordpress/i18n";
 /* Internal dependencies */
 import Paper from "./Paper";
 import colors from "../../style-guide/colors.json";
-import SvgIcon from "../../composites/Plugin/Shared/components/SvgIcon";
+import SvgIcon from "../../packages/components/src/icons/SvgIcon";
 import breakpoints from "../../style-guide/responsive-breakpoints.json";
 import { DismissButton } from "../../packages/components";
 

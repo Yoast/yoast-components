@@ -6,7 +6,7 @@ import { defineMessages, injectIntl, intlShape } from "react-intl";
 import ArticleContent from "./ArticleContent";
 import { YoastButton } from "../Plugin/Shared/components/YoastButton";
 import { YoastLinkButton } from "../Plugin/Shared/components/YoastLinkButton";
-import SvgIcon from "../Plugin/Shared/components/SvgIcon";
+import SvgIcon from "../../packages/components/src/icons/SvgIcon";
 import { makeOutboundLink } from "../../utils/makeOutboundLink";
 import breakpoints from "../../style-guide/responsive-breakpoints.json";
 import colors from "../../style-guide/colors.json";

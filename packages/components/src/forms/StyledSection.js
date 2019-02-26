@@ -6,7 +6,7 @@ import Section from "./Section";
 import Heading from "../../../../composites/basic/Heading";
 import colors from "../../../../style-guide/colors.json";
 import { rgba } from "../../../../style-guide/helpers";
-import SvgIcon from "../../../../composites/Plugin/Shared/components/SvgIcon";
+import SvgIcon from "../icons/SvgIcon";
 import { getRtlStyle } from "../../../../utils/helpers/styled-components";
 
 export const StyledHeading = styled( Heading )`

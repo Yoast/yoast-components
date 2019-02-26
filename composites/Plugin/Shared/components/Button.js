@@ -5,7 +5,7 @@ import omit from "lodash/omit";
 import PropTypes from "prop-types";
 
 import colors from "../../../../style-guide/colors.json";
-import SvgIcon from "./SvgIcon";
+import SvgIcon from "../../../../packages/components/src/icons/SvgIcon";
 import { rgba } from "../../../../style-guide/helpers";
 import { getRtlStyle } from "../../../../utils/helpers/styled-components";
 

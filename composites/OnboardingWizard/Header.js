@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Icon from "../Plugin/Shared/components/Icon";
+import Icon from "../../packages/components/src/icons/Icon";
 
 /**
  * Onboarding wizard header.

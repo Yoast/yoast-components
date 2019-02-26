@@ -8,7 +8,7 @@ import uniqueId from "lodash/uniqueId";
 import HelpText from "../../Shared/components/HelpText";
 import colors from "../../../../style-guide/colors.json";
 import { Button } from "../../Shared/components/Button";
-import SvgIcon from "../../Shared/components/SvgIcon";
+import SvgIcon from "../../../../packages/components/src/icons/SvgIcon";
 import { rgba } from "../../../../style-guide/helpers";
 import { YoastSlideToggle } from "../../../../utils/animations";
 import { getRtlStyle } from "../../../../utils/helpers/styled-components";

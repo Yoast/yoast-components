@@ -1,8 +1,8 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import Icon from "../components/Icon";
-import YoastSeoIcon from "../../../basic/YoastSeoIcon";
+import Icon from "../../../../packages/components/src/icons/Icon";
+import YoastSeoIcon from "../../../../packages/components/src/icons/YoastSeoIcon";
 
 test( "the Icon without props matches the snapshot", () => {
 	const component = renderer.create(

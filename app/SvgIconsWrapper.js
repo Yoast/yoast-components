@@ -5,7 +5,7 @@ import transform from "lodash/transform";
 
 /* Internal dependencies */
 import colors from "../style-guide/colors.json";
-import SvgIcon, { icons } from "../composites/Plugin/Shared/components/SvgIcon";
+import SvgIcon, { icons } from "../packages/components/src/icons/SvgIcon";
 
 export const SvgIconsContainer = styled.div`
 	max-width: 1024px;

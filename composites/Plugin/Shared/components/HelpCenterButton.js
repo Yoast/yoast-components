@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import colors from "../../../../style-guide/colors.json";
 import { YoastButton } from "./YoastButton";
-import SvgIcon from "../../Shared/components/SvgIcon";
+import SvgIcon from "../../../../packages/components/src/icons/SvgIcon";
 
 /**
  * Returns an icon button that can optionally contain text.

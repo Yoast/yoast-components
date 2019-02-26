@@ -1,7 +1,7 @@
 import React from "react";
 import interpolateComponents from "interpolate-components";
 
-import Icon from "../Plugin/Shared/components/Icon";
+import Icon from "../../packages/components/src/icons/Icon";
 import PropTypes from "prop-types";
 
 /**

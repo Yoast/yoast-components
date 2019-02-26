@@ -4,7 +4,7 @@ import Modal from "react-modal";
 import styled from "styled-components";
 
 import colors from "../../../../style-guide/colors.json";
-import SvgIcon from "./SvgIcon";
+import SvgIcon from "../../../../packages/components/src/icons/SvgIcon";
 
 const StyledHeading = styled.h1`
 	float: left;
