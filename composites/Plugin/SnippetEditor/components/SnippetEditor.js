@@ -14,11 +14,11 @@ import stripSpaces from "yoastseo/src/stringProcessing/stripSpaces";
 import noop from "lodash/noop";
 
 // Internal dependencies.
-import SnippetPreview from "../../SnippetPreview/components/SnippetPreview";
+import SnippetPreview from "../../../../packages/search-metadata-previews/src/google/SnippetPreview";
 import {
 	DEFAULT_MODE,
 	MODES,
-} from "../../SnippetPreview/constants";
+} from "../../../../packages/search-metadata-previews/src/google/constants";
 import SnippetEditorFields from "./SnippetEditorFields";
 import { Button } from "../../Shared/components/Button";
 import SvgIcon from "../../../../packages/components/src/icons/SvgIcon";

@@ -5,10 +5,10 @@ import styled from "styled-components";
 import uniqueId from "lodash/uniqueId";
 
 // Internal dependencies
-import HelpText from "../../Shared/components/HelpText";
+import HelpText from "../../../../composites/Plugin/Shared/components/HelpText";
 import colors from "../../../../style-guide/colors.json";
-import { Button } from "../../Shared/components/Button";
-import SvgIcon from "../../../../packages/components/src/icons/SvgIcon";
+import { Button } from "../../../../composites/Plugin/Shared/components/Button";
+import SvgIcon from "../../../components/src/icons/SvgIcon";
 import { rgba } from "../../../../style-guide/helpers";
 import { YoastSlideToggle } from "../../../../utils/animations";
 import { getRtlStyle } from "../../../../utils/helpers/styled-components";

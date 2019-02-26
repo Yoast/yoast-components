@@ -1,102 +1,41 @@
-// External dependencies.
+/* External dependencies */
 import React, { PureComponent } from "react";
 import styled from "styled-components";
-import interpolateComponents from "interpolate-components";
-import transliterate from "yoastseo/src/stringProcessing/transliterate";
-import createRegexFromArray from "yoastseo/src/stringProcessing/createRegexFromArray";
 import replaceSpecialCharactersAndDiacritics from "yoastseo/src/stringProcessing/replaceDiacritics";
 import PropTypes from "prop-types";
 import truncate from "lodash/truncate";
 import { parse } from "url";
 import { __ } from "@wordpress/i18n";
 
-// Internal dependencies.
-import FixedWidthContainer from "./FixedWidthContainer";
+/* Yoast Dependencies */
+import { AmpLogo } from "../../../components";
+
+/* Internal dependencies */
 import colors from "../../../../style-guide/colors";
 import ScreenReaderText from "../../../../a11y/ScreenReaderText";
-import { DEFAULT_MODE, MODE_DESKTOP, MODE_MOBILE, MODES } from "../constants";
-import { angleLeft, angleRight } from "../../SnippetEditor/components/Shared";
-import { getRtlStyle } from "../../../../utils/helpers/styled-components";
-
-/*
- * These colors should not be abstracted. They are chosen because Google renders
- * the snippet like this.
- */
-const colorTitle = "#1e0fbe";
-const colorUrl = "#006621";
-const colorDescription = "#545454";
-const colorGeneratedDescription = "#777";
-const colorDate = "#808080";
-
-const MAX_WIDTH = 600;
-const WIDTH_PADDING = 20;
-const DESCRIPTION_LIMIT = 156;
-
-export const DesktopContainer = styled( FixedWidthContainer )`
-	background-color: white;
-	font-family: arial, sans-serif;
-	box-sizing: border-box;
-`;
-
-const MobileContainer = styled.div`
-	border-bottom: 1px hidden #fff;
-	border-radius: 2px;
-	box-shadow: 0 1px 2px rgba(0,0,0,.2);
-	font-family: Arial, Roboto-Regular, HelveticaNeue, sans-serif;
-	max-width: ${ MAX_WIDTH }px;
-	box-sizing: border-box;
-	font-size: 14px;
-`;
+import DesktopContainer from "./DesktopContainer";
+import MobileContainer from "./MobileContainer";
+import Title from "./Title";
+import {
+	MODE_MOBILE,
+	MODE_DESKTOP,
+	MODES,
+	DEFAULT_MODE,
+	COLOR_URL,
+	COLOR_DESCRIPTION,
+	COLOR_GENERATED_DESCRIPTION,
+	COLOR_DATE,
+	MAX_WIDTH,
+	WIDTH_PADDING,
+	DESCRIPTION_LIMIT,
+} from "./constants";
+import addCaretStyle from "./helpers/addCaretStyle";
+import highlightWords from "./helpers/highlightWords";
+import hasTrailingSlash from "./helpers/hasTrailingSlash";
 
 export const BaseTitle = styled.div`
 	cursor: pointer;
 	position: relative;
-`;
-
-/**
- * Adds caret styles to a component.
- *
- * @param {ReactComponent} WithoutCaret The component without caret styles.
- * @param {string} color The color to render the caret in.
- * @param {string} mode The mode the snippet preview is in.
- *
- * @returns {ReactComponent} The component with caret styles.
- */
-function addCaretStyle( WithoutCaret, color, mode ) {
-	return styled( WithoutCaret )`
-		&::before {
-			display: block;
-			position: absolute;
-			top: -3px;
-			${ getRtlStyle( "left", "right" ) }: ${ () => mode === MODE_DESKTOP ? "-22px" : "-40px" };
-			width: 24px;
-			height: 24px;
-			background-image: url( ${ getRtlStyle( angleRight( color ), angleLeft( color ) ) } );
-			background-size: 25px;
-			content: "";
-		}
-	`;
-}
-
-export const Title = styled.div`
-	color: ${ colorTitle };
-	text-decoration: none;
-	font-size: 18px;
-	line-height: 1.2;
-	font-weight: normal;
-	margin: 0;
-
-	display: inline-block;
-	overflow: hidden;
-	max-width: ${ MAX_WIDTH }px;
-	vertical-align: top;
-	text-overflow: ellipsis;
-`;
-
-export const TitleBounded = styled( Title )`
-	max-width: ${ MAX_WIDTH }px;
-	vertical-align: top;
-	text-overflow: ellipsis;
 `;
 
 export const TitleUnboundedDesktop = styled.span`
@@ -114,7 +53,7 @@ export const TitleUnboundedMobile = styled.span`
 
 export const BaseUrl = styled.div`
 	display: inline-block;
-	color: ${ colorUrl };
+	color: ${ COLOR_URL };
 	cursor: pointer;
 	position: relative;
 	max-width: 90%;
@@ -131,7 +70,7 @@ const BaseUrlOverflowContainer = BaseUrl.extend`
 BaseUrlOverflowContainer.displayName = "SnippetPreview__BaseUrlOverflowContainer";
 
 export const DesktopDescription = styled.div`
-	color: ${ props => props.isDescriptionPlaceholder ? colorGeneratedDescription : colorDescription };
+	color: ${ props => props.isDescriptionPlaceholder ? COLOR_GENERATED_DESCRIPTION : COLOR_DESCRIPTION };
 	cursor: pointer;
 	position: relative;
 	max-width: ${ MAX_WIDTH }px;
@@ -161,7 +100,7 @@ export const UrlDownArrow = styled.div`
 `;
 
 const DatePreview = styled.span`
-	color: ${ colorDate };
+	color: ${ COLOR_DATE };
 `;
 
 const Separator = styled.hr`
@@ -169,90 +108,6 @@ const Separator = styled.hr`
 	border-bottom: 1px solid #DFE1E5;
 	margin: 0;
 `;
-
-const ampLogo = "data:image/png;base64," +
-	"iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAABr0lEQVR4AbWWJYCUURhFD04Z" +
-	"i7hrLzgFd4nzV9x6wKHinmYb7g4zq71gIw2LWBnZ3Q8df/fh96Tn/t2HVIw4CVKk+fSFNCkS" +
-	"xInxW1pFkhLmoMRjVvFLmkEX5ocuZuBVPw5jv8hh+iEU5QEmuMK+prz7RN3dPMMEGQYzxpH/" +
-	"lGjzou5jgl7mAvOdZfcbF+jbm3MAbFZ7VX9SJnlL1D8UMyjLe+BrAYDb+jJUr59JrlNWRtcq" +
-	"X9GkrPCR4QBAf4qYJAkQoyQrbKKs8RiaEjEI0GvvQ1mLMC9xaBFFBaZS1TbMSwJSomg39erD" +
-	"F+TxpCCNOXjGQJTCvG6qn4ZPzkcxA61Tjhaf4KMj+6Q3XvW6Lopraa8IozRQxIi0a7NXorUL" +
-	"c5JyHX/3F3q+0PsFYytVTaGgjz/AvCyiegE69IUsPxHNBMpa738i6tGWlzkAABjKe/+j9YeR" +
-	"HGVd9oWRnwe2ewDASp/L/UqoPQ5AmFeYZMavBP8dAJz0GWWDHQlzXApMdz4KYUfKICcxkKeO" +
-	"fGmQyrIPcgE9m+g/+kT812/Nr3+0kqzitxQjoKXh6xfor99nlEdFjyvH15gAAAAASUVORK5C" +
-	"YII=";
-
-const Amp = styled.div`
-	background-size: 100% 100%;
-	display: inline-block;
-	height: 12px;
-	width: 12px;
-	margin-bottom: -1px;
-	opacity: 0.46;
-	margin-right: 6px;
-	background-image: url( ${ ampLogo } )
-`;
-
-/**
- * Highlights a keyword with strong React elements.
- *
- * @param {string} locale ISO 639 (2/3 characters) locale.
- * @param {string[]} wordsToHighlight The array of words to be highlighted.
- * @param {string} text The text in which to highlight words.
- * @param {string} cleanText Optional. The text in which to highlight words
- *                           without special characters and diacritics.
- *
- * @returns {ReactElement} React elements to be rendered.
- */
-function highlightWords( locale, wordsToHighlight, text, cleanText ) {
-	if ( wordsToHighlight.length === 0 ) {
-		return text;
-	}
-
-	// Clean the text from special characters and diacritics.
-	let textToUse = cleanText ? cleanText : text;
-
-	// Initiate an array of cleaned and transliterated forms.
-	const wordsToHighlightCleaned = [];
-
-	wordsToHighlight.forEach( function( form ) {
-		/*
-	    * When a text has been cleaned up from special characters and diacritics
-	    * we need to match against a cleaned up keyword as well.
-	    */
-		form = cleanText ? replaceSpecialCharactersAndDiacritics( form ) : form;
-
-		wordsToHighlightCleaned.push( form );
-
-		// Transliterate the keyword for highlighting
-		const formTransliterated = transliterate( form, locale );
-
-		if ( formTransliterated !== form ) {
-			wordsToHighlightCleaned.push( formTransliterated );
-		}
-	} );
-
-	const keywordFormsMatcher = createRegexFromArray( wordsToHighlightCleaned, false, "", false );
-
-	textToUse = textToUse.replace( keywordFormsMatcher, function( matchedKeyword ) {
-		return `{{strong}}${ matchedKeyword }{{/strong}}`;
-	} );
-
-	return interpolateComponents( {
-		mixedString: textToUse,
-		components: { strong: <strong /> },
-	} );
-}
-
-/**
- * Returns if a url has a trailing slash or not.
- *
- * @param {string} url The url to check for a trailing slash.
- * @returns {boolean} Whether or not the url contains a trailing slash.
- */
-function hasTrailingSlash( url ) {
-	return url.lastIndexOf( "/" ) === ( url.length - 1 );
-}
 
 /**
  * The snippet preview class.
@@ -637,7 +492,7 @@ export default class SnippetPreview extends PureComponent {
 
 		const separator = mode === MODE_DESKTOP ? null : <Separator />;
 		const downArrow = mode === MODE_DESKTOP ? <UrlDownArrow /> : null;
-		const amp       = mode === MODE_DESKTOP || ! isAmp ? null : <Amp />;
+		const amp       = mode === MODE_DESKTOP || ! isAmp ? null : <AmpLogo />;
 
 		/*
 		 * The jsx-a11y eslint plugin is asking for an onFocus accompanying the onMouseEnter.
@@ -661,11 +516,11 @@ export default class SnippetPreview extends PureComponent {
 							onMouseEnter={ onMouseEnter.bind( null, "title" ) }
 							onMouseLeave={ onMouseLeave.bind( null ) }
 						>
-							<TitleBounded>
+							<Title>
 								<TitleUnbounded innerRef={ this.setTitleRef }>
 									{ this.getTitle() }
 								</TitleUnbounded>
-							</TitleBounded>
+							</Title>
 						</SnippetTitle>
 						<ScreenReaderText>
 							{ __( "Url preview", "yoast-components" ) + ":" }

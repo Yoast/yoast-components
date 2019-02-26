@@ -7,7 +7,7 @@ import {
 } from "../../../../utils/helpers/intl-enzyme-test-helper";
 import {
 	MODE_DESKTOP,
-} from "../../SnippetPreview/constants";
+} from "../../../../packages/search-metadata-previews/src/google/constants";
 import {
 	focus,
 } from "../components/ReplacementVariableEditorStandalone";

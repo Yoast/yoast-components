@@ -1,10 +1,10 @@
-import SnippetPreview from "../components/SnippetPreview";
+import SnippetPreview from "../SnippetPreview";
 import { MODE_DESKTOP, MODE_MOBILE } from "../constants";
 import React from "react";
-import { createComponentWithIntl } from "../../../../utils/intlProvider";
+import { createComponentWithIntl } from "../../../../../utils/intlProvider";
 import {
 	mountWithIntl,
-} from "../../../../utils/helpers/intl-enzyme-test-helper";
+} from "../../../../../utils/helpers/intl-enzyme-test-helper";
 
 const defaultArgs = {
 	description: "Description",

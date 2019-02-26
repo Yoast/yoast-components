@@ -1,7 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import ProgressBar from "../components/ProgressBar";
+import ProgressBar from "../ProgressBar";
 
 test( "the progress bar matches the snapshot", () => {
 	const component = renderer.create(
