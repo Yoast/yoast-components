@@ -65,7 +65,7 @@ export { default as HelpText } from "./composites/Plugin/Shared/components/HelpT
 export { default as SynonymsInput } from "./composites/Plugin/Shared/components/SynonymsInput";
 export * from "./composites/Plugin/SnippetPreview";
 export * from "./composites/Plugin/SnippetEditor";
-export * from "./packages/components/src/forms";
+export * from "./packages/components";
 export * from "./composites/Plugin/ContentAnalysis";
 export { default as colors } from "./style-guide/colors.json";
 export { default as utils } from "./utils";
