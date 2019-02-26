@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import Section from "../Section";
-import Heading from "../../composites/basic/Heading";
-import colors from "../../style-guide/colors.json";
-import { rgba } from "../../style-guide/helpers";
-import SvgIcon from "../../composites/Plugin/Shared/components/SvgIcon";
-import { getRtlStyle } from "../../utils/helpers/styled-components";
+import Section from "./Section";
+import Heading from "../../../../composites/basic/Heading";
+import colors from "../../../../style-guide/colors.json";
+import { rgba } from "../../../../style-guide/helpers";
+import SvgIcon from "../../../../composites/Plugin/Shared/components/SvgIcon";
+import { getRtlStyle } from "../../../../utils/helpers/styled-components";
 
 export const StyledHeading = styled( Heading )`
 	margin-left: ${ getRtlStyle( "0", "20px" ) };

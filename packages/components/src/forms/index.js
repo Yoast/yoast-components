@@ -1,4 +1,4 @@
-import StyledSection, { StyledSectionBase, StyledHeading } from "./StyledSection/StyledSection";
+import StyledSection, { StyledSectionBase, StyledHeading } from "./StyledSection";
 
 export {
 	StyledSection,
@@ -6,7 +6,7 @@ export {
 	StyledHeading,
 };
 
-export { default as Textfield } from "./composites/Textfield";
+export { default as Textfield } from "./Textfield";
 export { default as Button } from "./Button";
 export { default as Input } from "./Input";
 export { default as Label } from "./Label";

@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Label from "../Label";
-import Input from "../Input";
-import Textarea from "../Textarea";
-import Explanation from "../../composites/OnboardingWizard/components/Explanation";
+import Label from "./Label";
+import Input from "./Input";
+import Textarea from "./Textarea";
+import Explanation from "../../../../composites/OnboardingWizard/components/Explanation";
 
 /**
  * Represents the Textfield composite component.
